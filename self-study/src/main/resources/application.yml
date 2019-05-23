@@ -1,0 +1,21 @@
+my:
+  name: forezp
+  age: 12
+# 指定程序启动端口号
+server:
+  port: 8088
+# 指定使用哪个环境配置文件
+spring:
+  profiles:
+    active: test
+
+management:
+  server:
+    port: 9001
+  endpoint:
+    shutdown:
+      enabled: true
+    health:
+      enabled: true
+      show-details: always
+

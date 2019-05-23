@@ -1,0 +1,3 @@
+使用lombok，编写的java代码很优雅，而使用起来和普通的java编码方式创建的类毫无二致。
+
+本代码就从ORM实体类、Builder模式工具类、Wither工具类以及Accessors工具类几个层面使用对比一下。
