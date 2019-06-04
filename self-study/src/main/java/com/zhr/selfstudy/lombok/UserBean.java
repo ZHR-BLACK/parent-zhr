@@ -1,5 +1,7 @@
 package com.zhr.selfstudy.lombok;
 
+import lombok.*;
+
 import java.util.List;
 
 /**
@@ -14,6 +16,7 @@ import java.util.List;
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @NoArgsConstructor
 public class UserBean {
+
     private Integer id;
     private String userName;
     // 设置默认值要使用该标签，否则无法与build兼容生效
