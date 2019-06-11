@@ -1,10 +1,10 @@
 package behavior_pattern.observer.mode2.impl;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import behavior_pattern.observer.mode2.Observer;
 import behavior_pattern.observer.mode2.Subject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MyTopic implements Subject {
 	private List<Observer> observers;

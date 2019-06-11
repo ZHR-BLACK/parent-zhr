@@ -1,11 +1,11 @@
 package structural_model.proxy;
 
-import java.lang.reflect.Method;
-
+import behavior_pattern.reflect.ReflectServiceImpl;
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;
-import behavior_pattern.reflect.ReflectServiceImpl;
+
+import java.lang.reflect.Method;
 
 /**
  * cglib动态代理

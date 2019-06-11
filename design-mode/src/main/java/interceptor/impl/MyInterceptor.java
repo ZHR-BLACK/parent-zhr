@@ -1,8 +1,8 @@
 package interceptor.impl;
 
-import java.lang.reflect.Method;
-
 import interceptor.Interceptor;
+
+import java.lang.reflect.Method;
 
 public class MyInterceptor implements Interceptor{
 

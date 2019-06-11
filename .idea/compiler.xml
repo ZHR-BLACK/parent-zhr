@@ -6,34 +6,35 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="bs_sklf_api_invoke" />
+        <module name="bs_invoke_test" />
         <module name="bs_ccb" />
-        <module name="java8-stream-sample" />
+        <module name="bs_icbc" />
         <module name="bs_baseservice" />
         <module name="bs_sklf_citibank" />
         <module name="bs_certificate_exchange" />
-        <module name="bs_sklf_api_web" />
-        <module name="bs_sklf_api" />
+        <module name="bs_jrmf360" />
+        <module name="bs_jlwj" />
         <module name="bs_citibank" />
-        <module name="bs_sklf_ccb" />
+        <module name="bs_sklf_cmbc" />
         <module name="eureka-client" />
-        <module name="rabbitmq" />
-        <module name="bs_cmbc" />
+        <module name="bs_abc" />
         <module name="bs_cebmerchant" />
-        <module name="bs_cebunionpay" />
-        <module name="bs_icbc" />
-        <module name="bs_invoke_test" />
+        <module name="bs_boc" />
+        <module name="common" />
+        <module name="java8-stream-sample" />
+        <module name="rabbitmq" />
         <module name="bs_chinapay" />
         <module name="bs_tjunionpay" />
-        <module name="bs_sklf_cmbc" />
+        <module name="designmode" />
         <module name="self-study" />
-        <module name="bs_jrmf360" />
-        <module name="bs_abc" />
+        <module name="bs_cebunionpay" />
+        <module name="bs_cmbc" />
         <module name="algorithm" />
-        <module name="bs_jlwj" />
-        <module name="common" />
-        <module name="bs_boc" />
+        <module name="bs_sklf_api" />
         <module name="bs_zgcb" />
+        <module name="bs_sklf_api_web" />
+        <module name="bs_sklf_api_invoke" />
+        <module name="bs_sklf_ccb" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
@@ -49,6 +50,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="algorithm" options="-parameters" />
       <module name="common" options="-parameters" />
+      <module name="designmode" options="-parameters" />
       <module name="eureka-client" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
       <module name="jdkdetail" options="-parameters" />

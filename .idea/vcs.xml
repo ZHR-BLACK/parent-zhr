@@ -3,5 +3,6 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$/../bs_mvnbuild" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../java8-stream-sample" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
   </component>
 </project>

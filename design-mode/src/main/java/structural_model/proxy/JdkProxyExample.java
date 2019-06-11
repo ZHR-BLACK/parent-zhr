@@ -1,10 +1,10 @@
 package structural_model.proxy;
 
+import structural_model.proxy.impl.HelloWorldImpl;
+
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
-
-import structural_model.proxy.impl.HelloWorldImpl;
 /**
  * 动态代理
  * @author smilesnake

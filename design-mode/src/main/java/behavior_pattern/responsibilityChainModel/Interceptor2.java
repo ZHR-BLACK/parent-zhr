@@ -1,8 +1,8 @@
 package behavior_pattern.responsibilityChainModel;
 
-import java.lang.reflect.Method;
-
 import interceptor.Interceptor;
+
+import java.lang.reflect.Method;
 
 public class Interceptor2 implements Interceptor{
 

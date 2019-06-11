@@ -1,11 +1,11 @@
 package interceptor;
 
+import structural_model.proxy.HelloWorld;
+import structural_model.proxy.impl.HelloWorldImpl;
+
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
-
-import structural_model.proxy.HelloWorld;
-import structural_model.proxy.impl.HelloWorldImpl;
 /**
  * 代理对象
  * @author smilesnake
