@@ -15,13 +15,14 @@
     <artifactId>parent</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
-<!--    <modules>-->
-<!--        <module>common</module>-->
-<!--        <module>algorithm</module>-->
-<!--        <module>jdk-detail</module>-->
-<!--        <module>eureka</module>-->
-<!--        <module>design-mode</module>-->
-<!--    </modules>-->
+    <modules>
+        <module>common</module>
+        <module>algorithm</module>
+        <module>design-mode</module>
+        <module>rabbitmq</module>
+        <module>self-study</module>
+        <module>concurrent</module>
+    </modules>
 
     <dependencies>
         <dependency>
