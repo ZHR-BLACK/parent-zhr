@@ -1,0 +1,3 @@
+# 我是注释
+[com.zhr.selfstudy.hutool.cron]
+TestJob.run = 0/1 * * * * ?
