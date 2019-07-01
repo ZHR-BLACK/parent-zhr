@@ -85,6 +85,7 @@ public class HasCycle141 {
         }
         ListNode slow = head;
         ListNode fast = head.next;
+        // 如果快和慢指针相等了,说明快指针追上了慢指针,只有在链表有环的情况才会出现
         while (slow != fast) {
             if (fast == null || fast.next == null) {
                 return false;
