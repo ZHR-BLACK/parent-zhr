@@ -23,7 +23,7 @@ import java.util.Map;
  * 输入: [4,1,2,1,2]
  * 输出: 4
  **/
-public class SingleNumber {
+public class SingleNumber136 {
 
     /**
      * @param nums

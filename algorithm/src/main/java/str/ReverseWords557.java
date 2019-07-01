@@ -13,7 +13,7 @@ package str;
  * 输出: "s'teL ekat edoCteeL tsetnoc" 
  * 注意：在字符串中，每个单词由单个空格分隔，并且字符串中不会有任何额外的空格。
  **/
-public class ReverseWords {
+public class ReverseWords557 {
 
     /**
      * @param s

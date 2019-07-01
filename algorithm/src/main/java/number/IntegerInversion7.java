@@ -22,7 +22,7 @@ package number;
  * <p>
  * 假设我们的环境只能存储得下 32 位的有符号整数，则其数值范围为 [−231,  231 − 1]。请根据这个假设，如果反转后整数溢出那么就返回 0。
  **/
-public class IntegerInversion {
+public class IntegerInversion7 {
 
     public static int reverse(int x) {
         // 这里是long型，为的是避免超出int界限

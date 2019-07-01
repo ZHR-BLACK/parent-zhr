@@ -28,7 +28,7 @@ import java.util.Set;
  * 输入: [1,1,1,3,3,4,3,2,4,2]
  * 输出: true
  **/
-public class ContainsDuplicate {
+public class ContainsDuplicate217 {
 
     /**
      * @param nums
