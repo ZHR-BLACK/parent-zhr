@@ -1,4 +1,4 @@
-这是研究算法的module
+这是研究算法的module,主要是刷中文版leetcode(力扣)
 
 link包下是链表相关
 number包下是数字相关
