@@ -8,6 +8,7 @@ import java.util.Stack;
  * @ClassName MinStack155
  * @Date 2019-07-04 16:56
  * 155. 最小栈
+ * <p>
  * 设计一个支持 push，pop，top 操作，并能在常数时间内检索到最小元素的栈。
  * <p>
  * push(x) -- 将元素 x 推入栈中。
@@ -30,7 +31,7 @@ public class MinStack155 {
     /**
      * @Date 2019-07-04 17:56
      * Stack.Peek 与 stack.pop 的区别
-     *
+     * <p>
      * 相同点：大家都返回栈顶的值。
      * 不同点：peek 不改变栈的值(不删除栈顶的值)，pop会把栈顶的值删除。
      **/
@@ -57,16 +58,15 @@ public class MinStack155 {
     // 出栈
     public void pop() {
         // 如果stack顶是最小元素,则同时将min_stack顶的元素取出
-        if (stack.pop().equals(min_stack.peek()))
+        if (stack.pop().equals(min_stack.peek())){
             // 取出栈顶的元素
             min_stack.pop();
+        }
     }
-
     public int top() {
         // 查看栈顶元素
         return stack.peek();
     }
-
     public int getMin() {
         return min_stack.peek();
     }

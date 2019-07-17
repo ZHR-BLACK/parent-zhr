@@ -25,7 +25,7 @@ public class IsValid20 {
 
     // Initialize hash map with mappings. This simply makes the code easier to read.
     public IsValid20() {
-        this.mappings = new HashMap<Character, Character>();
+        this.mappings = new HashMap();
         this.mappings.put(')', '(');
         this.mappings.put('}', '{');
         this.mappings.put(']', '[');
@@ -52,7 +52,7 @@ public class IsValid20 {
     public boolean isValid(String s) {
 
         // Initialize a stack to be used in the algorithm.
-        Stack<Character> stack = new Stack<Character>();
+        Stack<Character> stack = new Stack();
 
         int length = s.length();
         for (int i = 0; i < length; i++) {

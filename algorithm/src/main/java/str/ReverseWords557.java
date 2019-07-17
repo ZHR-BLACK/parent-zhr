@@ -19,7 +19,8 @@ public class ReverseWords557 {
      * @param s
      * @return java.lang.String
      * 遇到空格反转前面的字符串
-     * 执行用时：9ms，在所有Java提交中击败了90.19%的用户    内存消耗：47.6MB，在所有Java提交中击败了70.36%的用户
+     * 执行用时：9ms，在所有Java提交中击败了90.19%的用户
+     * 内存消耗：47.6MB，在所有Java提交中击败了70.36%的用户
      * @Date 2019/6/13 17:04
      **/
     public String reverseWords(String s) {
@@ -40,7 +41,7 @@ public class ReverseWords557 {
                     l++;
                     r--;
                 }
-                // 将开始标和结尾标都初始定位到空格后的第一个字符下标处
+                // 将开始标和结尾标都初始定位到空格后的第一个字符下标处,准备开始处理空格后的字符串
                 l = i + 1;
                 r = i + 1;
             } else {
@@ -63,7 +64,8 @@ public class ReverseWords557 {
      * @param s
      * @return java.lang.String
      * 递归反转
-     * 执行用时：13ms，在所有Java提交中击败了74.82%的用户    内存消耗：47.5MB，在所有Java提交中击败了72.58%的用户
+     * 执行用时：13ms，在所有Java提交中击败了74.82%的用户
+     * 内存消耗：47.5MB，在所有Java提交中击败了72.58%的用户
      * @Date 2019/6/13 17:19
      **/
     public String reverseWords2(String s) {
