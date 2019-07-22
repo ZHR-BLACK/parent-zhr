@@ -29,7 +29,8 @@ public class SingleNumber136 {
      * @param nums
      * @return int
      * 异或
-     * 执行用时：1ms，在所有Java提交中击败了99.72%的用户      内存消耗：41.3MB，在所有Java提交中击败了45.94%的用户
+     * 执行用时：1ms，在所有Java提交中击败了99.72%的用户
+     * 内存消耗：41.3MB，在所有Java提交中击败了45.94%的用户
      * 如果我们对 0 和二进制位做 XOR 运算，得到的仍然是这个二进制位,XOR运算即^运算。
      * a ^ 0 = a
      * a ^ 0 = a
@@ -60,7 +61,8 @@ public class SingleNumber136 {
      * @param nums
      * @return int
      * 利用 Hash 表，Time: O(n) Space: O(n)
-     * 执行用时：14ms，在所有Java提交中击败了22.31%的用户     内存消耗：38.4MB，在所有Java提交中击败了96.09%的用户
+     * 执行用时：14ms，在所有Java提交中击败了22.31%的用户
+     * 内存消耗：38.4MB，在所有Java提交中击败了96.09%的用户
      * @Date 2019/6/13 16:41
      **/
     public int singleNumber2(int[] nums) {
