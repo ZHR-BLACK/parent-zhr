@@ -8,6 +8,9 @@ import java.util.concurrent.ThreadLocalRandom;
  * @ClassName TestRandom
  * @Date 2019/6/12 17:12
  * 随机数
+ *
+ * 如果每个线程都维护一个种子变量，则每个线程生成随机数时都根据自己老的种子计算新的种子，并使用新种子更新老的种子，再根据新种子计算随机数，
+ * 就不会存在竞争问题了，这会大大提高并发性能。
  **/
 public class TestRandom {
 
