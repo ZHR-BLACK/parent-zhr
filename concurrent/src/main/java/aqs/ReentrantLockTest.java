@@ -8,7 +8,6 @@ import java.util.concurrent.locks.ReentrantLock;
  * @version 1.0
  * @ClassName ReentrantLockTest
  * @Date 2019-07-31 15:12
- * @description todo
  **/
 public class ReentrantLockTest {
 
