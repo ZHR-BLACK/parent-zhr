@@ -1,8 +1,8 @@
 package stream.demo3;
 
-import demo2.Student;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import stream.demo2.Student;
 
 import java.util.*;
 import java.util.stream.Collectors;

@@ -1,6 +1,7 @@
 package stream.demo3;
 
-import demo2.Student;
+
+import stream.demo2.Student;
 
 import java.util.function.Predicate;
 
