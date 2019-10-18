@@ -18,7 +18,6 @@ public class Test {
      * <p>2、你的好友能同时看到你的变化。</p>
      *
      * <p>根据这个特性，状态模式在日常开发中用的挺多的，尤其是做网站的时候，我们有时希望根据对象的某一属性，区别开他们的一些功能，比如说简单的权限控制等
-     *
      * @param args
      */
     public static void main(String[] args) {

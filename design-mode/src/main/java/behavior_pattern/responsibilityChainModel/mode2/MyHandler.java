@@ -26,8 +26,9 @@ public class MyHandler extends AbstractHandler implements Handler {
     @Override
     public void operator() {
         System.out.println(name + "deal !");
-        if (getHandler() != null)
+        if (getHandler() != null){
             getHandler().operator();
+        }
     }
 
     public static void main(String[] args) {

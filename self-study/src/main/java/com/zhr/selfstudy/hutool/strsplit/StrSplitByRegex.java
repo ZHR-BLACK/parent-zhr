@@ -1,5 +1,6 @@
 package com.zhr.selfstudy.hutool.strsplit;
 
+import cn.hutool.core.text.StrBuilder;
 import cn.hutool.core.text.StrSpliter;
 
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.List;
 public class StrSplitByRegex {
 
     public static void main(String[] args) {
-        StringBuilder sb = new StringBuilder("");
+        StrBuilder sb = new StrBuilder("");
         sb.append("   aaa \n");
         sb.append("     bbb          \n");
         sb.append("ccc  \n");

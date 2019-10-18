@@ -11,34 +11,31 @@ package behavior_pattern.visitor;
  * <li>可达到为一个被访问者动态添加新的操作而无需做其它的修改的效果。</li>
  * <ul>
  * 访问者模式
- * 
  * @author smilesnake
- *
  */
 public class MySubject implements Subject {
 
-	@Override
-	public void accept(Visitor visitor) {
-		visitor.visit(this);
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
+    }
 
-	}
+    @Override
+    public String getSubject() {
+        return "love";
+    }
 
-	@Override
-	public String getSubject() {
-		return "love";
-	}
-/**
- * <p>该模式适用场景：如果我们想为一个现有的类增加新功能，不得不考虑几个事情：</p>
- * <li>1、新功能会不会与现有功能出现兼容性问题?</li>
- * <li>2、以后会不会再需要添加?</li>
- * <li>3、如果类不允许修改代码怎么办?</li>
- * <p>面对这些问题，最好的解决方法就是使用访问者模式，访问者模式适用于数据结构相对稳定的系统，把数据结构和算法解耦，</p>
- * @param args
- */
-	public static void main(String[] args) {
-		Visitor visitor = new MyVisitor();
-		Subject subject = new MySubject();
-		subject.accept(visitor);
-	}
+    /**
+     * <p>该模式适用场景：如果我们想为一个现有的类增加新功能，不得不考虑几个事情：</p>
+     * <li>1、新功能会不会与现有功能出现兼容性问题?</li>
+     * <li>2、以后会不会再需要添加?</li>
+     * <li>3、如果类不允许修改代码怎么办?</li>
+     * <p>面对这些问题，最好的解决方法就是使用访问者模式，访问者模式适用于数据结构相对稳定的系统，把数据结构和算法解耦，</p>
+     */
+    public static void main(String[] args) {
+        Visitor visitor = new MyVisitor();
+        Subject subject = new MySubject();
+        subject.accept(visitor);
+    }
 
 }
