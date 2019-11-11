@@ -35,6 +35,7 @@ public class ContainsDuplicate217 {
      * @return boolean
      * 执行用时：26ms，在所有Java提交中击败了29.13%的用户内存消耗：52.8MB，在所有Java提交中击败了19.03%的用户
      * @Date 2019/6/13 15:36
+     * 利用了Set中不能存相同元素
      **/
     public boolean containsDuplicate(int[] nums) {
         Set<Integer> res = new HashSet();
@@ -49,6 +50,7 @@ public class ContainsDuplicate217 {
      * @return boolean
      * 执行用时：24ms，在所有Java提交中击败了42.52%的用户内存消耗：53.4MB，在所有Java提交中击败了16.86%的用户
      * @Date 2019/6/13 15:40
+     * 将元素存入map中,每次遍历先检查下新元素是否存在map中
      **/
     public boolean containsDuplicate2(int[] nums) {
         HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
@@ -73,6 +75,7 @@ public class ContainsDuplicate217 {
         }
         int min = nums[0];
         int max = nums[0];
+
         for (int i = 0; i < nums.length; i++) {
             max = Math.max(max, nums[i]);
             min = Math.min(min, nums[i]);
@@ -97,6 +100,7 @@ public class ContainsDuplicate217 {
      **/
     public boolean containsDuplicate4(int[] nums) {
         Arrays.sort(nums);
+        // 遍历次数为数组元素个数减1
         for (int i = 0; i < nums.length - 1; i++) {
             if (nums[i] == nums[i + 1]) {
                 return true;

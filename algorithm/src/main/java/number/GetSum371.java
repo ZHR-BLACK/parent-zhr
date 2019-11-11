@@ -11,7 +11,7 @@ package number;
  * 示例 1:
  * 输入: a = 1, b = 2
  * 输出: 3
- *
+ * <p>
  * 示例 2:
  * 输入: a = -2, b = 3
  * 输出: 1
@@ -19,12 +19,12 @@ package number;
 public class GetSum371 {
 
     /**
-     * @Date 2019-07-01 17:07
-     * @param  a
-     * @param  b
+     * @param a
+     * @param b
      * @return int
      * 执行用时：0ms，在所有Java提交中击败了100.00%的用户
      * 内存消耗：32.9MB，在所有Java提交中击败了21.28%的用户
+     * @Date 2019-07-01 17:07
      **/
     public int getSum(int a, int b) {
         int sum, carry;

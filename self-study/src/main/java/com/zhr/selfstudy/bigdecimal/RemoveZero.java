@@ -13,6 +13,6 @@ public class RemoveZero {
 
     public static void main(String[] args) {
         BigDecimal bd = new BigDecimal("56.100000000");
-        System.out.println(bd.stripTrailingZeros().toPlainString());
+        System.out.println(bd.stripTrailingZeros().toPlainString());// 56.1
     }
 }

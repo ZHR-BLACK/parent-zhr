@@ -1,5 +1,7 @@
 package arr;
 
+import java.util.Arrays;
+
 /**
  * @author ZHR
  * @version 1.0
@@ -21,7 +23,8 @@ public class MoveZeroes283 {
      * @param nums
      * @return void
      * 第一次倒序遍历找出0，第二次遍历将0不断交换移到数组尾部
-     * 执行用时：31ms，在所有ava提交中击败了17.79%的用户    内存消耗：37.2MB，在所有Java提交中击败了95.82%的用户
+     * 执行用时：31ms，在所有ava提交中击败了17.79%的用户
+     * 内存消耗：37.2MB，在所有Java提交中击败了95.82%的用户
      * @Date 2019/6/14 10:58
      **/
     public void moveZeroes(int[] nums) {
@@ -47,7 +50,8 @@ public class MoveZeroes283 {
      * 遍历数组，判断是否是0，如果不是0，则将当前与lastNotZero调换位置，lastNotZero++。确保lastNotZero 之前的永远不为0，这样最后所有的0都在最后了。
      * 时间复杂度：O(N) 空间复杂度：O(1)
      * <p>
-     * 执行用时：1ms，在所有Java提交中击败了96.67%的用户     内存消耗：36.4MB，在所有Java提交中击败了97.53%的用户
+     * 执行用时：1ms，在所有Java提交中击败了96.67%的用户
+     * 内存消耗：36.4MB，在所有Java提交中击败了97.53%的用户
      * @Date 2019/6/14 11:03
      **/
     public static void moveZeroes2(int[] nums) {
@@ -66,6 +70,7 @@ public class MoveZeroes283 {
     public static void main(String[] args) {
         int[] nums = {1, 0, 5, 8, 0, 6};
         moveZeroes2(nums);
+        System.out.println("nums = " + Arrays.toString(nums));
     }
 
 }

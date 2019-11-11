@@ -14,7 +14,7 @@ import java.nio.charset.StandardCharsets;
  **/
 public class InputStreamToString {
 
-    public String inputStreamToString(InputStream inputStream) throws IOException {
+    public static String inputStreamToString(InputStream inputStream) throws IOException {
         ByteArrayOutputStream result = new ByteArrayOutputStream();
         byte[] buffer = new byte[1024];
         int length;
@@ -24,7 +24,5 @@ public class InputStreamToString {
         return result.toString(StandardCharsets.UTF_8.name());
     }
 
-    public static void main(String[] args) {
 
-    }
 }
