@@ -29,7 +29,7 @@ public class ReentrantReadWriteLockList {
         }
     }
 
-    // 添加元素,用写锁
+    // 删除元素,用写锁
     public void remove(String e) {
         writeLock.lock();
         try {
@@ -45,7 +45,7 @@ public class ReentrantReadWriteLockList {
         try {
             return array.get(index);
         } finally {
-            readLock.lock();
+            readLock.unlock();
         }
     }
 

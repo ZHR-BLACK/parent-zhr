@@ -12,6 +12,7 @@ import cn.hutool.core.lang.Console;
  * jdk动态代理
  **/
 public class Cat implements Animal {
+
     @Override
     public void eat() {
         Console.log("猫吃鱼");

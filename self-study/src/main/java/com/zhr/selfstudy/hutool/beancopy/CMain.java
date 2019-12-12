@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class C {
+public class CMain {
 
     private String name;
 
@@ -25,10 +25,10 @@ public class C {
 
 
     public static void main(String[] args) {
-        C c = new C();
-        // 复制A的属性值到C中
-        BeanUtil.copyProperties(new A(), c);
-        System.out.println("c = " + c);
-        System.out.println("c = " + c.getB().getPhone());
+        CMain cMain = new CMain();
+        // 复制A的属性值到CMain中
+        BeanUtil.copyProperties(new A(), cMain);
+        System.out.println("c = " + cMain);
+        System.out.println("c = " + cMain.getB().getPhone());
     }
 }

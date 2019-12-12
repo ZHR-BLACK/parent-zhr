@@ -1,5 +1,6 @@
 package com.zhr.selfstudy.hutool.strsplit;
 
+import cn.hutool.core.lang.Console;
 import cn.hutool.core.text.StrSpliter;
 
 import java.util.List;
@@ -30,5 +31,6 @@ public class StrSplit {
         System.out.println("split = " + split);
         List<String> split2 = StrSpliter.split(str1, ',', 0, true, true);
         System.out.println("split2 = " + split2);
+
     }
 }

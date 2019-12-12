@@ -29,7 +29,7 @@ public class CountExample {
         System.out.println("notSafeCount = " + notSafeCount);
     }
 
-    private static void bingfa() throws Exception{
+    private static void bingfa() throws Exception {
         ExecutorService executorService = Executors.newCachedThreadPool();
         //信号量，此处用于控制并发的线程数
         final Semaphore semaphore = new Semaphore(threadTotal);
@@ -41,8 +41,10 @@ public class CountExample {
                     //执行此方法用于获取执行许可，当总计未释放的许可数不超过200时，
                     //允许通行，否则线程阻塞等待，直到获取到许可。
                     semaphore.acquire();
+                    // todo 这里比较的是这两种添加元素的方法的安全性
 //                    add();
                     copyList();
+
                     //释放许可
                     semaphore.release();
                 } catch (Exception e) {
@@ -55,19 +57,27 @@ public class CountExample {
         }
         countDownLatch.await();//线程阻塞，直到闭锁值为0时，阻塞才释放，继续往下执行
         executorService.shutdown();
-        System.out.println("count:" + count);
-        count = 0;
+        // todo 统计是否安全的计数器
+//        System.out.println("count:" + count);
+//        if (count != 5000) {
+//            notSafeCount++;
+//        }
+//        count = 0;
+
+        if(arrayList.size() != 5000){
+            notSafeCount++;
+        }
         System.out.println("size = " + arrayList.size());
         arrayList.clear();
     }
 
-    // 待并发测试的方法
+    // 待并发测试的方法,count++不是原子操作,不安全
     private static void add() {
         count++;
     }
 
-    // 待并发测试的方法
-    private static void copyList(){
+    // 待并发测试的方法,arrayList是线程安全的
+    private static void copyList() {
         arrayList.add("1");
     }
 }

@@ -32,8 +32,5 @@ public class StrSplitByRegex {
         List<String> split = StrSpliter.splitByRegex(text, "\\r?\\n", 0, true, true);
         System.out.println("split = " + split.size());
         System.out.println("split = " + split);
-
-
-
     }
 }

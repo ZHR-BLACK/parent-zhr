@@ -9,10 +9,18 @@ import java.text.SimpleDateFormat;
  * @version 1.0
  * @ClassName TestSimpleDateFormat
  * @Date 2019/6/12 11:38
+ *
+ * 第一种方式：每次使用时new一个SimpleDateFormat的实例，这样可以保证每个实例使用自己的Calendar实例，
+ * 但是每次使用都需要new一个对象，并且使用后由于没有其他引用，又需要回收，开销会很大。
+ *
+ * 第二种方式:使用synchronized来将设置Calendar锁住,防止其不是原子化的操作,
+ * 进行同步意味着多个线程要竞争锁，在高并发场景下这会导致系统响应性能下降。
+ *
  * 第三种方式：使用ThreadLocal，这样每个线程只需要使用一个SimpleDateFormat实例，这相比第一种方式大大节省了对象的创建销毁开销，并且不需要使多个线程同步。
  **/
-public class TestSimpleDateFormat {
+public class ThreadLocalSimpleDateFormatMain {
 
+    // 使用第三种方式来确保使用SimpleDateFormat安全
     // (1)创建threadlocal实例
     static ThreadLocal<DateFormat> safeSdf = ThreadLocal.withInitial(() -> new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"));
 

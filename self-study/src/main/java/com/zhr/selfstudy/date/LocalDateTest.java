@@ -3,6 +3,7 @@ package com.zhr.selfstudy.date;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.Month;
+import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoField;
 
 /**
@@ -36,5 +37,8 @@ public class LocalDateTest {
         System.out.println("dayOfWeek = " + dayOfWeek);
         int dayOfWeek1 = localDate.get(ChronoField.DAY_OF_WEEK);
         System.out.println("dayOfWeek1 = " + dayOfWeek1);
+
+        String format = localDate.format(DateTimeFormatter.BASIC_ISO_DATE);
+        System.out.println("format ********************" + format);
     }
 }

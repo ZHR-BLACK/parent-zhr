@@ -11,6 +11,7 @@ import cn.hutool.core.text.StrBuilder;
  * @ClassName StrBuilderTest
  * @Date 2019-06-28 10:33
  * 测试StrBuilder和StringBuilder构建字符串的性能
+ * 字符串拼接性能
  **/
 public class StrBuilderTest {
 
@@ -33,6 +34,7 @@ public class StrBuilderTest {
             builder.reset();
         }
         Console.log(timer2.interval());
+
     }
 
 }

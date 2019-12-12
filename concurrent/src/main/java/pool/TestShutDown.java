@@ -16,19 +16,29 @@ public class TestShutDown {
     static void asynExecuteOne() {
         ExecutorService executor = Executors.newSingleThreadExecutor();
         executor.execute(() -> {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             System.out.println("--async execute one---");
         });
         // 加上以下代码才会使线程池关闭
-//        executor.shutdown();
+        executor.shutdown();
     }
 
     static void asynExecuteTwo() {
         ExecutorService executor = Executors.newSingleThreadExecutor();
         executor.execute(() -> {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             System.out.println("--async execute two---");
         });
         // 加上以下代码才会使线程池关闭
-//        executor.shutdown();
+        executor.shutdown();
     }
 
 
