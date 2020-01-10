@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+    <!-- 定义：统一的日志输出格式 -->
+    <property name="LOG_FLAG"
+              value="[ %-5level] [%date{yyyy-MM-dd HH:mm:ss.SSS}] [%thread]：%logger{96} [%line] - %msg%n"/>
+    <!-- 定义：统一的日志输出字符集 -->
+    <property name="LOG_ENC" value="UTF-8"/>
+
+
+    <appender name="STDOUT"
+              class="ch.qos.logback.core.ConsoleAppender"> <!-- encoders are assigned the type ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+            <pattern>${LOG_FLAG}</pattern>
+            <charset>${LOG_ENC}</charset>
+        </encoder>
+    </appender>
+
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>

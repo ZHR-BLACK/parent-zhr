@@ -17,29 +17,30 @@ package link;
  **/
 public class ReverseList206 {
 
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
+//    public class ListNode {
+//        int val;
+//        ListNode next;
+//
+//        ListNode(int x) {
+//            val = x;
+//        }
+//    }
     /**
      * @param head
      * @return link.ReverseList206.ListNode
-     * 在遍历列表时，将当前节点的 next 指针改为指向前一个元素。由于节点没有引用其上一个节点，因此必须事先存储其前一个元素。在更改引用之前，还需要另一个指针来存储下一个节点。不要忘记在最后返回新的头引用！
+     * 在遍历列表时，将当前节点的 next 指针改为指向前一个元素。由于节点没有引用其上一个节点，因此必须事先存储其前一个元素。
+     * 在更改引用之前，还需要另一个指针来存储下一个节点。不要忘记在最后返回新的头引用！
      * 时间复杂度：O(n)，假设 nn 是列表的长度，时间复杂度是 O(n)。
      * 空间复杂度：O(1)。
      * @Date 2019-07-02 16:05
      * 执行用时：1ms，在所有Java提交中击败了83.50%的用户
      * 内存消耗：36.4MB，在所有Java提交中击败了55.69%的用户
      **/
-    public ListNode reverseList(ListNode head) {
-        ListNode prev = null;
-        ListNode curr = head;
+    public AssaistUtil.ListNode reverseList(AssaistUtil.ListNode head) {
+        AssaistUtil.ListNode prev = null;
+        AssaistUtil.ListNode curr = head;
         while (curr != null) {
-            ListNode nextTemp = curr.next;
+            AssaistUtil.ListNode nextTemp = curr.next;
             curr.next = prev;
             prev = curr;
             curr = nextTemp;
@@ -57,13 +58,28 @@ public class ReverseList206 {
      * 执行用时：1ms，在所有Java提交中击败了83.50%的用户
      * 内存消耗：35.9MB，在所有Java提交中击败了56.12%的用户
      **/
-    public ListNode reverseList2(ListNode head) {
+    public AssaistUtil.ListNode reverseList2(AssaistUtil.ListNode head) {
         if (head == null || head.next == null) return head;
-        ListNode p = reverseList2(head.next);
+        AssaistUtil.ListNode p = reverseList2(head.next);
         head.next.next = head;
         head.next = null;
         return p;
     }
+
+
+    public static void main(String[] args) {
+
+        int[] arr = {1,2,3,4,5};
+
+        AssaistUtil.ListNode linkedList = AssaistUtil.createLinkedList(arr);
+        AssaistUtil.printLinkedList(linkedList);
+
+        ReverseList206 reverseList206 = new ReverseList206();
+        AssaistUtil.ListNode listNode = reverseList206.reverseList(linkedList);
+        AssaistUtil.printLinkedList(listNode);
+
+    }
+
 
 
 }

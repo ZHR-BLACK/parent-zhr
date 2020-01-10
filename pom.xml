@@ -24,6 +24,7 @@
         <module>concurrent</module>
         <module>automated_test</module>
         <module>jfinal-demo</module>
+        <module>spring-boot</module>
     </modules>
 
     <dependencies>
