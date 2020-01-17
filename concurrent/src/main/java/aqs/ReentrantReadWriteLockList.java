@@ -13,6 +13,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
  **/
 public class ReentrantReadWriteLockList {
 
+    // 线程不安全的list
     private ArrayList<String> array = new ArrayList<>();
     // 独占锁
     private final ReentrantReadWriteLock lock = new ReentrantReadWriteLock();

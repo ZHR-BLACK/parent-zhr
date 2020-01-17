@@ -5,7 +5,7 @@ package thread;
  * @version 1.0
  * @ClassName WaitDemo
  * @Date 2019-12-06 18:18
- * @description todo
+ * @description wait()会阻塞当前线程并释放锁
  **/
 public class WaitDemo {
 

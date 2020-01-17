@@ -16,7 +16,6 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>common</module>
         <module>algorithm</module>
         <module>design-mode</module>
         <module>rabbitmq</module>
@@ -24,7 +23,8 @@
         <module>concurrent</module>
         <module>automated_test</module>
         <module>jfinal-demo</module>
-        <module>spring-boot</module>
+        <module>boot</module>
+        <module>out</module>
     </modules>
 
     <dependencies>

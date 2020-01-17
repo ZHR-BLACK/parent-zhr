@@ -11,7 +11,7 @@ import java.util.List;
  * @version 1.0
  * @ClassName Main
  * @Date 2019-10-17 14:35
- * json 转Record类后的相关用法
+ * json转Record类后的相关用法
  **/
 public class RecordMain {
 

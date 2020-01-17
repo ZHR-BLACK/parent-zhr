@@ -14,8 +14,6 @@ import java.util.TimerTask;
  * Timer是固定的多线程生产单线程消费，但是ScheduledThreadPoolExecutor是可以配置的，
  * 既可以是多线程生产单线程消费也可以是多线程生产多线程消费，所以在日常开发中使用定时器功能时应该优先使用ScheduledThreadPoolExecutor。
  *
- *
- *
  * 当一个Timer运行多个TimerThread时，只要其中一个TimerTask在执行中向run方法外抛出了异常，则其他任务也会自动终止。
  * 原因是一个Timer对应的一个TimerTask中的主要代码处有异常只catch了InterruptedException,如果有其他异常会抛出异常导致程序中断.
  *
