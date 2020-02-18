@@ -20,7 +20,7 @@ public class IntegerDemo {
         Integer in5 = 199;
         Integer in6 = 199;
 
-        System.out.println(i == i1);        // true
+        System.out.println(i == i1);         // true
         System.out.println(i == in1);        // true
         System.out.println(i == in2);        // true
         System.out.println(i == in3);        // true
@@ -31,8 +31,6 @@ public class IntegerDemo {
         System.out.println(in1 == in3);        // false
 
         System.out.println(in3 == in4);        // false
-
-
 
         Integer j1 = 40;
         Integer i2 = 40;

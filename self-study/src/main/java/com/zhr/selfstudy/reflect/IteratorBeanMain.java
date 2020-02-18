@@ -14,6 +14,7 @@ import java.util.Map;
  * @ClassName IteratorBean
  * @Date 2019-10-31 11:21
  * @description 遍历bean属性值到Map中, key为属性名
+ *
  **/
 @Data
 @AllArgsConstructor

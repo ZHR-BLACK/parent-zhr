@@ -25,7 +25,7 @@ public class CatchFinallyTest {
         } catch (Exception e) {
             return a + 2;
         } finally {
-            return a + 1;
+            return a + 1;// 到此结束
         }
     }
     // finally是在return后面的表达式运算之后执行的，此时并没有返回运算之后的值，而是把值保存起来，

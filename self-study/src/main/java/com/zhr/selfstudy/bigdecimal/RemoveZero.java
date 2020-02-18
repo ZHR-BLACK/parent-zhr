@@ -15,4 +15,5 @@ public class RemoveZero {
         BigDecimal bd = new BigDecimal("56.100000000");
         System.out.println(bd.stripTrailingZeros().toPlainString());// 56.1
     }
+
 }

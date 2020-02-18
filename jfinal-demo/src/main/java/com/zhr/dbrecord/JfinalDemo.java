@@ -16,6 +16,8 @@ import java.util.List;
  * @ClassName JfinalDemo
  * @Date 2019-11-07 10:05
  * @description 测试Db操作数据库
+ *
+ * 修改表数据
  **/
 public class JfinalDemo {
 

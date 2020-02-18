@@ -8,6 +8,7 @@ package com.zhr.selfstudy.javadoc;
  * @version 1.0
  * @Date 2019/6/4 14:48
  * @since 1.6
+ * @javadoc 这是javadoc文档
  *
  **/
 public class Documentation {

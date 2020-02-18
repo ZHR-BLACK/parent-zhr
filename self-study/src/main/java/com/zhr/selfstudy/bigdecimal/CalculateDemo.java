@@ -11,6 +11,7 @@ import java.math.RoundingMode;
  * @ClassName CalculateDemo
  * @Date 2019-11-04 10:54
  * @description BigDecimal的相关计算
+ * 设定保留小数
  **/
 public class CalculateDemo {
 
@@ -23,11 +24,9 @@ public class CalculateDemo {
         boolean compare = compare("12.50", "36.50");
         System.out.println("compare = " + compare);
 
-
         PrintDiy.printSign("取余数,并设定小数位几位");
         BigDecimal remainder = remainder(new BigDecimal("20"), new BigDecimal("6"), 2);
         System.out.println("remainder = " + remainder);
-
     }
 
     // 比较大小

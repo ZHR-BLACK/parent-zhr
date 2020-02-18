@@ -12,6 +12,7 @@ import java.util.concurrent.TimeUnit;
  * @ClassName RetryDemo
  * @Date 2019-10-29 18:18
  * @description 重试demo
+ * RetryerBuilder 重试设置
  * <dependency>
  * <groupId>com.github.rholder</groupId>
  * <artifactId>guava-retrying</artifactId>

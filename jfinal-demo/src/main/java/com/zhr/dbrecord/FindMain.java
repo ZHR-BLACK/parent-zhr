@@ -37,7 +37,7 @@ public class FindMain {
         String nickName = Db.queryStr("select name from student where id = ?", 3);
         System.out.println("nickName ********************" + nickName);
 
-        // 查找
+        // 根据多个条件查找
         Record record = Db.findByIds("student", "id,name", 1, "张三");
         System.out.println("record ********************" + record);
 
@@ -46,7 +46,7 @@ public class FindMain {
 
         // 设置查询参数
         Kv cond = Kv.by("age", 16).set("name", "宋五");
-        //根据标识将参数封装进sql模板并返回完整的sql
+        // 根据标识将参数封装进sql模板并返回完整的sql
         SqlPara sqlpara = Db.getSqlPara("self.findByNameAndAge", cond);
         // 执行查询
         List<Record> list = Db.find(sqlpara);

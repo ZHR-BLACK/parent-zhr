@@ -23,7 +23,7 @@ public class DemoConfig extends JFinalConfig {
      *      打开浏览器在地址栏中输入: http://localhost/hello，输出内容为Hello JFinal World证明项目框架搭建完成
      */
     public static void main(String[] args) {
-        UndertowServer.start(DemoConfig.class, 80, true);
+        UndertowServer.start(DemoConfig.class, 8020, true);
     }
 
     public void configConstant(Constants me) {

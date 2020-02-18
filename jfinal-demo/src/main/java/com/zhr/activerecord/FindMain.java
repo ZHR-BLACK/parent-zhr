@@ -10,7 +10,7 @@ import java.util.List;
  * @version 1.0
  * @ClassName Main
  * @Date 2019-11-07 15:50
- * @description todo
+ * @description 通过dao修改,查找
  **/
 public class FindMain {
 
@@ -18,7 +18,7 @@ public class FindMain {
         DatabaseInit.init();
 
         // 查询id值为25的User将其name属性改为James并更新到数据库
-        User.dao.findById(3).set("name", "James").update();
+        User.dao.findById(2).set("name", "James").update();
 
         // 查询id值为25的user, 且仅仅取name与age两个字段的值
         User user = User.dao.findByIdLoadColumns(3, "name, age");

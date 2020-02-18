@@ -1,5 +1,8 @@
 package com.zhr.selfstudy;
 
+import cn.hutool.core.date.DateUtil;
+
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -22,5 +25,11 @@ public class Test {
         if(ma == null){
             System.out.println("ma ********************" + ma);
         }
+
+
+        Date date = new Date();
+        String format = DateUtil.format(date, "yyyy-MM-dd");
+        System.out.println("date ********************" + format);
+
     }
 }

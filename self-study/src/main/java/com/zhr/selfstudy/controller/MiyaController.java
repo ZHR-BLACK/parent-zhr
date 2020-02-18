@@ -9,11 +9,12 @@ import org.springframework.web.bind.annotation.RestController;
  * @version 1.0
  * @ClassName MiyaController
  * @Date 2019/5/15 10:15
- * @description todo
+ * @description 从配置文件中读取属性值
  **/
 @RestController
 public class MiyaController {
 
+    // 从配置文件中读取该属性值
     @Value("${my.name}")
     private String name;
     @Value("${my.age}")

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @version 1.0
  * @ClassName FirstController
  * @Date 2019/5/14 18:28
- * @description todo
+ * @description controller相关demo
  **/
 @RestController
 public class FirstController {
