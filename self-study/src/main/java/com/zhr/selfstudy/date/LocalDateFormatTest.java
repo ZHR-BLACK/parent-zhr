@@ -1,5 +1,8 @@
 package com.zhr.selfstudy.date;
 
+import org.joda.time.DateTime;
+import org.joda.time.format.DateTimeFormat;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -8,7 +11,7 @@ import java.time.format.DateTimeFormatter;
  * @version 1.0
  * @ClassName LocalDateFormatTest
  * @Date 2019-10-21 10:53
- * @description todo
+ * @description 日期格式化
  **/
 public class LocalDateFormatTest {
 
@@ -26,9 +29,11 @@ public class LocalDateFormatTest {
         String s3 = localDate.format(dateTimeFormatter);
         System.out.println("s3 = " + s3);
 
-
         // 解析时间
         LocalDate localDate1 = LocalDate.parse("20190910", DateTimeFormatter.BASIC_ISO_DATE);
+        System.out.println("localDate1 ********************" + localDate1);
         LocalDate localDate2 = LocalDate.parse("2019-09-10", DateTimeFormatter.ISO_LOCAL_DATE);
+        System.out.println("localDate2 ********************" + localDate2);
+
     }
 }

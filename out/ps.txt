@@ -1,0 +1,3 @@
+用于接收外部通知的项目,是一个springboot搭建的项目
+部署在tomcat中要ServletInitializer类配置
+如外部http请求我们某些信息

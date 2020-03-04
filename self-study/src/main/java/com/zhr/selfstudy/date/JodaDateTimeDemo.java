@@ -91,8 +91,8 @@ public class JodaDateTimeDemo {
 
 
         PrintDiy.printSign("计算间隔和区间");
-        DateTime begin = new DateTime("2015-02-01");
-        DateTime end = new DateTime("2016-05-01");
+        DateTime begin = new DateTime("2012-03-01");
+        DateTime end = new DateTime("2020-05-17");
         //计算区间毫秒数
         Duration d = new Duration(begin, end);
         long millis2 = d.getMillis();
@@ -101,6 +101,10 @@ public class JodaDateTimeDemo {
         Period p = new Period(begin, end, PeriodType.days());
         int days = p.getDays();
         System.out.println("区间天数一共days = " + days);
+
+        Period p2 = new Period(begin, end, PeriodType.years());
+        int years = p2.getYears();
+        System.out.println("区间天数一共years = " + years);
 
         //计算特定日期是否在该区间内
         Interval interval = new Interval(begin, end);

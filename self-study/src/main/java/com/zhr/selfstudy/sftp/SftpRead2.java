@@ -20,7 +20,9 @@ import java.util.List;
  **/
 public class SftpRead2 {
 
+    // 目录
     public static final String directory = "/home/zhr";
+    // 要读取的文件名
     public static final String fileName = "aa.txt";
 
     public static void main(String[] args) {
