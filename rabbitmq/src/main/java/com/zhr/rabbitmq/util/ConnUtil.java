@@ -19,8 +19,8 @@ public class ConnUtil {
         ConnectionFactory factory = new ConnectionFactory();
         factory.setUsername("root");
         factory.setPassword("root");
-        factory.setVirtualHost("myVirtual");
-        factory.setHost("39.97.112.224");
+        factory.setVirtualHost("/");
+        factory.setHost("111.231.107.12");
         factory.setPort(5672);
         return factory.newConnection();
     }

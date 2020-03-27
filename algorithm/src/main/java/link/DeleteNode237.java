@@ -48,4 +48,6 @@ public class DeleteNode237 {
         // 将节点后一个的后一个节点赋给该节点的下一个节点
         node.next = node.next.next;
     }
+
+
 }

@@ -20,7 +20,6 @@ public class ReUtilTest {
         String resultExtractMulti = ReUtil.extractMulti("(.*?)年(.*?)月", "2013年5月", "$1-$2");
         System.out.println("resultExtractMulti = " + resultExtractMulti);
 
-
         List<String> resultFindAll = ReUtil.findAll("\\w{2}", "ZZZaaa", 0, new ArrayList<String>());
         ArrayList<String> expected = CollectionUtil.newArrayList("ZZ", "Za", "aa");
         System.out.println("expected = " + expected);
