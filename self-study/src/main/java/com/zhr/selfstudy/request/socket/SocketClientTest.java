@@ -14,7 +14,7 @@ import java.net.Socket;
 public class SocketClientTest {
 
     private static final String HOST = "127.0.0.1";
-    private static final int PORT = 5209;
+    private static final int PORT = 6033;
 
     private static void test() {
         Socket socket;

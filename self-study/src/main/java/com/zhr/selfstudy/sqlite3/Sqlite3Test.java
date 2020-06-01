@@ -14,11 +14,9 @@ import java.sql.*;
  **/
 public class Sqlite3Test {
 
-
     public static void main(String args[]) throws SQLException, FileNotFoundException, ClassNotFoundException {
         JSONObject object = SqliteHelper.executeQueryOne("select * from student where name = '张静'", "zhr");
         System.out.println("object ********************" + object);
-
 
     }
 

@@ -50,4 +50,10 @@ public class HexStrUtil {
         return new String(bytes);
     }
 
+    public static void main(String[] args) {
+        String s = "sadauSADFASqhzxczxcwiuhqeuw";
+        String s1 = str2HexStr(s);
+        System.out.println("s1 ********************" + s1);
+    }
+
 }

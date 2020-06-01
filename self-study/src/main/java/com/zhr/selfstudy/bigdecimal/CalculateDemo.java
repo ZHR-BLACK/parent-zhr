@@ -18,15 +18,15 @@ public class CalculateDemo {
     public static void main(String[] args) {
         PrintDiy.printSign("计算后四舍五入保留两位小数");
         BigDecimal bigDecimal = new BigDecimal("10.50").multiply(new BigDecimal("10.00")).setScale(2, RoundingMode.HALF_UP);
-        System.out.println("bigDecimal = " + bigDecimal);
+        System.out.println("bigDecimal = " + bigDecimal);//105.00
 
         PrintDiy.printSign("比较两数大小");
         boolean compare = compare("12.50", "36.50");
-        System.out.println("compare = " + compare);
+        System.out.println("compare = " + compare);// false
 
         PrintDiy.printSign("取余数,并设定小数位几位");
         BigDecimal remainder = remainder(new BigDecimal("20"), new BigDecimal("6"), 2);
-        System.out.println("remainder = " + remainder);
+        System.out.println("remainder = " + remainder);// 2.00
     }
 
     // 比较大小

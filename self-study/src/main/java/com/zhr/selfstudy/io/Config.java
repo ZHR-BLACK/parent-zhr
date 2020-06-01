@@ -1,10 +1,10 @@
 package com.zhr.selfstudy.io;
 
-import java.io.*;
-import java.util.Properties;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.io.*;
+import java.util.Properties;
 
 /**
  * @author ZHR
@@ -27,9 +27,9 @@ public class Config {
             // 或者
 //            properties.load(Config.class.getResourceAsStream("/application.properties"));
             //获取路径
-            String path = Config.class.getResource("/application.properties").getPath();
-            logger.info("path:" + path);
-            File file = new File(path);
+//            String path = Config.class.getResource("/application.properties").getPath();
+//            logger.info("path:" + path);
+//            File file = new File(path);
 //            String abPath = file.getAbsolutePath();
 
             // 读取系统外配置文件 (即Jar包外文件) --- 外部工程引用该Jar包时需要在工程下创建config目录存放配置文件

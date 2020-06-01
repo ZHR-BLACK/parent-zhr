@@ -26,11 +26,13 @@ public class ExcelWrite {
         String path = "C:/Users/ZHR/Desktop/" + RandomUtil.randomNumbers(10) + ".xlsx";
 
         Workbook wb = new HSSFWorkbook();
+        // 创建sheet页
         Sheet sheet = wb.createSheet();
+        // 创建第一行
         Row row = sheet.createRow(0);
         row.createCell(0, CellType.STRING).setCellValue("企业编号");
         row.createCell(1, CellType.STRING).setCellValue("企业账号");
-
+        // 第二行
         Row row2 = sheet.createRow(1);
         row2.createCell(0, CellType.STRING).setCellValue("11111111111");
         row2.createCell(1, CellType.STRING).setCellValue("222222222222");

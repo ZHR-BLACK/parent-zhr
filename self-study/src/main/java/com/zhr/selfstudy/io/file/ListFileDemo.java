@@ -1,4 +1,4 @@
-package com.zhr.selfstudy.io;
+package com.zhr.selfstudy.io.file;
 
 import java.io.File;
 

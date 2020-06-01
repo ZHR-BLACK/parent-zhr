@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 /**
  * @author ZHR
  * @version 1.0
@@ -20,5 +22,7 @@ public class A {
 
     private int age = 6;
 
-    private B b = new B();
+    private B b;
+
+    private List<B> bs;
 }

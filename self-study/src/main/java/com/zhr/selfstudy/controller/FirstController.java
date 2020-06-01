@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @ClassName FirstController
  * @Date 2019/5/14 18:28
  * @description controller相关demo
+ * @RestController和@RequestMapping的使用
  **/
 @RestController
 public class FirstController {

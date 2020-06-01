@@ -7,7 +7,8 @@ import java.math.BigDecimal;
  * @version 1.0
  * @ClassName RemoveZero
  * @Date 2019-10-17 16:12
- * 去掉BigDecimal后无用的零
+ * 去掉数字型字符串后面无用的0
+ * 去掉BigDecimal后无用的0
  **/
 public class RemoveZero {
 

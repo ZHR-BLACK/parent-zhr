@@ -22,7 +22,6 @@ public class IntegerDemo {
 
         System.out.println(i == i1);         // true
         System.out.println(i == in1);        // true
-        System.out.println(i == in2);        // true
         System.out.println(i == in3);        // true
 
         System.out.println(in1 == in2);        // true
@@ -42,6 +41,6 @@ public class IntegerDemo {
         System.out.println("i1=i2 \t" + (j1 == i2));// true
         System.out.println("i1=i2+i3 \t" + (j1 == i2 + i3));// true
         System.out.println("i4=i5 \t" + (i4 == i5));// false
-        System.out.println("i4=i5+i6 \t" + (i4 == i5 + i6));// true
+        System.out.println("i4=i5+i6 \t" + (i4 == i5 + i6));// true,运算后会变为基本类型值的比较
     }
 }
