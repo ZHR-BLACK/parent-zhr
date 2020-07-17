@@ -1,5 +1,7 @@
 package unsafe;
 
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
@@ -40,5 +42,6 @@ public class AtomicLongDemo {
         thread2.join();
 
         System.out.println("count = " + atomicLong.get());
+
     }
 }
