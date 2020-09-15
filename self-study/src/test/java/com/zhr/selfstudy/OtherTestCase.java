@@ -1,30 +1,24 @@
 package com.zhr.selfstudy;
 
-import java.util.UUID;
+import com.jfinal.ext.kit.DateKit;
+
+import java.util.Date;
 
 /**
  * @author ZHR
  * @version 1.0
- * @ClassName OtherTestCase
- * @Date 2019-07-03 10:39
- * @description todo
  **/
 public class OtherTestCase {
 
-    public static String uuid() {
-        return UUID.randomUUID().toString().replaceAll("-", "");
-    }
-
     public static void main(String[] args) {
 
-        while (true) {
-            System.out.println("uuid = " + uuid());
+        String now = DateKit.toStr(new Date(), "yyyyMMddHHmmss");
+        String key = String.format("billseqno:%s", now);
+        System.out.println("key==================" + key);
 
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
+        Long ls = 123213123123123L;
+        String format = String.format("%04x", ls);
+        System.out.println("format==================" + format);
+
     }
 }

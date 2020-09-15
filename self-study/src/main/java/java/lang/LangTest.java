@@ -1,5 +1,7 @@
 package java.lang;
 
+import java.util.concurrent.ConcurrentHashMap;
+
 /**
  * @author ZHR
  * @version 1.0

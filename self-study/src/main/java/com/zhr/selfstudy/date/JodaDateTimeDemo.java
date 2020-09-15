@@ -41,7 +41,6 @@ public class JodaDateTimeDemo {
         DateTime dateTime = DateTime.parse("2015-12-21 23:22:45", format);
         System.out.println(dateTime.toString("yyyy/MM/dd HH:mm:ss EE"));
 
-
         System.out.println("***********************获取时间参数**********************");
         // with开头的方法（比如：withYear）：用来设置DateTime实例的某个时间。因为DateTime是不可变对象，所以没有提供setter方法可供使用，with方法也没有改变原有的对象，而是返回了设置后的一个副本对象。
         // plus/minus开头的方法（比如：plusDay, minusMonths）：用来返回在DateTime实例上增加或减少一段时间后的实例。
@@ -75,7 +74,6 @@ public class JodaDateTimeDemo {
         dt = dt.minusMinutes(-30);// 加半个小时
         System.out.println(dt.toString("yyyy-MM-dd HH:mm:ss"));
 
-
         System.out.println("********************日期比较*************************");
         DateTime d1 = new DateTime("2015-10-01");
         DateTime d2 = new DateTime("2016-02-01");
@@ -89,10 +87,9 @@ public class JodaDateTimeDemo {
         boolean f2 = d1.isBefore(d2);
         boolean f3 = d1.isEqual(d2);
 
-
         PrintDiy.printSign("计算间隔和区间");
         DateTime begin = new DateTime("2012-03-01");
-        DateTime end = new DateTime("2020-05-21");
+        DateTime end = new DateTime("2020-08-25");
         //计算区间毫秒数
 //        Duration d = new Duration(begin, end);
 //        long millis2 = d.getMillis();
@@ -125,6 +122,5 @@ public class JodaDateTimeDemo {
         LocalDate newYear = localDate.plusYears(1).withDayOfYear(1);
         Days days1 = Days.daysBetween(localDate, newYear);
         System.out.println("days1 = " + days1.getDays());
-
     }
 }

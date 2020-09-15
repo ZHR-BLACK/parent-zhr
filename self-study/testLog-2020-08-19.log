@@ -1,0 +1,578 @@
+16:40:39.095 [ERROR] [hutool-cron-1] [cn.hutool.cron.listener.TaskListenerManager] null
+cn.hutool.cron.CronException: null
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:65)
+	at cn.hutool.cron.TaskExecutor.run(TaskExecutor.java:41)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cn.hutool.core.util.ReflectUtil.invoke(ReflectUtil.java:863)
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:63)
+	... 4 common frames omitted
+Caused by: java.lang.ArithmeticException: / by zero
+	at com.zhr.selfstudy.hutool.cron.TestJob.run(TestJob.java:16)
+	... 10 common frames omitted
+16:40:40.018 [ERROR] [hutool-cron-2] [cn.hutool.cron.listener.TaskListenerManager] null
+cn.hutool.cron.CronException: null
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:65)
+	at cn.hutool.cron.TaskExecutor.run(TaskExecutor.java:41)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cn.hutool.core.util.ReflectUtil.invoke(ReflectUtil.java:863)
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:63)
+	... 4 common frames omitted
+Caused by: java.lang.ArithmeticException: / by zero
+	at com.zhr.selfstudy.hutool.cron.TestJob.run(TestJob.java:16)
+	... 10 common frames omitted
+16:40:41.001 [ERROR] [hutool-cron-0] [cn.hutool.cron.listener.TaskListenerManager] null
+cn.hutool.cron.CronException: null
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:65)
+	at cn.hutool.cron.TaskExecutor.run(TaskExecutor.java:41)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cn.hutool.core.util.ReflectUtil.invoke(ReflectUtil.java:863)
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:63)
+	... 4 common frames omitted
+Caused by: java.lang.ArithmeticException: / by zero
+	at com.zhr.selfstudy.hutool.cron.TestJob.run(TestJob.java:16)
+	... 10 common frames omitted
+16:40:42.000 [ERROR] [hutool-cron-1] [cn.hutool.cron.listener.TaskListenerManager] null
+cn.hutool.cron.CronException: null
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:65)
+	at cn.hutool.cron.TaskExecutor.run(TaskExecutor.java:41)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cn.hutool.core.util.ReflectUtil.invoke(ReflectUtil.java:863)
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:63)
+	... 4 common frames omitted
+Caused by: java.lang.ArithmeticException: / by zero
+	at com.zhr.selfstudy.hutool.cron.TestJob.run(TestJob.java:16)
+	... 10 common frames omitted
+16:40:43.001 [ERROR] [hutool-cron-2] [cn.hutool.cron.listener.TaskListenerManager] null
+cn.hutool.cron.CronException: null
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:65)
+	at cn.hutool.cron.TaskExecutor.run(TaskExecutor.java:41)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cn.hutool.core.util.ReflectUtil.invoke(ReflectUtil.java:863)
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:63)
+	... 4 common frames omitted
+Caused by: java.lang.ArithmeticException: / by zero
+	at com.zhr.selfstudy.hutool.cron.TestJob.run(TestJob.java:16)
+	... 10 common frames omitted
+16:40:44.003 [ERROR] [hutool-cron-1] [cn.hutool.cron.listener.TaskListenerManager] null
+cn.hutool.cron.CronException: null
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:65)
+	at cn.hutool.cron.TaskExecutor.run(TaskExecutor.java:41)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cn.hutool.core.util.ReflectUtil.invoke(ReflectUtil.java:863)
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:63)
+	... 4 common frames omitted
+Caused by: java.lang.ArithmeticException: / by zero
+	at com.zhr.selfstudy.hutool.cron.TestJob.run(TestJob.java:16)
+	... 10 common frames omitted
+16:40:45.001 [ERROR] [hutool-cron-2] [cn.hutool.cron.listener.TaskListenerManager] null
+cn.hutool.cron.CronException: null
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:65)
+	at cn.hutool.cron.TaskExecutor.run(TaskExecutor.java:41)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cn.hutool.core.util.ReflectUtil.invoke(ReflectUtil.java:863)
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:63)
+	... 4 common frames omitted
+Caused by: java.lang.ArithmeticException: / by zero
+	at com.zhr.selfstudy.hutool.cron.TestJob.run(TestJob.java:16)
+	... 10 common frames omitted
+16:40:46.001 [ERROR] [hutool-cron-0] [cn.hutool.cron.listener.TaskListenerManager] null
+cn.hutool.cron.CronException: null
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:65)
+	at cn.hutool.cron.TaskExecutor.run(TaskExecutor.java:41)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cn.hutool.core.util.ReflectUtil.invoke(ReflectUtil.java:863)
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:63)
+	... 4 common frames omitted
+Caused by: java.lang.ArithmeticException: / by zero
+	at com.zhr.selfstudy.hutool.cron.TestJob.run(TestJob.java:16)
+	... 10 common frames omitted
+16:40:47.002 [ERROR] [hutool-cron-1] [cn.hutool.cron.listener.TaskListenerManager] null
+cn.hutool.cron.CronException: null
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:65)
+	at cn.hutool.cron.TaskExecutor.run(TaskExecutor.java:41)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cn.hutool.core.util.ReflectUtil.invoke(ReflectUtil.java:863)
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:63)
+	... 4 common frames omitted
+Caused by: java.lang.ArithmeticException: / by zero
+	at com.zhr.selfstudy.hutool.cron.TestJob.run(TestJob.java:16)
+	... 10 common frames omitted
+16:40:48.001 [ERROR] [hutool-cron-2] [cn.hutool.cron.listener.TaskListenerManager] null
+cn.hutool.cron.CronException: null
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:65)
+	at cn.hutool.cron.TaskExecutor.run(TaskExecutor.java:41)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cn.hutool.core.util.ReflectUtil.invoke(ReflectUtil.java:863)
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:63)
+	... 4 common frames omitted
+Caused by: java.lang.ArithmeticException: / by zero
+	at com.zhr.selfstudy.hutool.cron.TestJob.run(TestJob.java:16)
+	... 10 common frames omitted
+16:40:49.001 [ERROR] [hutool-cron-0] [cn.hutool.cron.listener.TaskListenerManager] null
+cn.hutool.cron.CronException: null
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:65)
+	at cn.hutool.cron.TaskExecutor.run(TaskExecutor.java:41)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cn.hutool.core.util.ReflectUtil.invoke(ReflectUtil.java:863)
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:63)
+	... 4 common frames omitted
+Caused by: java.lang.ArithmeticException: / by zero
+	at com.zhr.selfstudy.hutool.cron.TestJob.run(TestJob.java:16)
+	... 10 common frames omitted
+16:40:50.000 [ERROR] [hutool-cron-2] [cn.hutool.cron.listener.TaskListenerManager] null
+cn.hutool.cron.CronException: null
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:65)
+	at cn.hutool.cron.TaskExecutor.run(TaskExecutor.java:41)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cn.hutool.core.util.ReflectUtil.invoke(ReflectUtil.java:863)
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:63)
+	... 4 common frames omitted
+Caused by: java.lang.ArithmeticException: / by zero
+	at com.zhr.selfstudy.hutool.cron.TestJob.run(TestJob.java:16)
+	... 10 common frames omitted
+16:40:51.002 [ERROR] [hutool-cron-0] [cn.hutool.cron.listener.TaskListenerManager] null
+cn.hutool.cron.CronException: null
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:65)
+	at cn.hutool.cron.TaskExecutor.run(TaskExecutor.java:41)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cn.hutool.core.util.ReflectUtil.invoke(ReflectUtil.java:863)
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:63)
+	... 4 common frames omitted
+Caused by: java.lang.ArithmeticException: / by zero
+	at com.zhr.selfstudy.hutool.cron.TestJob.run(TestJob.java:16)
+	... 10 common frames omitted
+16:40:52.001 [ERROR] [hutool-cron-1] [cn.hutool.cron.listener.TaskListenerManager] null
+cn.hutool.cron.CronException: null
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:65)
+	at cn.hutool.cron.TaskExecutor.run(TaskExecutor.java:41)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cn.hutool.core.util.ReflectUtil.invoke(ReflectUtil.java:863)
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:63)
+	... 4 common frames omitted
+Caused by: java.lang.ArithmeticException: / by zero
+	at com.zhr.selfstudy.hutool.cron.TestJob.run(TestJob.java:16)
+	... 10 common frames omitted
+16:40:53.001 [ERROR] [hutool-cron-1] [cn.hutool.cron.listener.TaskListenerManager] null
+cn.hutool.cron.CronException: null
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:65)
+	at cn.hutool.cron.TaskExecutor.run(TaskExecutor.java:41)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cn.hutool.core.util.ReflectUtil.invoke(ReflectUtil.java:863)
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:63)
+	... 4 common frames omitted
+Caused by: java.lang.ArithmeticException: / by zero
+	at com.zhr.selfstudy.hutool.cron.TestJob.run(TestJob.java:16)
+	... 10 common frames omitted
+16:40:54.001 [ERROR] [hutool-cron-0] [cn.hutool.cron.listener.TaskListenerManager] null
+cn.hutool.cron.CronException: null
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:65)
+	at cn.hutool.cron.TaskExecutor.run(TaskExecutor.java:41)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cn.hutool.core.util.ReflectUtil.invoke(ReflectUtil.java:863)
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:63)
+	... 4 common frames omitted
+Caused by: java.lang.ArithmeticException: / by zero
+	at com.zhr.selfstudy.hutool.cron.TestJob.run(TestJob.java:16)
+	... 10 common frames omitted
+16:40:55.001 [ERROR] [hutool-cron-2] [cn.hutool.cron.listener.TaskListenerManager] null
+cn.hutool.cron.CronException: null
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:65)
+	at cn.hutool.cron.TaskExecutor.run(TaskExecutor.java:41)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cn.hutool.core.util.ReflectUtil.invoke(ReflectUtil.java:863)
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:63)
+	... 4 common frames omitted
+Caused by: java.lang.ArithmeticException: / by zero
+	at com.zhr.selfstudy.hutool.cron.TestJob.run(TestJob.java:16)
+	... 9 common frames omitted
+16:40:56.002 [ERROR] [hutool-cron-1] [cn.hutool.cron.listener.TaskListenerManager] null
+cn.hutool.cron.CronException: null
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:65)
+	at cn.hutool.cron.TaskExecutor.run(TaskExecutor.java:41)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cn.hutool.core.util.ReflectUtil.invoke(ReflectUtil.java:863)
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:63)
+	... 4 common frames omitted
+Caused by: java.lang.ArithmeticException: / by zero
+	at com.zhr.selfstudy.hutool.cron.TestJob.run(TestJob.java:16)
+	... 9 common frames omitted
+16:40:57.000 [ERROR] [hutool-cron-0] [cn.hutool.cron.listener.TaskListenerManager] null
+cn.hutool.cron.CronException: null
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:65)
+	at cn.hutool.cron.TaskExecutor.run(TaskExecutor.java:41)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cn.hutool.core.util.ReflectUtil.invoke(ReflectUtil.java:863)
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:63)
+	... 4 common frames omitted
+Caused by: java.lang.ArithmeticException: / by zero
+	at com.zhr.selfstudy.hutool.cron.TestJob.run(TestJob.java:16)
+	... 9 common frames omitted
+16:40:58.002 [ERROR] [hutool-cron-2] [cn.hutool.cron.listener.TaskListenerManager] null
+cn.hutool.cron.CronException: null
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:65)
+	at cn.hutool.cron.TaskExecutor.run(TaskExecutor.java:41)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cn.hutool.core.util.ReflectUtil.invoke(ReflectUtil.java:863)
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:63)
+	... 4 common frames omitted
+Caused by: java.lang.ArithmeticException: / by zero
+	at com.zhr.selfstudy.hutool.cron.TestJob.run(TestJob.java:16)
+	... 9 common frames omitted
+16:40:59.002 [ERROR] [hutool-cron-1] [cn.hutool.cron.listener.TaskListenerManager] null
+cn.hutool.cron.CronException: null
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:65)
+	at cn.hutool.cron.TaskExecutor.run(TaskExecutor.java:41)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cn.hutool.core.util.ReflectUtil.invoke(ReflectUtil.java:863)
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:63)
+	... 4 common frames omitted
+Caused by: java.lang.ArithmeticException: / by zero
+	at com.zhr.selfstudy.hutool.cron.TestJob.run(TestJob.java:16)
+	... 9 common frames omitted
+16:41:00.004 [ERROR] [hutool-cron-0] [cn.hutool.cron.listener.TaskListenerManager] null
+cn.hutool.cron.CronException: null
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:65)
+	at cn.hutool.cron.TaskExecutor.run(TaskExecutor.java:41)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cn.hutool.core.util.ReflectUtil.invoke(ReflectUtil.java:863)
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:63)
+	... 4 common frames omitted
+Caused by: java.lang.ArithmeticException: / by zero
+	at com.zhr.selfstudy.hutool.cron.TestJob.run(TestJob.java:16)
+	... 9 common frames omitted
+16:41:01.000 [ERROR] [hutool-cron-2] [cn.hutool.cron.listener.TaskListenerManager] null
+cn.hutool.cron.CronException: null
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:65)
+	at cn.hutool.cron.TaskExecutor.run(TaskExecutor.java:41)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cn.hutool.core.util.ReflectUtil.invoke(ReflectUtil.java:863)
+	at cn.hutool.cron.task.InvokeTask.execute(InvokeTask.java:63)
+	... 4 common frames omitted
+Caused by: java.lang.ArithmeticException: / by zero
+	at com.zhr.selfstudy.hutool.cron.TestJob.run(TestJob.java:16)
+	... 9 common frames omitted
+16:58:23.394 [INFO ] [main] [org.quartz.impl.StdSchedulerFactory] Using default implementation for ThreadExecutor
+16:58:23.400 [INFO ] [main] [org.quartz.simpl.SimpleThreadPool] Job execution threads will use class loader of thread: main
+16:58:23.418 [INFO ] [main] [org.quartz.core.SchedulerSignalerImpl] Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+16:58:23.419 [INFO ] [main] [org.quartz.core.QuartzScheduler] Quartz Scheduler v.2.3.0 created.
+16:58:23.420 [INFO ] [main] [org.quartz.simpl.RAMJobStore] RAMJobStore initialized.
+16:58:23.421 [INFO ] [main] [org.quartz.core.QuartzScheduler] Scheduler meta-data: Quartz Scheduler (v2.3.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+16:58:23.421 [INFO ] [main] [org.quartz.impl.StdSchedulerFactory] Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+16:58:23.422 [INFO ] [main] [org.quartz.impl.StdSchedulerFactory] Quartz scheduler version: 2.3.0
+16:59:25.205 [INFO ] [main] [org.quartz.impl.StdSchedulerFactory] Using default implementation for ThreadExecutor
+16:59:25.212 [INFO ] [main] [org.quartz.simpl.SimpleThreadPool] Job execution threads will use class loader of thread: main
+16:59:25.230 [INFO ] [main] [org.quartz.core.SchedulerSignalerImpl] Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+16:59:25.230 [INFO ] [main] [org.quartz.core.QuartzScheduler] Quartz Scheduler v.2.3.0 created.
+16:59:25.232 [INFO ] [main] [org.quartz.simpl.RAMJobStore] RAMJobStore initialized.
+16:59:25.233 [INFO ] [main] [org.quartz.core.QuartzScheduler] Scheduler meta-data: Quartz Scheduler (v2.3.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+16:59:25.233 [INFO ] [main] [org.quartz.impl.StdSchedulerFactory] Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+16:59:25.233 [INFO ] [main] [org.quartz.impl.StdSchedulerFactory] Quartz scheduler version: 2.3.0
+17:00:02.823 [INFO ] [main] [org.quartz.impl.StdSchedulerFactory] Using default implementation for ThreadExecutor
+17:00:02.831 [INFO ] [main] [org.quartz.simpl.SimpleThreadPool] Job execution threads will use class loader of thread: main
+17:00:02.850 [INFO ] [main] [org.quartz.core.SchedulerSignalerImpl] Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+17:00:02.850 [INFO ] [main] [org.quartz.core.QuartzScheduler] Quartz Scheduler v.2.3.0 created.
+17:00:02.851 [INFO ] [main] [org.quartz.simpl.RAMJobStore] RAMJobStore initialized.
+17:00:02.852 [INFO ] [main] [org.quartz.core.QuartzScheduler] Scheduler meta-data: Quartz Scheduler (v2.3.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+17:00:02.853 [INFO ] [main] [org.quartz.impl.StdSchedulerFactory] Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+17:00:02.853 [INFO ] [main] [org.quartz.impl.StdSchedulerFactory] Quartz scheduler version: 2.3.0
+17:01:22.358 [INFO ] [main] [org.quartz.impl.StdSchedulerFactory] Using default implementation for ThreadExecutor
+17:01:22.364 [INFO ] [main] [org.quartz.simpl.SimpleThreadPool] Job execution threads will use class loader of thread: main
+17:01:22.380 [INFO ] [main] [org.quartz.core.SchedulerSignalerImpl] Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+17:01:22.381 [INFO ] [main] [org.quartz.core.QuartzScheduler] Quartz Scheduler v.2.3.0 created.
+17:01:22.382 [INFO ] [main] [org.quartz.simpl.RAMJobStore] RAMJobStore initialized.
+17:01:22.384 [INFO ] [main] [org.quartz.core.QuartzScheduler] Scheduler meta-data: Quartz Scheduler (v2.3.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+17:01:22.384 [INFO ] [main] [org.quartz.impl.StdSchedulerFactory] Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+17:01:22.384 [INFO ] [main] [org.quartz.impl.StdSchedulerFactory] Quartz scheduler version: 2.3.0
+17:01:22.398 [INFO ] [main] [org.quartz.core.QuartzScheduler] Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+17:02:31.783 [INFO ] [main] [org.quartz.impl.StdSchedulerFactory] Using default implementation for ThreadExecutor
+17:02:31.790 [INFO ] [main] [org.quartz.simpl.SimpleThreadPool] Job execution threads will use class loader of thread: main
+17:02:31.807 [INFO ] [main] [org.quartz.core.SchedulerSignalerImpl] Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+17:02:31.807 [INFO ] [main] [org.quartz.core.QuartzScheduler] Quartz Scheduler v.2.3.0 created.
+17:02:31.808 [INFO ] [main] [org.quartz.simpl.RAMJobStore] RAMJobStore initialized.
+17:02:31.809 [INFO ] [main] [org.quartz.core.QuartzScheduler] Scheduler meta-data: Quartz Scheduler (v2.3.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+17:02:31.809 [INFO ] [main] [org.quartz.impl.StdSchedulerFactory] Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+17:02:31.809 [INFO ] [main] [org.quartz.impl.StdSchedulerFactory] Quartz scheduler version: 2.3.0
+17:02:31.828 [INFO ] [main] [org.quartz.core.QuartzScheduler] Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+17:02:32.015 [ERROR] [DefaultQuartzScheduler_Worker-1] [org.quartz.core.JobRunShell] Job group1.job1 threw an unhandled Exception: 
+java.lang.ArithmeticException: / by zero
+	at com.zhr.selfstudy.quartz.PrintWordsJob.execute(PrintWordsJob.java:22)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+17:02:32.015 [ERROR] [DefaultQuartzScheduler_Worker-1] [org.quartz.core.ErrorLogger] Job (group1.job1 threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception.
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.ArithmeticException: / by zero
+	at com.zhr.selfstudy.quartz.PrintWordsJob.execute(PrintWordsJob.java:22)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 common frames omitted
+17:02:34.002 [ERROR] [DefaultQuartzScheduler_Worker-2] [org.quartz.core.JobRunShell] Job group1.job1 threw an unhandled Exception: 
+java.lang.ArithmeticException: / by zero
+	at com.zhr.selfstudy.quartz.PrintWordsJob.execute(PrintWordsJob.java:22)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+17:02:34.002 [ERROR] [DefaultQuartzScheduler_Worker-2] [org.quartz.core.ErrorLogger] Job (group1.job1 threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception.
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.ArithmeticException: / by zero
+	at com.zhr.selfstudy.quartz.PrintWordsJob.execute(PrintWordsJob.java:22)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 common frames omitted
+17:02:36.001 [ERROR] [DefaultQuartzScheduler_Worker-3] [org.quartz.core.JobRunShell] Job group1.job1 threw an unhandled Exception: 
+java.lang.ArithmeticException: / by zero
+	at com.zhr.selfstudy.quartz.PrintWordsJob.execute(PrintWordsJob.java:22)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+17:02:36.001 [ERROR] [DefaultQuartzScheduler_Worker-3] [org.quartz.core.ErrorLogger] Job (group1.job1 threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception.
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.ArithmeticException: / by zero
+	at com.zhr.selfstudy.quartz.PrintWordsJob.execute(PrintWordsJob.java:22)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 common frames omitted
+17:02:38.003 [ERROR] [DefaultQuartzScheduler_Worker-4] [org.quartz.core.JobRunShell] Job group1.job1 threw an unhandled Exception: 
+java.lang.ArithmeticException: / by zero
+	at com.zhr.selfstudy.quartz.PrintWordsJob.execute(PrintWordsJob.java:22)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+17:02:38.003 [ERROR] [DefaultQuartzScheduler_Worker-4] [org.quartz.core.ErrorLogger] Job (group1.job1 threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception.
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.ArithmeticException: / by zero
+	at com.zhr.selfstudy.quartz.PrintWordsJob.execute(PrintWordsJob.java:22)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 common frames omitted
+17:02:40.000 [ERROR] [DefaultQuartzScheduler_Worker-5] [org.quartz.core.JobRunShell] Job group1.job1 threw an unhandled Exception: 
+java.lang.ArithmeticException: / by zero
+	at com.zhr.selfstudy.quartz.PrintWordsJob.execute(PrintWordsJob.java:22)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+17:02:40.001 [ERROR] [DefaultQuartzScheduler_Worker-5] [org.quartz.core.ErrorLogger] Job (group1.job1 threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception.
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.ArithmeticException: / by zero
+	at com.zhr.selfstudy.quartz.PrintWordsJob.execute(PrintWordsJob.java:22)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 common frames omitted
+17:02:42.004 [ERROR] [DefaultQuartzScheduler_Worker-6] [org.quartz.core.JobRunShell] Job group1.job1 threw an unhandled Exception: 
+java.lang.ArithmeticException: / by zero
+	at com.zhr.selfstudy.quartz.PrintWordsJob.execute(PrintWordsJob.java:22)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+17:02:42.004 [ERROR] [DefaultQuartzScheduler_Worker-6] [org.quartz.core.ErrorLogger] Job (group1.job1 threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception.
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.ArithmeticException: / by zero
+	at com.zhr.selfstudy.quartz.PrintWordsJob.execute(PrintWordsJob.java:22)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 common frames omitted
+17:03:27.032 [INFO ] [main] [org.quartz.impl.StdSchedulerFactory] Using default implementation for ThreadExecutor
+17:03:27.039 [INFO ] [main] [org.quartz.simpl.SimpleThreadPool] Job execution threads will use class loader of thread: main
+17:03:27.064 [INFO ] [main] [org.quartz.core.SchedulerSignalerImpl] Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+17:03:27.065 [INFO ] [main] [org.quartz.core.QuartzScheduler] Quartz Scheduler v.2.3.0 created.
+17:03:27.066 [INFO ] [main] [org.quartz.simpl.RAMJobStore] RAMJobStore initialized.
+17:03:27.068 [INFO ] [main] [org.quartz.core.QuartzScheduler] Scheduler meta-data: Quartz Scheduler (v2.3.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+17:03:27.068 [INFO ] [main] [org.quartz.impl.StdSchedulerFactory] Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+17:03:27.068 [INFO ] [main] [org.quartz.impl.StdSchedulerFactory] Quartz scheduler version: 2.3.0
+17:03:27.084 [INFO ] [main] [org.quartz.core.QuartzScheduler] Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.

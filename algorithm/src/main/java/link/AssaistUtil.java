@@ -5,7 +5,7 @@ package link;
  * @version 1.0
  * @ClassName AssaistUtil
  * @Date 2020-01-02 9:35
- * @description todo
+ * @description 通用链表体
  **/
 public class AssaistUtil {
 

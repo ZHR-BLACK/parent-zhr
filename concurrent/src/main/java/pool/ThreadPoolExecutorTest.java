@@ -1,5 +1,6 @@
 package pool;
 
+import java.util.LinkedHashSet;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -29,7 +30,6 @@ public class ThreadPoolExecutorTest {
             }
         }
         pool.shutdown();
-        
     }
 
     static class NameTreadFactory implements ThreadFactory {

@@ -24,8 +24,8 @@ public class ReadPropConfigurationPropertiesController {
     // 访问http://127.0.0.1:8080/configurationProperties
     @RequestMapping("/configurationProperties")
     public void configurationProperties(){
-        System.out.println("address********************" + address);
-        System.out.println("company********************" + company);
+        System.out.println("address====================" + address);
+        System.out.println("company=======" + company);
     }
 
     public String getAddress() {

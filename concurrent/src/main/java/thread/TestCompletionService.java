@@ -52,7 +52,7 @@ class MyThreadt33 implements Callable<String> {
         for (int i = 0; i < 10; i++) {
             Thread.sleep(200);
             sum += i;
-            System.out.println("Mythread3: " + i);
+            System.out.println("Mythread3:" + i);
         }
         return String.valueOf(sum + 300000);
     }
@@ -74,7 +74,7 @@ class MyThreadt44 implements Callable<String> {
 //            System.out.println("Mythread4: " + i);
 //        }
 //        return String.valueOf(sum + 400000);
-        System.out.println("commandstr ********************" + commandstr);
+        System.out.println("commandstr********************" + commandstr);
         Thread.sleep(1000);
         return "success";
     }
