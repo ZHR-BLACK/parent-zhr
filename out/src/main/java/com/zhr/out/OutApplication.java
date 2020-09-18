@@ -14,10 +14,11 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerA
  * @description SpringBoot 本地启动时启动类需要做的配置
  **/
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class, DataSourceTransactionManagerAutoConfiguration.class})
-public class OutApplication{
+public class OutApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(OutApplication.class, args);
     }
+
 
 }

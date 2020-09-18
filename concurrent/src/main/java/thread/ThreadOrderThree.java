@@ -27,7 +27,7 @@ public class ThreadOrderThree {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            //T3线程中要处理的东西
+            //T1线程中要处理的东西
             System.out.println("T1线程执行");
             for (int i = 0; i < 10; i++) {
                 System.out.println(this.getName() + ":" + i);
@@ -42,7 +42,7 @@ public class ThreadOrderThree {
 
         @Override
         public void run() {
-            //T3线程中要处理的东西
+            //T2线程中要处理的东西
             System.out.println("T2线程执行");
             try {
                 Thread.sleep(200);
@@ -82,12 +82,12 @@ public class ThreadOrderThree {
             t3.join();//阻塞主线程，执行完t3再返回
 
             T2 t2 = t.new T2("T2");
-            t2.start();//启动t3线程
-            t2.join();//阻塞主线程，执行完t3再返回
+            t2.start();//启动t2线程
+            t2.join();//阻塞主线程，执行完t2再返回
 
             T1 t1 = t.new T1("T1");
-            t1.start();//启动t3线程
-            t1.join();//阻塞主线程，执行完t3再返回
+            t1.start();//启动t1线程
+            t1.join();//阻塞主线程，执行完t1再返回
 
         } catch (InterruptedException e) {
             e.printStackTrace();

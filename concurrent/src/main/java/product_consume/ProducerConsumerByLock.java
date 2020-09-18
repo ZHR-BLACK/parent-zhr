@@ -57,7 +57,6 @@ public class ProducerConsumerByLock {
         @Override
         public void run() {
             while (true) {
-
                 //获得锁
                 lock.lock();
                 while (queue.size() == maxSize) {
@@ -75,10 +74,8 @@ public class ProducerConsumerByLock {
                 //唤醒其他所有生产者、消费者
                 fullCondition.signalAll();
                 emptyCondition.signalAll();
-
                 //释放锁
                 lock.unlock();
-
                 try {
                     Thread.sleep(new Random().nextInt(1000));
                 } catch (InterruptedException e) {
@@ -109,7 +106,6 @@ public class ProducerConsumerByLock {
             while (true) {
                 //获得锁
                 lock.lock();
-
                 while (queue.isEmpty()) {
                     try {
                         System.out.println("Queue is empty, Consumer[" + name + "] thread is waiting for Producer");
@@ -125,7 +121,6 @@ public class ProducerConsumerByLock {
                 //唤醒其他所有生产者、消费者
                 fullCondition.signalAll();
                 emptyCondition.signalAll();
-
                 //释放锁
                 lock.unlock();
 

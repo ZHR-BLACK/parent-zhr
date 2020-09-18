@@ -75,8 +75,11 @@ public class ReverseList206 {
         AssaistUtil.printLinkedList(linkedList);
 
         ReverseList206 reverseList206 = new ReverseList206();
-        AssaistUtil.ListNode listNode = reverseList206.reverseList(linkedList);
-        AssaistUtil.printLinkedList(listNode);
+//        AssaistUtil.ListNode listNode = reverseList206.reverseList(linkedList);
+//        AssaistUtil.printLinkedList(listNode);
+
+        AssaistUtil.ListNode listNode2 = reverseList206.reverseList2(linkedList);
+        AssaistUtil.printLinkedList(listNode2);
 
     }
 
