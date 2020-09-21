@@ -19,15 +19,6 @@ package link;
  **/
 public class SortList148 {
 
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
-
     /**
      * @param head
      * @return link.SortList148.ListNode

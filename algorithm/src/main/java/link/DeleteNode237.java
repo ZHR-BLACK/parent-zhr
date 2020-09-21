@@ -28,13 +28,6 @@ package link;
  **/
 public class DeleteNode237 {
 
-    class ListNode {
-        int val;
-        ListNode next;
-        ListNode(int x) {
-            val = x;
-        }
-    }
     /**
      * @Date 2019/6/13 15:57
      * @param  node

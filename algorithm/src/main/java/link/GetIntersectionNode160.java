@@ -20,16 +20,6 @@ import java.util.Set;
  **/
 public class GetIntersectionNode160 {
 
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
-    }
-
     /**
      * 有配图,image/160.png
      *

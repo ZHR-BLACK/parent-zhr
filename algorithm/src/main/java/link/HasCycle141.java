@@ -36,15 +36,6 @@ import java.util.Set;
  **/
 public class HasCycle141 {
 
-    class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
-    }
     /**
      * 执行用时：14ms，在所有Java提交中击败了16.32%的用户
      * 内存消耗：41.4MB，在所有Java提交中击败了14.70%的用户
