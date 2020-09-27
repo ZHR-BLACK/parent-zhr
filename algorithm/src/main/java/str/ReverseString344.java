@@ -1,5 +1,7 @@
 package str;
 
+import java.util.Arrays;
+
 /**
  * @author ZHR
  * @version 1.0
@@ -77,9 +79,18 @@ public class ReverseString344 {
         int n = s.length;
         for (int i = 0; i < n / 2; i++) {
             temp = s[i];
-            s[i] = s[n - i - 1];
+            s[i] = s[n - i - 1];// 找到对称的字符
             s[n - i - 1] = temp;
         }
+    }
+
+    public static void main(String[] args) {
+        String s = "wyqueiqweiu";
+        char[] chars = s.toCharArray();
+        ReverseString344 rs = new ReverseString344();
+        rs.reverseString3(chars);
+
+        System.out.println("rs==================" + Arrays.toString(chars));
     }
 
 }

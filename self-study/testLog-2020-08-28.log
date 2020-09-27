@@ -1,0 +1,56 @@
+14:49:32.011 [INFO ] [main] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.zhr.selfstudy.SelfApplicationTests], using SpringBootContextLoader
+14:49:32.027 [INFO ] [main] [org.springframework.test.context.support.AbstractContextLoader] Could not detect default resource locations for test class [com.zhr.selfstudy.SelfApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+14:49:32.028 [INFO ] [main] [org.springframework.test.context.support.AnnotationConfigContextLoaderUtils] Could not detect default configuration classes for test class [com.zhr.selfstudy.SelfApplicationTests]: SelfApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+14:49:32.482 [INFO ] [main] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] Found @SpringBootConfiguration com.zhr.selfstudy.SelfStudyApplication for test class com.zhr.selfstudy.SelfApplicationTests
+14:49:32.756 [INFO ] [main] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+14:49:32.854 [INFO ] [main] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@702b8b12, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@22e357dc, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@49912c99, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@10163d6, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2dde1bff, org.springframework.test.context.transaction.TransactionalTestExecutionListener@15bbf42f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@550ee7e5, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5f9b2141, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@247d8ae, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@48974e45, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6a84a97d, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6c130c45]
+14:49:33.179 [ERROR] [main] [org.springframework.test.context.TestContextManager] Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@10163d6] to prepare test instance [com.zhr.selfstudy.SelfApplicationTests@7b36aa0c]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:44)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+Caused by: java.lang.IllegalArgumentException: Cannot instantiate interface org.springframework.boot.SpringApplicationRunListener : org.springframework.boot.context.event.EventPublishingRunListener
+	at org.springframework.boot.SpringApplication.createSpringFactoriesInstances(SpringApplication.java:450)
+	at org.springframework.boot.SpringApplication.getSpringFactoriesInstances(SpringApplication.java:429)
+	at org.springframework.boot.SpringApplication.getRunListeners(SpringApplication.java:415)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:301)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:127)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 25 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.context.event.EventPublishingRunListener]: Constructor threw exception; nested exception is java.lang.NoSuchMethodError: org.springframework.aop.framework.AopProxyUtils.getSingletonTarget(Ljava/lang/Object;)Ljava/lang/Object;
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:184)
+	at org.springframework.boot.SpringApplication.createSpringFactoriesInstances(SpringApplication.java:446)
+	... 31 common frames omitted
+Caused by: java.lang.NoSuchMethodError: org.springframework.aop.framework.AopProxyUtils.getSingletonTarget(Ljava/lang/Object;)Ljava/lang/Object;
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.addApplicationListener(AbstractApplicationEventMulticaster.java:109)
+	at org.springframework.boot.context.event.EventPublishingRunListener.<init>(EventPublishingRunListener.java:58)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:172)
+	... 32 common frames omitted

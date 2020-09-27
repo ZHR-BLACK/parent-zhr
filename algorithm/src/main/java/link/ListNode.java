@@ -9,10 +9,10 @@ package link;
  **/
 public class ListNode {
 
-    int val;
-    ListNode next;
+    public int val;
+    public ListNode next;
 
-    ListNode(int x) {
+    public ListNode(int x) {
         val = x;
     }
 

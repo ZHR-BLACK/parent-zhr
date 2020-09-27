@@ -20,7 +20,6 @@ public class Invoker {
 	}
 
 
-
 	public static void main(String[] args) {
 		Receiver receiver = new Receiver();
 		Command cmd = new MyCommand(receiver);

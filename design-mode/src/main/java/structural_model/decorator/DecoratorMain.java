@@ -7,10 +7,11 @@ package structural_model.decorator;
  * @author smilesnake
  *
  */
-public class Decorator implements Sourceable {
+public class DecoratorMain implements Sourceable {
+
 	private Sourceable source;
 
-	public Decorator(Sourceable source) {
+	public DecoratorMain(Sourceable source) {
 		super();
 		this.source = source;
 	}
@@ -26,11 +27,10 @@ public class Decorator implements Sourceable {
 	 * <P>1、需要扩展一个类的功能。
 	 * <P>2、动态的为一个对象增加功能，而且还能动态撤销。（继承不能做到这一点，继承的功能是静态的，不能动态增删。）
 	 * <P>缺点：产生过多相似的对象，不易排错！
-	 * @param args
 	 */
 	public static void main(String[] args) {
 		Sourceable source = new Source();
-		Sourceable obj = new Decorator(source);
+		Sourceable obj = new DecoratorMain(source);
 		obj.method();
 	}
 

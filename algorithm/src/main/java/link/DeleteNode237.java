@@ -32,7 +32,8 @@ public class DeleteNode237 {
      * @Date 2019/6/13 15:57
      * @param  node
      * @return void
-     * 执行用时：1ms，在所有ava提交中击败了86.60%的用户内存消耗：35.5MB，在所有Java提交中击败了90.80%的用户
+     * 执行用时：1ms，在所有ava提交中击败了86.60%的用户
+     * 内存消耗：35.5MB，在所有Java提交中击败了90.80%的用户
      * 时间和空间复杂度都是：O(1)。
      **/
     public void deleteNode(ListNode node) {
@@ -41,6 +42,5 @@ public class DeleteNode237 {
         // 将节点后一个的后一个节点赋给该节点的下一个节点
         node.next = node.next.next;
     }
-
 
 }

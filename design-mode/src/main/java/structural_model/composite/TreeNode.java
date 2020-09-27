@@ -1,8 +1,11 @@
 package structural_model.composite;
 
+import lombok.Data;
+
 import java.util.Enumeration;
 import java.util.Vector;
 
+@Data
 public class TreeNode {
 	private String name;
 	private TreeNode parent;
@@ -12,22 +15,6 @@ public class TreeNode {
 	public TreeNode(String name) {
 		super();
 		this.name = name;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public TreeNode getParent() {
-		return parent;
-	}
-
-	public void setParent(TreeNode parent) {
-		this.parent = parent;
 	}
 
 	/**

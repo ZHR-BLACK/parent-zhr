@@ -1,9 +1,14 @@
 package creation_pattern.builder;
 
+/**
+ * @Date 2020-09-23 14:59
+ * ZHR
+ * 通过调整调用方法的顺序构建不同的结果
+ **/
 public class TicketBuilder {
 
     public static Object build(TicketHelper helper) {
-        System.err.println("通过TicketHelper 构建套票信息");
+        System.out.println("通过TicketHelper 构建套票信息");
         return null;
     }
 

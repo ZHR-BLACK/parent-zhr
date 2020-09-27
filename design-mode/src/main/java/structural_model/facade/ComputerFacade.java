@@ -1,11 +1,11 @@
 package structural_model.facade;
 
-public class Computer {
+public class ComputerFacade {
 	private CPU cpu;
 	private Memory memory;
 	private Disk disk;
 
-	public Computer() {
+	public ComputerFacade() {
 		cpu = new CPU();
 		memory = new Memory();
 		disk = new Disk();

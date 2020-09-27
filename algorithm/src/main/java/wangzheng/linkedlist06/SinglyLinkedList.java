@@ -110,16 +110,13 @@ public class SinglyLinkedList {
             head = head.next;
             return;
         }
-
         Node q = head;
         while (q != null && q.next != p) {
             q = q.next;
         }
-
         if (q == null) {
             return;
         }
-
         q.next = q.next.next;
     }
 
@@ -132,7 +129,6 @@ public class SinglyLinkedList {
             q = p;
             p = p.next;
         }
-
         if (p == null) return;
 
         if (q == null) {
@@ -140,7 +136,6 @@ public class SinglyLinkedList {
         } else {
             q.next = q.next.next;
         }
-
         // 可重复删除指定value的代码
         /*
            if (head != null && head.data == value) {
@@ -184,7 +179,6 @@ public class SinglyLinkedList {
            }
 
         }
-
         System.out.println("什么结果");
         if (l==null && r==null){
            System.out.println("什么结果");
@@ -211,7 +205,6 @@ public class SinglyLinkedList {
                q = q.next.next;
 
            }
-
            System.out.println("中间节点" + p.data);
            System.out.println("开始执行奇数节点的回文判断");
            Node leftLink = null;

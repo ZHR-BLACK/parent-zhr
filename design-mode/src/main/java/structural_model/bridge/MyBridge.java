@@ -20,6 +20,7 @@ public class MyBridge extends Bridge {
 		getSource().method();
 	}
 
+
 	public static void main(String[] args) {
 		Bridge bridge = new MyBridge();
 

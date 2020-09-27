@@ -1,4 +1,4 @@
-package com.zhr.selfstudy.list;
+package list;
 
 import java.util.*;
 
@@ -31,11 +31,6 @@ public class DistinctList {
         return list;
     }
 
-    //使用LinkedHashSet删除ArrayList中重复的元素，保证顺序
-    ArrayList<String> listWithDuplicateElements = new ArrayList<>();
-    LinkedHashSet<String> set = new LinkedHashSet<>(listWithDuplicateElements);
-    ArrayList<String> listWithoutDuplicateElements = new ArrayList<>(set);
-
     // 删除ArrayList中重复元素，保持顺序
     public static void removeDuplicateWithOrder(List list) {
         Set set = new HashSet();
@@ -59,6 +54,24 @@ public class DistinctList {
             }
         }
         return listTemp;
+    }
+
+    public static List removeDuplicate4(List list){
+        //使用LinkedHashSet删除ArrayList中重复的元素，保证顺序
+        LinkedHashSet<String> set = new LinkedHashSet<>(list);
+        List<String> listWithoutDuplicateElements = new ArrayList<>(set);
+        return listWithoutDuplicateElements;
+    }
+
+    public static void main(String[] args) {
+        List<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(5);
+        list.add(9);
+        list.add(2);
+        list.add(5);
+        
+
     }
 
 }
