@@ -41,15 +41,4 @@ public class ArrayCount {
         return true;
     }
 
-    public static boolean dup2(int[] arr) {
-        Arrays.sort(arr);
-
-        for (int i = 0; i < arr.length; i++) {
-
-        }
-
-
-        return true;
-    }
-
 }

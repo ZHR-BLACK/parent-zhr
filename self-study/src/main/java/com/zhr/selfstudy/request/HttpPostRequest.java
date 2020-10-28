@@ -23,7 +23,8 @@ public class HttpPostRequest {
 //        String post1 = HttpUtil.post("http://111.231.107.12:8080/receive", map);
 //        System.out.println("post1 ********************" + post1);
 
-        HttpUtil.post("http://111.231.107.12:8080/newlist", "");
+//        HttpUtil.post("http://111.231.107.12:8080/newlist", "");
+        HttpUtil.post("http://localhost:8080/redisTest", "");
 //
 //        for (int i = 0; i < 100; i++) {
 //            new Thread(() -> {

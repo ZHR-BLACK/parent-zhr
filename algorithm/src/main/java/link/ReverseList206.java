@@ -33,6 +33,7 @@ public class ReverseList206 {
         ListNode curr = head;
         while (curr != null) {
             ListNode nextTemp = curr.next;
+            // 这两句代码相当于将当前的头结点添加到prev中
             curr.next = prev;
             prev = curr;
             curr = nextTemp;

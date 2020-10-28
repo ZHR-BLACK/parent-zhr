@@ -23,7 +23,6 @@ public class ChannelManager {
 
     private static final Logger logger = LoggerFactory.getLogger(ChannelManager.class);
 
-
     public static IChannel getInterByChannelCode(String channelCode, String jobCode) throws Exception {
         StringBuffer fullClassName = new StringBuffer("own.");
         fullClassName.append(channelCode.substring(0, 1).toUpperCase()).append(channelCode.substring(1)).append(jobCode);
@@ -77,7 +76,6 @@ public class ChannelManager {
 
     /**
      * 从一个指定路径下查找所有的类
-     *
      * @param packagename
      */
     private static ArrayList<Class> getAllClass(String packagename) {
@@ -98,7 +96,6 @@ public class ChannelManager {
 
     /**
      * 获取某包下所有类
-     *
      * @param packageName 包名
      * @return 类的完整名称
      */
@@ -134,7 +131,6 @@ public class ChannelManager {
 
     /**
      * 从项目文件获取某包下所有类
-     *
      * @param filePath 文件路径
      * @return 类的完整名称
      */
@@ -160,7 +156,6 @@ public class ChannelManager {
 
     /**
      * 从jar获取某包下所有类
-     *
      * @return 类的完整名称
      */
     private static List<String> getClassNameByJar(JarFile jarFile, String packagePath) {

@@ -35,7 +35,6 @@ public class ThreeThreadPrint2 {
                 }
             }
         };
-
         Thread thread1 = new Thread() {
             public void run() {
                 for (int i = 0; i < 10; ) {
@@ -54,7 +53,6 @@ public class ThreeThreadPrint2 {
                 }
             }
         };
-
         Thread thread2 = new Thread() {
             public void run() {
                 for (int i = 0; i < 10; ) {
