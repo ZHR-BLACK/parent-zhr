@@ -32,7 +32,6 @@ public class HammingDistance461 {
      * @param  x
      * @param  y
      * @return int
-     *
      **/
     public int hammingDistance(int x, int y) {
         //bitCount 数出整数二进制下 1 的个数

@@ -14,7 +14,7 @@ import java.util.concurrent.locks.ReentrantLock;
 public class ThreeThreadPrint2 {
 
     private static Lock lock = new ReentrantLock();
-    private static int state = 0;
+    private static volatile int state = 0;
 
     public static void main(String[] args) throws InterruptedException {
         Thread thread = new Thread() {

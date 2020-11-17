@@ -31,7 +31,6 @@ public class RemoveDuplicates26 {
 
     /**
      * 双指针法
-     *
      * @param nums
      * @return int
      * 数组完成排序后，我们可以放置两个指针i和j，其中i是慢指针，而j是快指针。只要nums[i]=nums[j]，我们就增加j以跳过重复项。

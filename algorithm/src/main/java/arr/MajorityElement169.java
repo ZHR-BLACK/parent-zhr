@@ -36,7 +36,7 @@ public class MajorityElement169 {
      * @Date 2019-07-02 14:33
      **/
     public int majorityElement(int[] nums) {
-        Map map = new HashMap();
+        Map<Integer,Integer> map = new HashMap<>();
         int length = nums.length;
         for (int i = 0; i < length; i++) {
             Object o = map.get(nums[i]);

@@ -38,9 +38,9 @@ public class TopKFrequent347 {
      * 最终，堆中的 kk 个元素即为前 kk 个高频元素
      *
      * 复杂度分析:
-     * 时间复杂度：O(Nlog(k))。Counter 方法的复杂度是 O(N)，建堆和输出的复杂度是O(Nlog(k))。
-     * 因此总复杂度为 O(N + Nlog(k)) = O(Nlog(k))。
-     * 空间复杂度：O(N)，存储哈希表的开销。
+     * 时间复杂度：O(Nlog(k))。Counter 方法的复杂度是 O(N)，建堆和输出的复杂度是O(Nlog(k))
+     * 因此总复杂度为 O(N + Nlog(k)) = O(Nlog(k))
+     * 空间复杂度：O(N)，存储哈希表的开销
      *
      * @Date 2019-07-15 17:13
      **/
@@ -87,9 +87,9 @@ public class TopKFrequent347 {
      * @Date 2019-07-15 17:22
      **/
     public List<Integer> topKFrequent2(int[] nums, int k) {
-        List<Integer> res = new ArrayList();
+        List<Integer> res = new ArrayList<>();
         // 使用字典，统计每个元素出现的次数，元素为键，元素出现的次数为值
-        HashMap<Integer, Integer> map = new HashMap();
+        HashMap<Integer, Integer> map = new HashMap<>();
         for (int num : nums) {
             if (map.containsKey(num)) {
                 map.put(num, map.get(num) + 1);
@@ -104,7 +104,7 @@ public class TopKFrequent347 {
             // 获取出现的次数作为下标
             int i = map.get(key);
             if (list[i] == null) {
-                list[i] = new ArrayList();
+                list[i] = new ArrayList<>();
             }
             list[i].add(key);
         }

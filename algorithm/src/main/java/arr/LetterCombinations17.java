@@ -60,7 +60,9 @@ public class LetterCombinations17 {
      **/
     public List<String> letterCombinations2(String digits) {
         List<String> ans = new ArrayList<>();
-        if (digits != null && digits.length() > 0) qaq(ans, "", digits);
+        if (digits != null && digits.length() > 0) {
+            qaq(ans, "", digits);
+        }
         return ans;
     }
 
