@@ -31,8 +31,8 @@ public class RemoveNthFromEnd19 {
      * 此时第二个指针将指向从最后一个结点数起的第 nn 个结点。我们重新链接第二个指针所引用的结点的 next 指针指向该结点的下下个结点。
      * <p>
      * 复杂度分析:
-     * 时间复杂度：O(L)，该算法对含有 LL 个结点的列表进行了一次遍历。因此时间复杂度为 O(L)。
-     * 空间复杂度：O(1)，我们只用了常量级的额外空间。
+     * 时间复杂度：O(L)，该算法对含有 LL 个结点的列表进行了一次遍历。因此时间复杂度为 O(L)
+     * 空间复杂度：O(1)，我们只用了常量级的额外空间
      * <p>
      * 执行用时：2ms，在所有Java提交中击败了89.89%的用户
      * 内存消耗：34.9MB，在所有Java提交中击败了86.69%的用户
@@ -57,5 +57,16 @@ public class RemoveNthFromEnd19 {
         second.next = second.next.next;
         // 返回头节点
         return dummy.next;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5};
+
+        ListNode linkedList = ListNode.createLinkedList(arr);
+        ListNode.printLinkedList(linkedList);
+
+        RemoveNthFromEnd19 pn = new RemoveNthFromEnd19();
+        ListNode listNode = pn.removeNthFromEnd(linkedList, 2);
+        ListNode.printLinkedList(listNode);
     }
 }

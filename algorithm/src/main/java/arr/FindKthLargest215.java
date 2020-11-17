@@ -1,5 +1,7 @@
 package arr;
 
+import wangzheng.array05.Array;
+
 import java.util.Arrays;
 import java.util.PriorityQueue;
 import java.util.Queue;
@@ -37,6 +39,7 @@ public class FindKthLargest215 {
      **/
     public int findKthLargest(int[] nums, int k) {
         Arrays.sort(nums);
+        System.out.println("nums==================" + Arrays.toString(nums));
         return nums[nums.length - k];
     }
 

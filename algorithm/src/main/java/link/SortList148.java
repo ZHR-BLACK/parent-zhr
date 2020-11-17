@@ -30,7 +30,6 @@ public class SortList148 {
         quickSort(head, null);
         return head;
     }
-
     void quickSort(ListNode head, ListNode tail) {
         if (head == tail || head.next == tail)
             return;
@@ -64,11 +63,9 @@ public class SortList148 {
      * @Date 2019-07-05 10:21
      **/
     public ListNode sortList2(ListNode head) {
-
         if (head == null || head.next == null) {
             return head;
         }
-
         ListNode mid = findMiddle(head);
         ListNode right = sortList(mid.next);
         mid.next = null;
@@ -88,7 +85,6 @@ public class SortList148 {
             fast = fast.next.next;
             slow = slow.next;
         }
-
         return slow;
     }
 
@@ -108,7 +104,6 @@ public class SortList148 {
                 tmp = tmp.next;
                 a = a.next;
             }
-
             while (a != null && b != null && b.val <= a.val) {
                 tmp.next = new ListNode(b.val);
                 tmp = tmp.next;
@@ -121,7 +116,6 @@ public class SortList148 {
         } else if (b != null) {
             tmp.next = b;
         }
-
         return result.next;
     }
 }

@@ -26,7 +26,6 @@ import java.util.Map;
  **/
 public class MajorityElement169 {
 
-
     /**
      * @param nums
      * @return int
@@ -63,7 +62,7 @@ public class MajorityElement169 {
      * ·时间复杂度：O（nlgn）
      * 用Python和Java将数组排序开销都为O（nlgn），它占据了运行的主要时间。
      * ·空间复杂度：O（1）或者O（n）
-     * 我们将nums 就地排序，如果不能就低排序，我们必须使用线性空间将nums 数组拷贝，然后再排序。
+     * 我们将nums 就地排序，如果不能就地排序，我们必须使用线性空间将nums 数组拷贝，然后再排序。
      * @Date 2019-07-02 14:40
      **/
     public int majorityElement2(int[] nums) {

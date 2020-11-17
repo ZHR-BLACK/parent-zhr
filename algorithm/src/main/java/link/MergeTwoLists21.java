@@ -16,14 +16,14 @@ package link;
  **/
 public class MergeTwoLists21 {
 
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
+//    public class ListNode {
+//        int val;
+//        ListNode next;
+//
+//        ListNode(int x) {
+//            val = x;
+//        }
+//    }
 
     /**
      * @param l1

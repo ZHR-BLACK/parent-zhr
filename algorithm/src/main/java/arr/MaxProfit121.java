@@ -36,6 +36,7 @@ public class MaxProfit121 {
      **/
     public int maxProfit(int prices[]) {
         int minprice = Integer.MAX_VALUE;
+        // 利润值
         int maxprofit = 0;
         for (int i = 0; i < prices.length; i++) {
             if (prices[i] < minprice) {

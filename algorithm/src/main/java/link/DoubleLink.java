@@ -3,9 +3,9 @@ package link;
 /**
  * @author ZHR
  * @version 1.0
- * @ClassName DoubleLink
+ * @ClassName DoubleLink 暂不考虑
  * @Date 2020-03-13 17:40
- * @description todo
+ * @description 双向链表
  **/
 public class DoubleLink<T> {
 
@@ -13,16 +13,11 @@ public class DoubleLink<T> {
      * Node<AnyType>类定义了双向链表中节点的结构，它是一个私有类， 而其属性和构造函数都是公有的，这样，其父类可以直接访问其属性
      * 而外部类根本不知道Node类的存在。
      *
+     * @param <T>  类型
+     * @param Data 是节点中的数据
+     * @param pre  指向前一个Node节点
+     * @param next 指向后一个Node节点
      * @author ZHB
-     *
-     * @param <T>
-     *            类型
-     * @param Data
-     *            是节点中的数据
-     * @param pre
-     *            指向前一个Node节点
-     * @param next
-     *            指向后一个Node节点
      */
     private class Node<T> {
         public Node<T> pre;
@@ -80,7 +75,6 @@ public class DoubleLink<T> {
     }
 
     public T getInt(int index) {
-
         if (index > this.theSize - 1 || index < 0)
             throw new IndexOutOfBoundsException();
 
@@ -94,16 +88,12 @@ public class DoubleLink<T> {
     }
 
     public void print() {
-
         Node<T> current = Header.next;
 
         while (current.next != null) {
-
             System.out.println(current.data.toString());
-
             current = current.next;
         }
-
     }
 
     public static void main(String[] args) {
