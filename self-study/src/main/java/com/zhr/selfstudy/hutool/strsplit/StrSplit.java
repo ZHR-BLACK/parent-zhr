@@ -1,6 +1,7 @@
 package com.zhr.selfstudy.hutool.strsplit;
 
 import cn.hutool.core.text.StrSpliter;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
 
@@ -11,6 +12,7 @@ import java.util.List;
  * @Date 2019-06-27 9:54
  * 字符串切割
  **/
+@Slf4j
 public class StrSplit {
 
     /**
@@ -27,9 +29,9 @@ public class StrSplit {
         String str1 = "a, ,efedsfs,   ddf";
         //参数：被切分字符串，分隔符逗号，0表示无限制分片数，不去除两边空格，忽略空白项
         List<String> split = StrSpliter.split(str1, ',', 0, false, true);
-        System.out.println("split = " + split);
+        log.info("split = " + split);
         List<String> split2 = StrSpliter.split(str1, ',', 0, true, true);
-        System.out.println("split2 = " + split2);
+        log.info("split2 = " + split2);
 
     }
 }
