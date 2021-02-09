@@ -1,11 +1,9 @@
 package com.zhr;
 
-import com.alibaba.druid.filter.logging.Slf4jLogFilter;
 import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
 import com.jfinal.plugin.activerecord.dialect.MysqlDialect;
 import com.jfinal.plugin.druid.DruidPlugin;
 import com.jfinal.template.source.ClassPathSourceFactory;
-import com.zhr.activerecord.User;
 import com.zhr.dbrecord.MyDbPro;
 
 /**

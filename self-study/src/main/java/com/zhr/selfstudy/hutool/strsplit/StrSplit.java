@@ -1,6 +1,5 @@
 package com.zhr.selfstudy.hutool.strsplit;
 
-import cn.hutool.core.lang.Console;
 import cn.hutool.core.text.StrSpliter;
 
 import java.util.List;

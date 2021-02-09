@@ -1,6 +1,5 @@
 package com.zhr.webselenium;
 
-import io.github.bonigarcia.wdm.Config;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;

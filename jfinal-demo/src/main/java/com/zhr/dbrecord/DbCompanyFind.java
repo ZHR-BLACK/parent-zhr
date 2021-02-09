@@ -4,8 +4,6 @@ import com.jfinal.plugin.activerecord.Db;
 import com.jfinal.plugin.activerecord.Record;
 import com.zhr.DatabaseInit;
 
-import java.util.List;
-
 /**
  * @author ZHR
  * @version 1.0

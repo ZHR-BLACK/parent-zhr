@@ -1,9 +1,6 @@
 package com.zhr.selfstudy.utils;
 
-import com.alibaba.fastjson.JSONObject;
-import org.apache.commons.collections4.CollectionUtils;
-import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.lang3.math.NumberUtils;
+import cn.hutool.core.util.StrUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import redis.clients.jedis.Jedis;
@@ -90,7 +87,7 @@ public class RedisUtil {
             //等待可用连接的最大时间，单位毫秒，默认值为-1，表示永不超时。如果超过等待时间，则直接抛出JedisConnectionException；
             config.setMaxWaitMillis(MAX_WAIT);
 
-            if (StringUtils.isNotBlank(AUTH)) {
+            if (!StrUtil.hasBlank(AUTH)) {
                 jedisPool = new JedisPool(config, HOST, PORT, TIMEOUT, AUTH);
             } else {
                 jedisPool = new JedisPool(config, HOST, PORT, TIMEOUT);
@@ -242,7 +239,7 @@ public class RedisUtil {
      * 设置key的过期时间
      *
      * @param key
-     * @param value -5：Jedis实例获取失败，1：成功，0：失败
+     * @param  -5：Jedis实例获取失败，1：成功，0：失败
      * @return
      * @author jqlin
      */
@@ -831,7 +828,6 @@ public class RedisUtil {
      * 从哈希表 key 中删除指定的field
      *
      * @param key
-     * @param field
      * @return
      * @author jqlin
      */

@@ -8,6 +8,7 @@ import org.dom4j.io.OutputFormat;
 import org.dom4j.io.SAXReader;
 import org.dom4j.io.XMLWriter;
 
+
 import java.io.IOException;
 import java.io.StringReader;
 import java.io.StringWriter;
@@ -79,10 +80,13 @@ public class XmlTool {
         if (!listElement.isEmpty()) {
             for (Element e : listElement) {// 遍历所有一级子节点
                 if (e.attributes().isEmpty() && e.elements().isEmpty()) // 判断一级节点是否有属性和子节点
+                {
                     result.put(e.getName(), e.getTextTrim());// 沒有则将当前节点作为上级节点的属性对待
-                else {
+                } else {
                     if (!result.containsKey(e.getName())) // 判断父节点是否存在该一级节点名称的属性
+                    {
                         result.put(e.getName(), new JSONArray());// 没有则创建
+                    }
                     ((JSONArray) result.get(e.getName())).add(elementToJSONObject(e));// 将该一级节点放入该节点名称的属性对应的值中
                 }
             }

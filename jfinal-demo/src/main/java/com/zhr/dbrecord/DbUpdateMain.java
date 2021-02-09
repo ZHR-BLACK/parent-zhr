@@ -1,10 +1,7 @@
 package com.zhr.dbrecord;
 
-import com.jfinal.kit.Kv;
-import com.jfinal.kit.LogKit;
 import com.jfinal.plugin.activerecord.Db;
 import com.jfinal.plugin.activerecord.Record;
-import com.jfinal.plugin.activerecord.SqlPara;
 import com.zhr.DatabaseInit;
 import org.joda.time.DateTime;
 
