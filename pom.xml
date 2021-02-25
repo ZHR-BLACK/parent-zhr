@@ -4,12 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.4.RELEASE</version>
-        <relativePath/>
-    </parent>
+<!--    <parent>-->
+<!--        <groupId>org.springframework.boot</groupId>-->
+<!--        <artifactId>spring-boot-starter-parent</artifactId>-->
+<!--        <version>2.3.1</version>-->
+<!--        &lt;!&ndash;        <relativePath/>&ndash;&gt;-->
+<!--    </parent>-->
 
     <groupId>com.study</groupId>
     <artifactId>parent</artifactId>
@@ -30,12 +30,12 @@
 
     <properties>
         <hutool-all.version>5.5.8</hutool-all.version>
-        <spring-boot-starter.version>2.1.4.RELEASE</spring-boot-starter.version>
-        <spring-boot-starter-test.version>2.3.8.RELEASE</spring-boot-starter-test.version>
+        <spring-boot-starter.version>2.3.1.RELEASE</spring-boot-starter.version>
+        <spring-boot-starter-test.version>2.3.1.RELEASE</spring-boot-starter-test.version>
         <commons-lang3.version>3.10</commons-lang3.version>
         <lombok.version>1.18.6</lombok.version>
         <junit.version>4.12</junit.version>
-        <spring-boot-starter-actuator.version>2.1.4.RELEASE</spring-boot-starter-actuator.version>
+        <spring-boot-starter-actuator.version>2.3.8.RELEASE</spring-boot-starter-actuator.version>
         <gson.version>2.8.4</gson.version>
         <fastjson.version>1.2.75</fastjson.version>
         <druid.version>1.1.12</druid.version>
@@ -59,7 +59,29 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter</artifactId>
                 <version>${spring-boot-starter.version}</version>
+<!--                <exclusions>-->
+<!--                    &lt;!&ndash; 排除自带的logback依赖 &ndash;&gt;-->
+<!--                    <exclusion>-->
+<!--                        <groupId>org.springframework.boot</groupId>-->
+<!--                        <artifactId>spring-boot-starter-logging</artifactId>-->
+<!--                    </exclusion>-->
+<!--                </exclusions>-->
             </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-jdbc</artifactId>
+                <version>2.3.1.RELEASE</version>
+            </dependency>
+            <!-- 项目内模块end -->
+            <!-- Spring Boot 核心模块 START -->
+            <!-- 核心模块，包括自动配置支持、日志和YAML -->
+<!--            <dependency>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-dependencies</artifactId>-->
+<!--                <version>2.3.1.RELEASE</version>-->
+<!--                <type>pom</type>-->
+<!--                <scope>import</scope>-->
+<!--            </dependency>-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-test</artifactId>
@@ -68,13 +90,30 @@
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-log4j2</artifactId>
-                <version>2.3.1.RELEASE</version>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring-boot-starter.version}</version>
+<!--                <exclusions>-->
+<!--                    &lt;!&ndash; 排除自带的logback依赖 &ndash;&gt;-->
+<!--                    <exclusion>-->
+<!--                        <groupId>org.springframework.boot</groupId>-->
+<!--                        <artifactId>spring-boot-starter-logging</artifactId>-->
+<!--                    </exclusion>-->
+<!--                </exclusions>-->
+            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-starter-log4j2</artifactId>-->
+<!--                <version>2.3.1.RELEASE</version>-->
+<!--            </dependency>-->
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>2.11.0</version>
             </dependency>
             <dependency>
                 <groupId>com.fasterxml.jackson.dataformat</groupId>
                 <artifactId>jackson-dataformat-yaml</artifactId>
-                <version>2.11.0</version>
+                <version>2.11.4</version>
             </dependency>
             <dependency>
                 <groupId>com.lmax</groupId>
@@ -97,18 +136,25 @@
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatis.plus.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <!--配置log4j-->
-                        <groupId>org.springframework.boot</groupId>
-                        <artifactId>spring-boot-starter-logging</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <artifactId>slf4j-api</artifactId>
-                        <groupId>org.slf4j</groupId>
-                    </exclusion>
-                </exclusions>
+<!--                <exclusions>-->
+<!--                    <exclusion>-->
+<!--                        <groupId>org.springframework.boot</groupId>-->
+<!--                        <artifactId>spring-boot-autoconfigure</artifactId>-->
+<!--                    </exclusion>-->
+<!--                </exclusions>-->
+<!--                <exclusions>-->
+<!--                    <exclusion>-->
+<!--                        &lt;!&ndash;配置log4j&ndash;&gt;-->
+<!--                        <groupId>org.springframework.boot</groupId>-->
+<!--                        <artifactId>spring-boot-starter-logging</artifactId>-->
+<!--                    </exclusion>-->
+<!--                    <exclusion>-->
+<!--                        <artifactId>slf4j-api</artifactId>-->
+<!--                        <groupId>org.slf4j</groupId>-->
+<!--                    </exclusion>-->
+<!--                </exclusions>-->
             </dependency>
+
             <dependency>
                 <groupId>p6spy</groupId>
                 <artifactId>p6spy</artifactId>
@@ -124,11 +170,6 @@
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
                 <version>${junit.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-actuator</artifactId>
-                <version>${spring-boot-starter-actuator.version}</version>
             </dependency>
             <dependency>
                 <groupId>cn.hutool</groupId>
@@ -192,7 +233,126 @@
                 <artifactId>webdrivermanager</artifactId>
                 <version>${webdrivermanager.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-aop</artifactId>
+                <version>5.2.0.RELEASE</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml</artifactId>
+                <version>4.0.1</version>
+            </dependency>
+            <!--重试-->
+            <dependency>
+                <groupId>com.github.rholder</groupId>
+                <artifactId>guava-retrying</artifactId>
+                <version>2.0.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.inject</groupId>
+                <artifactId>guice</artifactId>
+                <version>4.1.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.jcraft</groupId>
+                <artifactId>jsch</artifactId>
+                <version>0.1.55</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-core</artifactId>
+                <version>3.1.0</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>2.6</version>
+            </dependency>
+            <dependency>
+                <groupId>redis.clients</groupId>
+                <artifactId>jedis</artifactId>
+                <version>2.3.1</version>
+            </dependency>
+            <!--s1f4j-->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>1.7.26</version>
+            </dependency>
+            <!--            &lt;!&ndash;logback&ndash;&gt;-->
+            <!--            <dependency>-->
+            <!--                <groupId>ch.qos.logback</groupId>-->
+            <!--                <artifactId>logback-classic</artifactId>-->
+            <!--                <version>1.2.3</version>-->
+            <!--            </dependency>-->
+            <!--            <dependency>-->
+            <!--                <groupId>ch.qos.logback</groupId>-->
+            <!--                <artifactId>logback-core</artifactId>-->
+            <!--                <version>1.2.3</version>-->
+            <!--            </dependency>-->
+            <!--            <dependency>-->
+            <!--                <groupId>ch.qos.logback</groupId>-->
+            <!--                <artifactId>logback-access</artifactId>-->
+            <!--                <version>1.2.3</version>-->
+            <!--            </dependency>-->
+            <dependency>
+                <groupId>org.quartz-scheduler</groupId>
+                <artifactId>quartz</artifactId>
+                <version>2.3.0</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-api</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>selenium-java</artifactId>
+                <version>3.12.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-thymeleaf</artifactId>
+                <version>2.4.1</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-redis</artifactId>
+                <version>2.3.8.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-tomcat</artifactId>
+                <version>2.3.8.RELEASE</version>
+                <scope>provided</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
+
+
+<!--    <profiles>-->
+<!--        <profile>-->
+<!--            <id>test</id>-->
+<!--            <properties>-->
+<!--                <env>test</env>-->
+<!--                <retail.centre.version>0.0.1-SNAPSHOT</retail.centre.version>-->
+<!--                <retail.centre.pak>com.zhr</retail.centre.pak>-->
+<!--                <retail.centre.db.url>jdbc:p6spy:mysql://127.0.0.1:3306/self?allowMultiQueries=true&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;useSSL=false&amp;useTimezone=true&amp;serverTimezone=GMT%2B8</retail.centre.db.url>-->
+<!--                <retail.centre.db.driver>com.p6spy.engine.spy.P6SpyDriver</retail.centre.db.driver>-->
+<!--                <retail.centre.db.datasource>com.zaxxer.hikari.HikariDataSource</retail.centre.db.datasource>-->
+<!--                <retail.centre.log4j.filepath>logs</retail.centre.log4j.filepath>-->
+<!--            </properties>-->
+<!--            <activation>-->
+<!--                &lt;!&ndash;默认生效的配置组&ndash;&gt;-->
+<!--                <activeByDefault>true</activeByDefault>-->
+<!--            </activation>-->
+<!--        </profile>-->
+<!--    </profiles>-->
+
 
 </project>

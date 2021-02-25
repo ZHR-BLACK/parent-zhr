@@ -6,7 +6,7 @@ package com.zhr.selfstudy.retry.guava.exception;
 public class NeedRetryException extends Exception {
 
     public NeedRetryException(String message) {
-        super("NeedRetryException can retry."+message);
+        super("NeedRetryException can retry." + message);
     }
 
 }

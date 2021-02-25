@@ -3,7 +3,7 @@ my:
   age: 12
 # 指定程序启动端口号
 server:
-  port: 8088
+  port: 8085
   tomcat:
     max-swallow-size: 100MB # 最重要的是这一行
 # 指定使用哪个环境配置文件
@@ -37,17 +37,4 @@ mybatis-plus:
     db-config:
       id-type: AUTO
 
-management:
-  server:
-    port: 9001
-  endpoint:
-    shutdown:
-      enabled: true
-    health:
-      enabled: true
-      show-details: always
-
-# 日志文件配置
-logging:
-  config: classpath:log4j2.yml
 

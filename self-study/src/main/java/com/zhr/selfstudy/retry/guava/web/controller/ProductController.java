@@ -28,11 +28,8 @@ public class ProductController {
      */
     @GetMapping("/product")
     public List<Product> add(String name, Integer count) {
-
         if ((!Strings.isNullOrEmpty(name)) && null != count) {
-
             Product product = new Product(null, name, count, null);
-
             Product pAdded = pRepo.addProduct(product);
             log.info("pAdded id={}", pAdded.getId());
         }

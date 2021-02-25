@@ -1,13 +1,13 @@
 # 共有8个级别，按照从低到高为：ALL < TRACE < DEBUG < INFO < WARN < ERROR < FATAL < OFF。
 Configuration:
-  status: warn
+  status: info
 
   Properties: # 定义全局变量
     Property: # 缺省配置（用于开发环境）。其他环境需要在VM参数中指定，如下：
       - name: log.path
         value: /export/Logs/zhr
       - name: project.name
-        value: parent-zhr
+        value: parent
       - name: log.level.console # CONSOLE
         value: trace
       - name: file.log.pattern

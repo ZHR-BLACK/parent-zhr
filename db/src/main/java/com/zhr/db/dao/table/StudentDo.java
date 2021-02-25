@@ -1,4 +1,4 @@
-package com.zhr.selfstudy.dao.table;
+package com.zhr.db.dao.table;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;

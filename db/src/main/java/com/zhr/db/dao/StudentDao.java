@@ -1,4 +1,4 @@
-package com.zhr.selfstudy.dao;
+package com.zhr.db.dao;
 
 import java.util.List;
 
@@ -9,6 +9,10 @@ import java.util.List;
  */
 public interface StudentDao {
 
+    /**
+     * 查出所有数据id列表
+     * @return
+     */
     List<Long> selectAllId();
 
 }

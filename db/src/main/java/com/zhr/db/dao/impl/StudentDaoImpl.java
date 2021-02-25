@@ -1,10 +1,9 @@
-package com.zhr.selfstudy.dao.impl;
+package com.zhr.db.dao.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.zhr.selfstudy.dao.StudentDao;
-import com.zhr.selfstudy.dao.mapper.StudentMapper;
-import com.zhr.selfstudy.dao.table.StudentDo;
-import lombok.extern.slf4j.Slf4j;
+import com.zhr.db.dao.StudentDao;
+import com.zhr.db.dao.mapper.StudentMapper;
+import com.zhr.db.dao.table.StudentDo;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -14,7 +13,7 @@ import java.util.List;
  * @创建时间 2021/2/9 15:27
  * @描述
  */
-@Slf4j
+
 @Component
 public class StudentDaoImpl extends ServiceImpl<StudentMapper, StudentDo> implements StudentDao {
 

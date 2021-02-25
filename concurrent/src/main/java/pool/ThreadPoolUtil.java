@@ -17,11 +17,11 @@ import java.util.concurrent.*;
 @Slf4j
 public class ThreadPoolUtil {
 
-    public static String threadName = "default-thread-name";
+    public static final String THREAD_NAME = "default-thread-name";
 
     static BlockingQueue<Runnable> queue = new ArrayBlockingQueue<>(5000);
     static RejectedExecutionHandler rejectedPolicy = new CustomRejectedPolicy();
-    static ThreadFactory factory = new CustomTreadFactory(threadName);
+    static ThreadFactory factory = new CustomTreadFactory(THREAD_NAME);
     public static ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(5,
             30, 30, TimeUnit.SECONDS, queue, factory, rejectedPolicy);
 

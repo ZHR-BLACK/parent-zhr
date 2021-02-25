@@ -36,33 +36,25 @@ public class ProductInformationHander implements Callable<Boolean> {
 
     @Override
     public Boolean call() throws Exception {
-
         log.info("sync price begin,prices size={}", prices.size());
-
         List<Product> all = pRepo.findAll();
         System.out.println("all = " + all);
 
-
         for (Long id : prices.keySet()) {
             Product product = pRepo.findById(id);
-
             if (null == product) {
                 throw new NeedRetryException("can not find product by id=" + id);
             }
             if (null == product.getCount() || product.getCount() < 1) {
                 throw new NeedRetryException("product count is less than 1, id=" + id);
             }
-
             Product updatedP = pRepo.updatePrice(id, prices.get(id));
             if (null == updatedP) {
                 return false;
             }
-
             prices.remove(id);
         }
-
         log.info("sync price over,prices size={}", prices.size());
-
         return true;
     }
 

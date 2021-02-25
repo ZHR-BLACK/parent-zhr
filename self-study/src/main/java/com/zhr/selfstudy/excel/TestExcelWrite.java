@@ -16,7 +16,7 @@ public class TestExcelWrite {
         List<List<String>> rows = CollUtil.newArrayList(row1, row2, row3);
 
         //通过工具类创建writer
-        ExcelWriter writer = ExcelUtil.getWriter("C:/Users/ZHR/Desktop/test.xls");
+        ExcelWriter writer = ExcelUtil.getWriter("D:/zhangjing710/Desktop/test.xls");
 
         //一次性写出内容，强制输出标题
         writer.write(rows);

@@ -23,7 +23,7 @@ public class ExcelWrite {
     public static void main(String[] args) throws Exception {
 
         // 写入文件路径
-        String path = "C:/Users/ZHR/Desktop/" + RandomUtil.randomNumbers(10) + ".xlsx";
+        String path = "D:/zhangjing710/Desktop/" + RandomUtil.randomNumbers(10) + ".xlsx";
 
         Workbook wb = new HSSFWorkbook();
         // 创建sheet页

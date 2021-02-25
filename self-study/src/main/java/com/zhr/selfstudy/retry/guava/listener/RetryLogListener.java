@@ -28,9 +28,6 @@ public class RetryLogListener implements RetryListener {
             // 正常返回时的结果
             log.info("result={}" , attempt.getResult());
         }
-
-
         log.info("log listen over.");
-
     }
 }
