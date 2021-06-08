@@ -13,4 +13,10 @@ public class ExcelBean {
     private String phone;
 
     private String shopName;
+    // 0-不存在    1-存在
+//    private int existed = 0;
+
+    private String bizId;
+
+    private String bpin;
 }

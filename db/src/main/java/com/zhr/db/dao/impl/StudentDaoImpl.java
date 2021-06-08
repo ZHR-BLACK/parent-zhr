@@ -1,5 +1,7 @@
 package com.zhr.db.dao.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.zhr.db.dao.StudentDao;
 import com.zhr.db.dao.mapper.StudentMapper;
@@ -20,5 +22,20 @@ public class StudentDaoImpl extends ServiceImpl<StudentMapper, StudentDo> implem
     @Override
     public List<Long> selectAllId() {
         return this.baseMapper.selectAllId();
+    }
+
+    @Override
+    public List<StudentDo> selectPhoneForPage(int startPage, int pageSize) {
+        QueryWrapper<StudentDo> queryWrapper = new QueryWrapper<>();
+        queryWrapper.select("age");
+        queryWrapper.groupBy("age");
+        queryWrapper.having("count(1) > 1");
+//        queryWrapper.last("limit " + startPage + "," + pageSize);
+        return this.baseMapper.selectList(queryWrapper);
+    }
+
+    @Override
+    public boolean batchInsertOrUpdate(List<StudentDo> studentDoList) {
+        return this.saveOrUpdateBatch(studentDoList, studentDoList.size());
     }
 }

@@ -1,5 +1,8 @@
 package com.zhr.selfstudy.collections;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,8 +15,11 @@ import static java.util.stream.Collectors.toList;
  */
 public class ListTest {
 
+    Logger log = LoggerFactory.getLogger(ListTest.class);
+
     public static void main(String[] args) {
         List<String> list1 = new ArrayList<>();
+
         list1.add("2");
         list1.add("3");
 
@@ -21,8 +27,8 @@ public class ListTest {
 
         List<String> list2 = new ArrayList<>();
         list2.add("1");
-        list2.add("2");
         list2.add("3");
+        list2.add("4");
         list2.add("4");
 
         list1.addAll(list2);
@@ -33,7 +39,10 @@ public class ListTest {
         System.out.println("多的：" + addList);
 
         list1.removeAll(list2);
-        System.out.println("少的：" + list1);
+//        System.out.println("少的：" + list1);
+
+        List<String> collect = list1.stream().distinct().collect(toList());
+        System.out.println("少的：" + collect);
 
     }
 }
