@@ -41,7 +41,7 @@
         <druid.version>1.1.12</druid.version>
         <joda-time.version>2.10.9</joda-time.version>
         <okhttp.version>4.9.1</okhttp.version>
-        <jfinal.version>4.1</jfinal.version>
+        <jfinal.version>4.9.11</jfinal.version>
         <jetty-server.version>2019.3</jetty-server.version>
         <jfinal-undertow.version>1.9</jfinal-undertow.version>
         <cglib.version>3.2.12</cglib.version>
