@@ -54,6 +54,8 @@
         <redisson.version>3.10.5</redisson.version>
         <selenium-java.version>3.12.0</selenium-java.version>
         <amqp-client.version>4.4.1</amqp-client.version>
+        <jsch.version>0.1.55</jsch.version>
+        <commons-io.version>2.6</commons-io.version>
     </properties>
 
     <dependencyManagement>
@@ -225,7 +227,7 @@
             <dependency>
                 <groupId>com.jcraft</groupId>
                 <artifactId>jsch</artifactId>
-                <version>0.1.55</version>
+                <version>${jsch.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.mockito</groupId>
@@ -235,7 +237,7 @@
             <dependency>
                 <groupId>commons-io</groupId>
                 <artifactId>commons-io</artifactId>
-                <version>2.6</version>
+                <version>${commons-io.version}</version>
             </dependency>
             <dependency>
                 <groupId>redis.clients</groupId>
