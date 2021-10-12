@@ -51,6 +51,9 @@
         <mysql.version>8.0.18</mysql.version>
         <mybatis.plus.version>3.3.2</mybatis.plus.version>
         <p6spy.version>3.9.0</p6spy.version>
+        <redisson.version>3.10.5</redisson.version>
+        <selenium-java.version>3.12.0</selenium-java.version>
+        <amqp-client.version>4.4.1</amqp-client.version>
     </properties>
 
     <dependencyManagement>
@@ -59,13 +62,6 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter</artifactId>
                 <version>${spring-boot-starter.version}</version>
-<!--                <exclusions>-->
-<!--                    &lt;!&ndash; 排除自带的logback依赖 &ndash;&gt;-->
-<!--                    <exclusion>-->
-<!--                        <groupId>org.springframework.boot</groupId>-->
-<!--                        <artifactId>spring-boot-starter-logging</artifactId>-->
-<!--                    </exclusion>-->
-<!--                </exclusions>-->
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -92,19 +88,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
                 <version>${spring-boot-starter.version}</version>
-<!--                <exclusions>-->
-<!--                    &lt;!&ndash; 排除自带的logback依赖 &ndash;&gt;-->
-<!--                    <exclusion>-->
-<!--                        <groupId>org.springframework.boot</groupId>-->
-<!--                        <artifactId>spring-boot-starter-logging</artifactId>-->
-<!--                    </exclusion>-->
-<!--                </exclusions>-->
             </dependency>
-<!--            <dependency>-->
-<!--                <groupId>org.springframework.boot</groupId>-->
-<!--                <artifactId>spring-boot-starter-log4j2</artifactId>-->
-<!--                <version>2.3.1.RELEASE</version>-->
-<!--            </dependency>-->
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-databind</artifactId>
@@ -136,23 +120,6 @@
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatis.plus.version}</version>
-<!--                <exclusions>-->
-<!--                    <exclusion>-->
-<!--                        <groupId>org.springframework.boot</groupId>-->
-<!--                        <artifactId>spring-boot-autoconfigure</artifactId>-->
-<!--                    </exclusion>-->
-<!--                </exclusions>-->
-<!--                <exclusions>-->
-<!--                    <exclusion>-->
-<!--                        &lt;!&ndash;配置log4j&ndash;&gt;-->
-<!--                        <groupId>org.springframework.boot</groupId>-->
-<!--                        <artifactId>spring-boot-starter-logging</artifactId>-->
-<!--                    </exclusion>-->
-<!--                    <exclusion>-->
-<!--                        <artifactId>slf4j-api</artifactId>-->
-<!--                        <groupId>org.slf4j</groupId>-->
-<!--                    </exclusion>-->
-<!--                </exclusions>-->
             </dependency>
 
             <dependency>
@@ -281,22 +248,6 @@
                 <artifactId>slf4j-api</artifactId>
                 <version>1.7.26</version>
             </dependency>
-            <!--            &lt;!&ndash;logback&ndash;&gt;-->
-            <!--            <dependency>-->
-            <!--                <groupId>ch.qos.logback</groupId>-->
-            <!--                <artifactId>logback-classic</artifactId>-->
-            <!--                <version>1.2.3</version>-->
-            <!--            </dependency>-->
-            <!--            <dependency>-->
-            <!--                <groupId>ch.qos.logback</groupId>-->
-            <!--                <artifactId>logback-core</artifactId>-->
-            <!--                <version>1.2.3</version>-->
-            <!--            </dependency>-->
-            <!--            <dependency>-->
-            <!--                <groupId>ch.qos.logback</groupId>-->
-            <!--                <artifactId>logback-access</artifactId>-->
-            <!--                <version>1.2.3</version>-->
-            <!--            </dependency>-->
             <dependency>
                 <groupId>org.quartz-scheduler</groupId>
                 <artifactId>quartz</artifactId>
@@ -312,7 +263,7 @@
             <dependency>
                 <groupId>org.seleniumhq.selenium</groupId>
                 <artifactId>selenium-java</artifactId>
-                <version>3.12.0</version>
+                <version>${selenium-java.version}</version>
             </dependency>
 
             <dependency>
@@ -331,9 +282,56 @@
                 <version>2.3.8.RELEASE</version>
                 <scope>provided</scope>
             </dependency>
+            <dependency>
+                <groupId>com.rabbitmq</groupId>
+                <artifactId>amqp-client</artifactId>
+                <version>${amqp-client.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson</artifactId>
+                <version>${redisson.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>jackson-core</artifactId>
+                        <groupId>com.fasterxml.jackson.core</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>netty-handler</artifactId>
+                        <groupId>io.netty</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>netty-common</artifactId>
+                        <groupId>io.netty</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>netty-buffer</artifactId>
+                        <groupId>io.netty</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>reactor-core</artifactId>
+                        <groupId>io.projectreactor</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>netty-transport</artifactId>
+                        <groupId>io.netty</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>netty-resolver</artifactId>
+                        <groupId>io.netty</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>reactive-streams</artifactId>
+                        <groupId>org.reactivestreams</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>netty-codec</artifactId>
+                        <groupId>io.netty</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
         </dependencies>
     </dependencyManagement>
-
 
 <!--    <profiles>-->
 <!--        <profile>-->
