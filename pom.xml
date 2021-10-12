@@ -55,7 +55,7 @@
         <selenium-java.version>3.12.0</selenium-java.version>
         <amqp-client.version>4.4.1</amqp-client.version>
         <jsch.version>0.1.55</jsch.version>
-        <commons-io.version>2.6</commons-io.version>
+        <commons-io.version>2.7</commons-io.version>
     </properties>
 
     <dependencyManagement>
