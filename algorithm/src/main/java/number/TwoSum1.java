@@ -9,7 +9,7 @@ import java.util.Map;
  * @version 1.0
  * @ClassName TwoSum1
  * @Date 2020-09-25 14:39
- * @description 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。
+ * @description 给定一个整数数组 nums[]和一个目标值 target，请你在该数组中找出和为目标值的那[]两个[]整数，并返回他们的数组下标。
  * <p>
  * 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。
  * 示例:
@@ -41,7 +41,7 @@ public class TwoSum1 {
      * 执行用时：3ms，在所有Java提交中击败了74.16%的用户
      * 内存消耗：39.4MB，在所有Java提交中击败了5.12%的用户
      **/
-    public int[] twoSum2(int[] nums, int target) {
+    public static int[] twoSum2(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
             int complement = target - nums[i];
@@ -55,7 +55,7 @@ public class TwoSum1 {
 
     public static void main(String[] args) {
         int[] nums = {3, 2, 4};
-        int[] result = twoSum(nums, 6);
+        int[] result = twoSum2(nums, 6);
         System.out.println(Arrays.toString(result));
     }
 
