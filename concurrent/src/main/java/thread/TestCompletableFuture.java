@@ -12,7 +12,7 @@ import java.util.function.Supplier;
  * @version 1.0
  * @ClassName TestCompletableFuture
  * @Date 2020-06-02 11:57
- * @description todo
+ * @description TestCompletableFuture
  **/
 public class TestCompletableFuture {
 

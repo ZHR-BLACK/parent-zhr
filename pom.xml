@@ -4,13 +4,6 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-<!--    <parent>-->
-<!--        <groupId>org.springframework.boot</groupId>-->
-<!--        <artifactId>spring-boot-starter-parent</artifactId>-->
-<!--        <version>2.3.1</version>-->
-<!--        &lt;!&ndash;        <relativePath/>&ndash;&gt;-->
-<!--    </parent>-->
-
     <groupId>com.study</groupId>
     <artifactId>parent</artifactId>
     <packaging>pom</packaging>
@@ -213,6 +206,11 @@
                 <artifactId>poi-ooxml</artifactId>
                 <version>4.0.1</version>
             </dependency>
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>31.0.1-jre</version>
+            </dependency>
             <!--重试-->
             <dependency>
                 <groupId>com.github.rholder</groupId>
@@ -331,6 +329,12 @@
                         <groupId>io.netty</groupId>
                     </exclusion>
                 </exclusions>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/net.openhft/chronicle-queue -->
+            <dependency>
+                <groupId>net.openhft</groupId>
+                <artifactId>chronicle-queue</artifactId>
+                <version>5.22ea9</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

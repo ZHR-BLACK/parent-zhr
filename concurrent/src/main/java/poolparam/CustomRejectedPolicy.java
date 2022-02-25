@@ -12,6 +12,7 @@ import java.util.concurrent.ThreadPoolExecutor;
  */
 @Slf4j
 public class CustomRejectedPolicy implements RejectedExecutionHandler {
+
     @Override
     public void rejectedExecution(Runnable r, ThreadPoolExecutor e) {
         doLog(r, e);

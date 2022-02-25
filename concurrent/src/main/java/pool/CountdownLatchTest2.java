@@ -13,7 +13,7 @@ import java.util.concurrent.Executors;
  **/
 public class CountdownLatchTest2 {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         ExecutorService service = Executors.newCachedThreadPool(); //创建一个线程池
         final CountDownLatch count = new CountDownLatch(30);
         for (int i = 0; i < 30; i++) {
@@ -36,7 +36,7 @@ public class CountdownLatchTest2 {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            service.shutdown(); //任务结束。停止线程池的全部线程
+            service.shutdown(); // 任务结束。停止线程池的全部线程
         }
     }
 }
