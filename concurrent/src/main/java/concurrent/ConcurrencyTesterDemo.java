@@ -22,6 +22,5 @@ public class ConcurrencyTesterDemo {
 
         // 获取总的执行时间，单位毫秒
         Console.log(tester.getInterval());
-
     }
 }
