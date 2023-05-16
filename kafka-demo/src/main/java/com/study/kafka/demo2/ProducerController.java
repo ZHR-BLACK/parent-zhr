@@ -1,4 +1,4 @@
-package com.zhr.selfstudy.kafka.demo2;
+package com.study.kafka.demo2;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -19,7 +19,7 @@ public class ProducerController {
     @Autowired
     private KafkaTemplate<String, Object> kafkaTemplate;
 
-    @RequestMapping("send")
+    @RequestMapping("/send")
     public String sendMessage(@RequestBody User user) {
         kafkaTemplate.send("my-topic1", user);
         return "success";

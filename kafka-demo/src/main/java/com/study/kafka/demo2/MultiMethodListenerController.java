@@ -1,4 +1,4 @@
-package com.zhr.selfstudy.kafka.demo2;
+package com.study.kafka.demo2;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -18,11 +18,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class MultiMethodListenerController {
 
     @Autowired
-    private KafkaTemplate<Object, Object> template;
+    private KafkaTemplate<String, Object> template;
 
     @PostMapping(path = "/send/user")
-    public void sendFoo(@RequestBody User user) {
-        this.template.send("multi-my-topic1", user);
+    public void sendFoo() {
+        User build = User.builder().age(20).sex(1).build();
+        this.template.send("multi-my-topic1", build);
     }
 
     @PostMapping(path = "/send/role")

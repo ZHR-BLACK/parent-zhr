@@ -1,4 +1,4 @@
-package com.zhr.selfstudy.kafka.demo2;
+package com.study.kafka.demo2;
 
 import org.apache.kafka.clients.admin.NewTopic;
 import org.springframework.context.annotation.Bean;

@@ -19,6 +19,7 @@
         <module>jfinal-demo</module>
         <module>boot</module>
         <module>out</module>
+        <module>kafka-demo</module>
     </modules>
 
     <properties>

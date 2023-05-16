@@ -1,4 +1,4 @@
-package com.zhr.selfstudy.kafka.demo1;
+package com.study.kafka.demo1;
 
 import com.alibaba.fastjson.JSONObject;
 import org.apache.kafka.clients.consumer.ConsumerRecord;

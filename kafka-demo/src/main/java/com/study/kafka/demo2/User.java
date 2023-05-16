@@ -1,5 +1,6 @@
-package com.zhr.selfstudy.kafka.demo2;
+package com.study.kafka.demo2;
 
+import lombok.Builder;
 import lombok.Data;
 
 /**
@@ -10,6 +11,7 @@ import lombok.Data;
  * @description User
  **/
 @Data
+@Builder
 public class User {
 
     private String userName;
