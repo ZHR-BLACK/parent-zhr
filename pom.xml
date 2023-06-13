@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.study</groupId>
-    <artifactId>parent</artifactId>
+    <artifactId>parent-zhr</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
@@ -64,16 +64,6 @@
                 <artifactId>spring-boot-starter-jdbc</artifactId>
                 <version>${spring-boot-starter.version}</version>
             </dependency>
-            <!-- 项目内模块end -->
-            <!-- Spring Boot 核心模块 START -->
-            <!-- 核心模块，包括自动配置支持、日志和YAML -->
-<!--            <dependency>-->
-<!--                <groupId>org.springframework.boot</groupId>-->
-<!--                <artifactId>spring-boot-dependencies</artifactId>-->
-<!--                <version>2.3.1.RELEASE</version>-->
-<!--                <type>pom</type>-->
-<!--                <scope>import</scope>-->
-<!--            </dependency>-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-test</artifactId>
@@ -358,27 +348,65 @@
                 <artifactId>spring-kafka</artifactId>
                 <version>2.6.7</version>
             </dependency>
+
         </dependencies>
     </dependencyManagement>
 
-<!--    <profiles>-->
-<!--        <profile>-->
-<!--            <id>test</id>-->
-<!--            <properties>-->
-<!--                <env>test</env>-->
-<!--                <retail.centre.version>0.0.1-SNAPSHOT</retail.centre.version>-->
-<!--                <retail.centre.pak>com.zhr</retail.centre.pak>-->
-<!--                <retail.centre.db.url>jdbc:p6spy:mysql://127.0.0.1:3306/self?allowMultiQueries=true&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;useSSL=false&amp;useTimezone=true&amp;serverTimezone=GMT%2B8</retail.centre.db.url>-->
-<!--                <retail.centre.db.driver>com.p6spy.engine.spy.P6SpyDriver</retail.centre.db.driver>-->
-<!--                <retail.centre.db.datasource>com.zaxxer.hikari.HikariDataSource</retail.centre.db.datasource>-->
-<!--                <retail.centre.log4j.filepath>logs</retail.centre.log4j.filepath>-->
-<!--            </properties>-->
-<!--            <activation>-->
-<!--                &lt;!&ndash;默认生效的配置组&ndash;&gt;-->
-<!--                <activeByDefault>true</activeByDefault>-->
-<!--            </activation>-->
-<!--        </profile>-->
-<!--    </profiles>-->
+    <profiles>
+        <profile>
+            <id>test</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <spring.profiles.active>test</spring.profiles.active>
+            </properties>
+        </profile>
+        <profile>
+            <id>pre</id>
+            <properties>
+                <spring.profiles.active>pre</spring.profiles.active>
+            </properties>
+        </profile>
+        <profile>
+            <id>prod</id>
+            <properties>
+                <spring.profiles.active>prod</spring.profiles.active>
+            </properties>
+        </profile>
+    </profiles>
+
+    <build>
+        <finalName>parent-zhr</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-archetype-plugin</artifactId>
+                <version>3.0.1</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.0.2</version>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 
 </project>
