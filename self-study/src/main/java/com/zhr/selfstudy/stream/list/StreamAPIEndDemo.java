@@ -1,4 +1,4 @@
-package com.zhr.selfstudy.stream.demo3;
+package com.zhr.selfstudy.stream.list;
 
 import com.zhr.selfstudy.stream.demo2.Student;
 import org.junit.BeforeClass;
@@ -62,7 +62,6 @@ public class StreamAPIEndDemo {
         // 检查是否匹配所有元素
         boolean result = stream1.distinct().allMatch(new StudentPredicate2());
         System.out.println(result);
-
     }
 
     @Test
@@ -70,7 +69,6 @@ public class StreamAPIEndDemo {
         // 检查是否至少匹配一个元素
         boolean result = stream1.distinct().anyMatch(new StudentPredicate2());
         System.out.println(result);
-
     }
 
     @Test
@@ -78,7 +76,6 @@ public class StreamAPIEndDemo {
         // 检查是否没有匹配的元素
         boolean result = stream1.distinct().noneMatch(new StudentPredicate2());
         System.out.println(result);
-
     }
 
 
@@ -86,16 +83,14 @@ public class StreamAPIEndDemo {
     public void test5() {
         // 返回第一个元素
         Optional<Student> optionalStudent = stream1.distinct().findFirst();
-        System.out.println(optionalStudent.get());
+        System.out.println(optionalStudent.orElse(null));
 
     }
 
     @Test
     public void test6() {
-
         Optional<Student> optionalStudent = stream1.distinct().findAny();
-        System.out.println(optionalStudent.get());
-
+        System.out.println(optionalStudent.orElse(null));
     }
 
     @Test
@@ -103,7 +98,6 @@ public class StreamAPIEndDemo {
         // 返回流中元素的总个数
         long result = stream1.distinct().count();
         System.out.println(result);
-
     }
 
     @Test
@@ -113,8 +107,7 @@ public class StreamAPIEndDemo {
 
         // 仅仅获取最大年龄
         Optional<Integer> optionalStudent = stream1.distinct().map(Student::getAge).max(Integer::compare);
-        System.out.println(optionalStudent.get());
-
+        System.out.println(optionalStudent.orElse(null));
     }
 
 
@@ -133,7 +126,7 @@ public class StreamAPIEndDemo {
 
         // 终止操作 归约
         Optional<Student> result = stream2.reduce(new StudentBinaryOperator());
-        System.out.println(result.get());
+        System.out.println(result.orElse(null));
     }
 
     @Test
@@ -147,14 +140,14 @@ public class StreamAPIEndDemo {
     @Test
     public void tes12() {
         List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-        Integer sum = list.stream().reduce(0, (x, y) -> x + y);
+        Integer sum = list.stream().reduce(0, Integer::sum);
         System.out.println(sum);
 
     }
 
     @Test
     public void tes13() {
-        Integer sum = stream1.distinct().map(Student::getAge).reduce(0, (x, y) -> x + y);
+        Integer sum = stream1.distinct().map(Student::getAge).reduce(10, Integer::sum);
         System.out.println(sum);
 
     }
@@ -162,17 +155,8 @@ public class StreamAPIEndDemo {
     @Test
     public void tes14() {
         Optional<Integer> sum = stream1.distinct().map(Student::getAge).reduce(Integer::sum);
-        System.out.println(sum.get());
-
+        System.out.println(sum.orElse(0));
     }
-
-
-    @Test
-    public void tes15() {
-
-
-    }
-
 
     /*************************/
 
@@ -185,14 +169,12 @@ public class StreamAPIEndDemo {
     public void tes21() {
         List<String> names = stream1.map(Student::getName).collect(Collectors.toList());
         System.out.println(names);
-
     }
 
     @Test
     public void tes21_2() {
         Map<Integer, String> names = stream1.distinct().collect(Collectors.toMap(Student::getId, Student::getName));
         System.out.println(names);
-
     }
 
     @Test
@@ -206,15 +188,13 @@ public class StreamAPIEndDemo {
     public void tes23() {
         Set<String> names = stream1.map(Student::getName).collect(Collectors.toCollection(HashSet::new));
         System.out.println(names);
-
     }
 
     // 统计
     @Test
     public void tes24() {
-        Long count = stream1.collect(Collectors.counting());
+        Long count = stream1.count();
         System.out.println(count);
-
     }
 
     @Test
@@ -222,25 +202,23 @@ public class StreamAPIEndDemo {
         // avg
         Double avg = stream1.collect(Collectors.averagingDouble(Student::getHeight));
         System.out.println(avg);
-
-
     }
 
     @Test
     public void tes26() {
         // sum
-        Double sum = stream1.collect(Collectors.summingDouble(Student::getHeight));
+        Double sum = stream1.mapToDouble(Student::getHeight).sum();
         System.out.println(sum);
 
     }
 
     @Test
     public void tes27() {
-        //
         //Optional<Student> optionalStudent = stream1.collect(Collectors.maxBy((t1, t2) -> Double.compare(t1.getHeight(), t2.getHeight())));
-        Optional<Student> optionalStudent = stream1.collect(Collectors.maxBy(Comparator.comparingDouble(Student::getHeight)));
+        // 升高最高者
+        Optional<Student> optionalStudent = stream1.max(Comparator.comparingDouble(Student::getHeight));
 
-        System.out.println(optionalStudent.get());
+        System.out.println(optionalStudent.orElse(null));
     }
 
     @Test
@@ -254,13 +232,11 @@ public class StreamAPIEndDemo {
         System.out.println(sum.getAverage());
         System.out.println(sum.getMax());
         System.out.println(sum.getMin());
-
     }
 
     // 分组
     @Test
     public void tes29() {
-
         // .sorted(Comparator.comparingInt(Student::getAge))
         Map<Integer, List<Student>> stuMap = stream1.collect(Collectors.groupingBy(Student::getAge));
 
@@ -268,8 +244,6 @@ public class StreamAPIEndDemo {
             System.out.println("age:" + key);
             value.forEach(System.out::println);
         });
-
-
     }
 
     // 多级分组
@@ -306,13 +280,12 @@ public class StreamAPIEndDemo {
             value.forEach(System.out::println);
         });
     }
-
+    // 字符串拼接
     @Test
     public void tes32() {
-
-        String names = stream1.map(Student::getName).collect(Collectors.joining(",", "<Start>", "<End>"));
+        String names = stream1.map(Student::getName)
+                .collect(Collectors.joining(",", "<Start>", "<End>"));
         System.out.println(names);
     }
-
 
 }

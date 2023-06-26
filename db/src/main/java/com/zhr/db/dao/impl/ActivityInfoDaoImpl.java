@@ -45,19 +45,29 @@ public class ActivityInfoDaoImpl extends ServiceImpl<ActivityInfoMapper, Activit
 
     @Override
     public boolean editActivityInfoByActivityId(Long activityId) {
-        LambdaUpdateWrapper<ActivityInfoDo> updateWrapper = new LambdaUpdateWrapper<>();
-        updateWrapper.set(ActivityInfoDo::getHasHidden, 2);
-        updateWrapper.eq(ActivityInfoDo::getActivityId, activityId);
-        return this.update(updateWrapper);
+        return false;
     }
 
     @Override
     public boolean editActivityInfoByActivityIdAndHasHidden(Long activityId, int hasHidden) {
-        LambdaUpdateWrapper<ActivityInfoDo> updateWrapper = new LambdaUpdateWrapper<>();
-        updateWrapper.set(ActivityInfoDo::getHasHidden, hasHidden);
-        updateWrapper.eq(ActivityInfoDo::getActivityId, activityId);
-        return this.update(updateWrapper);
+        return false;
     }
+
+//    @Override
+//    public boolean editActivityInfoByActivityId(Long activityId) {
+//        LambdaUpdateWrapper<ActivityInfoDo> updateWrapper = new LambdaUpdateWrapper<>();
+//        updateWrapper.set(ActivityInfoDo::getHasHidden, 2);
+//        updateWrapper.eq(ActivityInfoDo::getActivityId, activityId);
+//        return this.update(updateWrapper);
+//    }
+//
+//    @Override
+//    public boolean editActivityInfoByActivityIdAndHasHidden(Long activityId, int hasHidden) {
+//        LambdaUpdateWrapper<ActivityInfoDo> updateWrapper = new LambdaUpdateWrapper<>();
+//        updateWrapper.set(ActivityInfoDo::getHasHidden, hasHidden);
+//        updateWrapper.eq(ActivityInfoDo::getActivityId, activityId);
+//        return this.update(updateWrapper);
+//    }
 
     @Override
     public List<ActivityInfoDo> selectActivityInfoListByActivityId(Long activityId) {
@@ -116,36 +126,46 @@ public class ActivityInfoDaoImpl extends ServiceImpl<ActivityInfoMapper, Activit
 
     @Override
     public List<ActivityInfoDo> selectActivityInfoListByActivityIdAndSinglePhone(Long activityId, String phone) {
-        LambdaQueryWrapper<ActivityInfoDo> queryWrapper = new LambdaQueryWrapper<>();
-        // 活动id
-        if (activityId != null
-                && activityId != 0) {
-            queryWrapper.eq(ActivityInfoDo::getActivityId, activityId);
-        }
-        // 手机号单笔查询
-        if (StringUtils.isNotBlank(phone)) {
-            queryWrapper.eq(ActivityInfoDo::getPhone, phone);
-        }
-        return this.baseMapper.selectList(queryWrapper);
+        return null;
     }
 
     @Override
     public List<ActivityInfoDo> selectActivityInfoListByActivityIdAndSinglePhoneAndBpin(Long activityId, String phone, String bpin) {
-        LambdaQueryWrapper<ActivityInfoDo> queryWrapper = new LambdaQueryWrapper<>();
-        // 活动id
-        if (activityId != null
-                && activityId != 0) {
-            queryWrapper.eq(ActivityInfoDo::getActivityId, activityId);
-        }
-        // 手机号单笔查询
-        if (StringUtils.isNotBlank(phone)) {
-            queryWrapper.eq(ActivityInfoDo::getPhone, phone);
-        }
-        if (StringUtils.isNotBlank(bpin)) {
-            queryWrapper.eq(ActivityInfoDo::getBpin, bpin);
-        }
-        return this.baseMapper.selectList(queryWrapper);
+        return null;
     }
+
+//    @Override
+//    public List<ActivityInfoDo> selectActivityInfoListByActivityIdAndSinglePhone(Long activityId, String phone) {
+//        LambdaQueryWrapper<ActivityInfoDo> queryWrapper = new LambdaQueryWrapper<>();
+//        // 活动id
+//        if (activityId != null
+//                && activityId != 0) {
+//            queryWrapper.eq(ActivityInfoDo::getActivityId, activityId);
+//        }
+//        // 手机号单笔查询
+//        if (StringUtils.isNotBlank(phone)) {
+//            queryWrapper.eq(ActivityInfoDo::getPhone, phone);
+//        }
+//        return this.baseMapper.selectList(queryWrapper);
+//    }
+
+//    @Override
+//    public List<ActivityInfoDo> selectActivityInfoListByActivityIdAndSinglePhoneAndBpin(Long activityId, String phone, String bpin) {
+//        LambdaQueryWrapper<ActivityInfoDo> queryWrapper = new LambdaQueryWrapper<>();
+//        // 活动id
+//        if (activityId != null
+//                && activityId != 0) {
+//            queryWrapper.eq(ActivityInfoDo::getActivityId, activityId);
+//        }
+//        // 手机号单笔查询
+//        if (StringUtils.isNotBlank(phone)) {
+//            queryWrapper.eq(ActivityInfoDo::getPhone, phone);
+//        }
+//        if (StringUtils.isNotBlank(bpin)) {
+//            queryWrapper.eq(ActivityInfoDo::getBpin, bpin);
+//        }
+//        return this.baseMapper.selectList(queryWrapper);
+//    }
 
     @Override
     public List<String> selectPhoneByActivityId(Long activityId) {

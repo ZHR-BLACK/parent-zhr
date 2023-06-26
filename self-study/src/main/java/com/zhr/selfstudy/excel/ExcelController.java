@@ -123,9 +123,6 @@ public class ExcelController {
                 if (servletOutputStream != null) {
                     servletOutputStream.close();
                 }
-                if (inputStream != null) {
-                    inputStream.close();
-                }
             } catch (Exception e) {
                 e.printStackTrace();
             }

@@ -1,4 +1,4 @@
-package com.zhr.selfstudy.stream.lambda;
+package com.zhr.selfstudy.stream.filter;
 
 import java.util.Arrays;
 import java.util.List;

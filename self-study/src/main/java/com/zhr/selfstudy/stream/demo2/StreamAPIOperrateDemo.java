@@ -5,6 +5,7 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -29,7 +30,7 @@ public class StreamAPIOperrateDemo {
                 , new Student().setId(3).setName("王五").setAge(15)
                 , new Student().setId(4).setName("赵六").setAge(17)
                 , new Student().setId(5).setName("钱七").setAge(20)
-                , new Student().setId(1).setName("张三").setAge(19)
+                , new Student().setId(6).setName("张三").setAge(19)
         );
     }
 
@@ -38,7 +39,6 @@ public class StreamAPIOperrateDemo {
      */
     @Test
     public void test1() {
-
         //中间操作 过滤年龄不等于18
         //Stream<Student> stream2 = stream1.filter(new MyPredicate());
 
@@ -50,9 +50,7 @@ public class StreamAPIOperrateDemo {
 //        });
 //        // 终止操作
 //        stream2.forEach(System.out::println);
-
         stream1.filter(item -> item.getAge() >= 18).forEach(System.out::println);
-
     }
 
 
@@ -61,24 +59,18 @@ public class StreamAPIOperrateDemo {
 
         //中间操作 截取前三个
 //        Stream<Student> stream2 = stream1.limit(3);
-
         // 终止操作
 //        stream2.forEach(System.out::println);
-
         stream1.limit(3).forEach(System.out::println);
-
     }
 
 
     @Test
     public void test3() {
-
         //中间操作 丢弃前三个
         Stream<Student> stream2 = stream1.skip(3);
-
         // 终止操作
         stream2.forEach(System.out::println);
-
     }
 
 
@@ -101,19 +93,15 @@ public class StreamAPIOperrateDemo {
      */
     @Test
     public void test5() {
-
         //中间操作
         //Stream<Student> stream2 = stream1.map(new MyFunction());
-        Stream<Student> stream2 = stream1.map((o) -> {
+        Stream<Student> stream2 = stream1.peek((o) -> {
             if (o.getName().contains("敏感词汇")) {
                 o.setName(o.getName().replaceAll("敏感词汇","*"));
             }
-            return o;
         });
-
         // 终止操作
         stream2.forEach(System.out::println);
-
     }
 
     @Test
@@ -141,11 +129,9 @@ public class StreamAPIOperrateDemo {
                 = list.stream().flatMap(StreamAPIOperrateDemo::stringToCharacter);
 
         stream.forEach((sm) -> sm.forEach(System.out::print));
-        //
 
         System.out.println();
         stream2.forEach(System.out::print);
-        //
     }
 
     private static Stream<Character> stringToCharacter(String string) {
@@ -171,7 +157,7 @@ public class StreamAPIOperrateDemo {
 
         //Stream<Student> stream2 = stream1.sorted((s1, s2) -> s1.getAge() - s2.getAge());
 
-        Stream<Student> stream2 = stream1.sorted((s1, s2) -> Integer.compare(s1.getAge(),s2.getAge()));
+        Stream<Student> stream2 = stream1.sorted(Comparator.comparingInt(Student::getAge));
 //        Stream<Student> stream3 = stream1.sorted(Comparator.comparingInt(Student::getAge));
 
         // 终止操作

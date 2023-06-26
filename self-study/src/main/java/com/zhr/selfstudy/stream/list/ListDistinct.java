@@ -1,4 +1,4 @@
-package com.zhr.selfstudy.collections;
+package com.zhr.selfstudy.stream.list;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
  * @创建时间 2021/3/4 17:16
  * @描述 list 去重  lambda
  */
-public class ListTest2 {
+public class ListDistinct {
 
     public static void main(String[] args) {
         List<String> list = new ArrayList<>();

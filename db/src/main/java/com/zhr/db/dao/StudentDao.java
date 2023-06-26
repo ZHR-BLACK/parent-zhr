@@ -1,5 +1,6 @@
 package com.zhr.db.dao;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.zhr.db.dao.table.StudentDo;
 
 import java.util.List;
@@ -32,4 +33,5 @@ public interface StudentDao {
      */
     boolean batchInsertOrUpdate(List<StudentDo> studentDoList);
 
+    IPage<StudentDo> queryStudentForPage(int startPage, int pageSize);
 }

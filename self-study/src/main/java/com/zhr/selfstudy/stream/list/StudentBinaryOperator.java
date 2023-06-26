@@ -1,5 +1,4 @@
-package com.zhr.selfstudy.stream.demo3;
-
+package com.zhr.selfstudy.stream.list;
 
 import com.zhr.selfstudy.stream.demo2.Student;
 

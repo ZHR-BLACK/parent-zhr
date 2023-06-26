@@ -1,9 +1,7 @@
-package com.zhr.selfstudy.stream.test;
+package com.zhr.selfstudy.stream.list;
 
 import com.google.gson.Gson;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.zhr.selfstudy.stream.Product;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -106,7 +104,6 @@ public class StreamDemo {
         // .collect(Collectors.toMap(Product::getType, Product::getName,
         // (oldValue, newValue) -> oldValue));
         // System.out.println(new Gson().toJson(collectMap2));
-
     }
 
     // 多级分组
@@ -150,7 +147,8 @@ public class StreamDemo {
     }
 
     // 字符串拼接
-    public static void test5() {
+    @Test
+    public void test5() {
         String x = productList.stream().map(Product::getType).collect(Collectors.joining());
         String y = productList.stream().map(Product::getType).collect(Collectors.joining(","));
         System.out.println(x);
@@ -179,38 +177,3 @@ public class StreamDemo {
     }
 }
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-class Product {
-    private Integer id;
-    private String name;
-    private double price;
-    private String type;
-
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((name == null) ? 0 : name.hashCode());
-        return result;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        Product other = (Product) obj;
-        if (name == null) {
-            if (other.name != null)
-                return false;
-        } else if (!name.equals(other.name))
-            return false;
-        return true;
-    }
-
-}

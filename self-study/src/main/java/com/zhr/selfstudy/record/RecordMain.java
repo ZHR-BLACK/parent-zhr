@@ -76,9 +76,7 @@ public class RecordMain {
             result.setCode(code);
             result.setMsg(msg);
             return result;
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
+        } catch (InstantiationException | IllegalAccessException e) {
             e.printStackTrace();
         }
         return null;

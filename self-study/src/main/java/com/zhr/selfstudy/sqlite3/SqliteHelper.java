@@ -24,7 +24,7 @@ public class SqliteHelper {
         log.info("Current OS Type :" + osName);
         osName = osName.toLowerCase();
         // 如果系统名称中含有windows就是windows系统
-        return osName.indexOf("windows") >= 0;
+        return osName.contains("windows");
 
     }
 
@@ -101,7 +101,7 @@ public class SqliteHelper {
      */
     public static List<JSONObject> executeQueryList(String sql, String channelCode) throws SQLException,
             ClassNotFoundException, FileNotFoundException {
-        List<JSONObject> rsList = new ArrayList<JSONObject>();
+        List<JSONObject> rsList = new ArrayList<>();
         Connection conn = null;
         Statement statement = null;
         ResultSet resultSet = null;

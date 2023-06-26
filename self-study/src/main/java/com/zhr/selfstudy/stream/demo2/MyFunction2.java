@@ -11,7 +11,7 @@ public class MyFunction2 implements Function<Student, String> {
 
     @Override
     public String apply(Student o) {
-        if (o==null) {
+        if (o == null) {
             return null;
         }
         return o.getName();

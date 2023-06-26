@@ -35,7 +35,7 @@ public class TestTransaction {
     public void test1() {
         transactions.stream()
                 .filter((t) -> t.getYear() == 2011)
-                .sorted((t1, t2) -> Integer.compare(t1.getValue(), t2.getValue()))
+                .sorted(Comparator.comparingInt(Transaction::getValue))
                 .forEach(System.out::println);
     }
 
@@ -52,9 +52,9 @@ public class TestTransaction {
     @Test
     public void test3() {
         transactions.stream()
-                .filter((t) -> t.getTrader().getCity().equals("Cambridge"))
                 .map(Transaction::getTrader)
-                .sorted((t1, t2) -> t1.getName().compareTo(t2.getName()))
+                .filter(trader -> trader.getCity().equals("Cambridge"))
+                .sorted(Comparator.comparing(Trader::getName))
                 .distinct()
                 .forEach(System.out::println);
     }
@@ -81,17 +81,15 @@ public class TestTransaction {
         transactions.stream()
                 .map((t) -> t.getTrader().getName())
                 .flatMap(TestTransaction::filterCharacter)
-                .sorted((s1, s2) -> s1.compareToIgnoreCase(s2))
+                .sorted(String::compareToIgnoreCase)
                 .forEach(System.out::print);
     }
 
     public static Stream<String> filterCharacter(String str) {
         List<String> list = new ArrayList<>();
-
         for (Character ch : str.toCharArray()) {
             list.add(ch.toString());
         }
-
         return list.stream();
     }
 
@@ -103,19 +101,21 @@ public class TestTransaction {
 //
 //		System.out.println(bl);
 
-        transactions.stream().filter(t -> t.getTrader().getCity().equals("Milan")).forEach(System.out::println);
+        transactions.stream()
+                .filter(t -> t.getTrader().getCity().equals("Milan"))
+                .forEach(System.out::println);
     }
 
     //6. 打印生活在剑桥的交易员的所有交易额
     @Test
     public void test6() {
-
 //        Optional<Integer> cambridge = transactions.stream().filter(t -> t.getTrader().getCity().equals("Cambridge")).map(t -> t.getValue()).reduce(Integer::sum);
 //        if (cambridge.isPresent()) {
 //            System.out.println("cambridge = " + cambridge.get());
 //        }
-
-        System.out.println("cambridge = " + transactions.stream().filter(t -> t.getTrader().getCity().equals("Cambridge")).mapToDouble(t -> t.getValue()).sum());
+        System.out.println("cambridge = " + transactions.stream()
+                .filter(t -> t.getTrader().getCity().equals("Cambridge"))
+                .mapToDouble(Transaction::getValue).sum());
     }
 
 
@@ -128,7 +128,9 @@ public class TestTransaction {
 //
 //		System.out.println(max.get());
 
-        System.out.println(transactions.stream().map(a -> a.getValue()).max(Comparator.comparingInt(t -> t.intValue())).get());
+        System.out.println(transactions.stream()
+                .map(Transaction::getValue)
+                .max(Comparator.comparingInt(t -> t)).get());
     }
 
     //8. 找到交易额最小的交易
@@ -139,7 +141,9 @@ public class TestTransaction {
 //
 //		System.out.println(op.get());
 
-        System.out.println(transactions.stream().min(Comparator.comparingInt(t -> t.getValue())).map(a -> a.getValue()).get());
+        System.out.println(transactions.stream()
+                .min(Comparator.comparingInt(Transaction::getValue))
+                .map(Transaction::getValue).get());
     }
 
 }

@@ -1,7 +1,4 @@
-package com.zhr.selfstudy.collections;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+package com.zhr.selfstudy.stream.list;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,8 +11,6 @@ import static java.util.stream.Collectors.toList;
  * @描述 找出新list中与原list中少的和多的
  */
 public class ListTest {
-
-    Logger log = LoggerFactory.getLogger(ListTest.class);
 
     public static void main(String[] args) {
         List<String> list1 = new ArrayList<>();

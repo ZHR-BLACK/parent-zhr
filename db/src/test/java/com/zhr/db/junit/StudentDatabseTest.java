@@ -1,5 +1,6 @@
 package com.zhr.db.junit;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.zhr.db.dao.StudentDao;
 import com.zhr.db.dao.table.StudentDo;
 import lombok.extern.slf4j.Slf4j;
@@ -56,6 +57,14 @@ public class StudentDatabseTest {
         List<StudentDo> studentDos = studentDao.selectPhoneForPage(0, 2);
         log.info("studentDos = " + studentDos);
     }
+
+    @Test
+    public void testQueryStudentForPage() {
+        IPage<StudentDo> studentDoIPage = studentDao.queryStudentForPage(1, 2);
+        log.info("studentDos = " + studentDoIPage.getRecords());
+    }
+
+
 
 
 }

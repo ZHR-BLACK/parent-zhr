@@ -1,8 +1,9 @@
-package com.zhr.selfstudy.stream.test;
+package com.zhr.selfstudy.stream.filter;
 
 import org.junit.Test;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 /**
  * @describe: 类描述信息
@@ -36,6 +37,6 @@ public class StreamTest {
 //        }
 //        System.out.println(www);
 
-        Arrays.asList(profiles).stream().filter(t -> t != null).filter(t -> t.equals("prod")).forEach(System.out::println);
+        Arrays.stream(profiles).filter(Objects::nonNull).filter(t -> t.equals("prod")).forEach(System.out::println);
     }
 }

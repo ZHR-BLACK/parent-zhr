@@ -1,4 +1,4 @@
-package com.zhr.selfstudy.stream.demo3;
+package com.zhr.selfstudy.stream.list;
 
 
 import com.zhr.selfstudy.stream.demo2.Student;
@@ -16,9 +16,6 @@ public class StudentPredicate2 implements Predicate<Student> {
         if (student == null) {
             return false;
         }
-        if (student.getAge() >= 18) {
-            return true;
-        }
-        return false;
+        return student.getAge() >= 18;
     }
 }

@@ -20,7 +20,7 @@ public class HashMain {
         long a = l % 5000;
         System.out.println("a ********************" + a);
 
-        long a2 = 0 - a;
+        long a2 = -a;
         System.out.println("a2 ********************" + a2);
     }
 }

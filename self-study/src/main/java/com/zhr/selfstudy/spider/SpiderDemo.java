@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -21,10 +22,10 @@ public class SpiderDemo {
         connection.connect(); //打开连接
         BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream(), "utf-8")); //创建输入流并设置编码
         StringBuffer sb = new StringBuffer();
-        String lines = null;
+        String lines;
         while ((lines = reader.readLine()) != null) {
-            lines = new String(lines.getBytes(), "utf-8"); //读取流的一行,设置编码
-            sb = sb.append(lines + "\n");
+            lines = new String(lines.getBytes(), StandardCharsets.UTF_8); //读取流的一行,设置编码
+            sb.append(lines).append("\n");
         }
         reader.close(); //关闭流
         connection.disconnect(); //销毁连接

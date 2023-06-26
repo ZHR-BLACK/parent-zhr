@@ -53,9 +53,7 @@ public class StreamAPICreateTest {
 
     @Test
     public void test3() {
-
         Stream<Integer> stream1 = Stream.of(1, 2, 3, 4);
-
         // 终止操作
         stream1.forEach(System.out::println);
 
@@ -66,18 +64,15 @@ public class StreamAPICreateTest {
         // 迭代方式创建无限流
 //        Stream<Integer> stream1 = Stream.iterate(1, new MyUnaryOperator()).limit(10);
         Stream<Integer> stream1 = Stream.iterate(1, (t) -> t + 2).limit(5);
-
         // 终止操作
         stream1.forEach(System.out::println);
     }
 
     @Test
     public void test5() {
-
         // 生成器 创建无限流
 //        Stream<Integer> stream1 = Stream.generate(new MySupplier());
         Stream<Integer> stream1 = Stream.generate(() -> new Random().nextInt(100));
-
         // 终止操作
         stream1.forEach(System.out::println);
     }
