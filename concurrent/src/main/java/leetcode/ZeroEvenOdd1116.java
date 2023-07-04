@@ -78,7 +78,6 @@ public class ZeroEvenOdd1116 {
     }
 
     public static void main(String[] args) {
-
         ZeroEvenOdd1116 zeroEvenOdd = new ZeroEvenOdd1116(10);
         IntConsumer zero = i -> {
             if (i != 0) {
@@ -125,10 +124,8 @@ public class ZeroEvenOdd1116 {
                 e.printStackTrace();
             }
         });
-
         thread3.start();
         thread1.start();
         thread2.start();
-
     }
 }

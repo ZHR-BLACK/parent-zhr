@@ -1,4 +1,4 @@
-package com.zhr.selfstudy.date;
+package com.zhr.selfstudy.date.joda;
 
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
@@ -25,7 +25,7 @@ public class LocalDateFormatTest {
         String s2 = localDate.format(DateTimeFormatter.ISO_LOCAL_DATE);
         System.out.println("s2 = " + s2);
         //自定义格式化
-        DateTimeFormatter dateTimeFormatter =   DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        DateTimeFormatter dateTimeFormatter =   DateTimeFormatter.ofPattern("dd/MM/====yyyy");
         String s3 = localDate.format(dateTimeFormatter);
         System.out.println("s3 = " + s3);
 

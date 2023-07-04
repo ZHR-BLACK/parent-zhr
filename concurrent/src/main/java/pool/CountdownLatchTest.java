@@ -48,8 +48,6 @@ public class CountdownLatchTest {
                     "已收到全部响应结果");
         } catch (Exception e) {
             e.printStackTrace();
-        } finally {
-
         }
         service.shutdown(); //任务结束。停止线程池的全部线程
     }

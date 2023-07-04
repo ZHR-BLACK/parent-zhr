@@ -48,7 +48,7 @@ public class CalculateDemo {
             throw new IllegalArgumentException(
                     "The scale must be a positive integer or zero");
         }
-        return v1.remainder(v2).setScale(scale, BigDecimal.ROUND_HALF_UP);
+        return v1.remainder(v2).setScale(scale, RoundingMode.HALF_UP);
     }
 
 

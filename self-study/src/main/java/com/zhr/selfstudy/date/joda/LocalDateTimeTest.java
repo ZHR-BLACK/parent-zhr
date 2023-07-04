@@ -1,12 +1,10 @@
-package com.zhr.selfstudy.date;
+package com.zhr.selfstudy.date.joda;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.Month;
+import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoField;
 import java.time.temporal.ChronoUnit;
+import java.util.Date;
 
 /**
  * @author ZHR
@@ -45,6 +43,9 @@ public class LocalDateTimeTest {
         System.out.println("修改2022 ===================== " + localDateTime);
         String format = localDateTime.format(DateTimeFormatter.BASIC_ISO_DATE);
         System.out.println("format = " + format);
-
+        // LocalDateTime转Date
+        Date date = Date.from(localDateTime.atZone(ZoneId.systemDefault()).toInstant());
+        System.out.println("date = " + date);
     }
+
 }

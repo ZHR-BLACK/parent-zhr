@@ -54,7 +54,6 @@ public class ProducerConsumerByBQ {
                     blockingQueue.put(i);
                     System.out.println("[" + name + "] Producing value : +" + i);
                     i++;
-
                     //暂停最多1秒
                     Thread.sleep(new Random().nextInt(1000));
                 } catch (InterruptedException e) {
