@@ -15,7 +15,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
  **/
 public class RemoveFromListMuiltiDemo {
 
-        static ArrayList<Integer> list = new ArrayList<>();
+    static ArrayList<Integer> list = new ArrayList<>();
 //    static CopyOnWriteArrayList<Integer> list = new CopyOnWriteArrayList();
 
     public static void main(String[] args) {
@@ -40,6 +40,5 @@ public class RemoveFromListMuiltiDemo {
         });
         thread1.start();
         thread2.start();
-
     }
 }

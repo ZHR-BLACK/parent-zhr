@@ -3,14 +3,14 @@ import java.util.Arrays;
 public class Test4 {
 
     public static void main(String[] args) {
-        int[] arr = new int[]{3,2,1};
+        int[] arr = new int[]{3, 2, 1};
         bubbleSort(arr);
     }
 
     public static void bubbleSort(int[] array) {
-        int t = 0;
-        for (int i = 0; i < array.length; i++){
-            for (int j = 0; j < array.length - 1 - i; j++){
+        int t;
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array.length - 1 - i; j++) {
                 if (array[j] > array[j + 1]) {
                     t = array[j];
                     array[j] = array[j + 1];
@@ -19,5 +19,6 @@ public class Test4 {
             }
             System.out.println(Arrays.toString(array));
         }
+        System.out.println(Arrays.toString(array));
     }
 }

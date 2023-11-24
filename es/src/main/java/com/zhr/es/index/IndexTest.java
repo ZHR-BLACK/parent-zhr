@@ -7,6 +7,7 @@ import co.elastic.clients.elasticsearch.indices.GetIndexResponse;
 import co.elastic.clients.json.jackson.JacksonJsonpMapper;
 import co.elastic.clients.transport.ElasticsearchTransport;
 import co.elastic.clients.transport.rest_client.RestClientTransport;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.http.HttpHost;
 import org.elasticsearch.client.RestClient;
 import org.junit.After;
@@ -22,6 +23,7 @@ import java.io.IOException;
  * @Date 2023-06-28 16:33
  * @description IndexTest
  **/
+@Slf4j
 public class IndexTest {
 
     private RestClient restClient;
@@ -29,11 +31,13 @@ public class IndexTest {
 
     private ElasticsearchClient client;
 
+    public static final String INDEX_NAME = "newapi";
+
     @Before
     public void init() {
         // 创建连接
         restClient = RestClient.builder(
-                new HttpHost("localhost", 9200)).build();
+                new HttpHost("8.140.51.4", 9200)).build();
         transport = new RestClientTransport(
                 restClient, new JacksonJsonpMapper());
         client = new ElasticsearchClient(transport);
@@ -48,21 +52,21 @@ public class IndexTest {
     @Test
     public void createIndex() throws IOException {
         // 创建索引
-        CreateIndexResponse createIndexResponse = client.indices().create(c -> c.index("newapi"));
+        CreateIndexResponse createIndexResponse = client.indices().create(c -> c.index(INDEX_NAME));
         // 打印结果
-        System.out.println(createIndexResponse.acknowledged());
+        log.info(String.valueOf(createIndexResponse.acknowledged()));
     }
 
     @Test
     public void queryIndex() throws IOException {
-        GetIndexResponse createIndexResponse = client.indices().get(e -> e.index("newapi"));
-        System.out.println("queryIndex:" + String.join(",", createIndexResponse.result().keySet()));
+        GetIndexResponse createIndexResponse = client.indices().get(e -> e.index(INDEX_NAME));
+        log.info("queryIndex:{}", String.join(",", createIndexResponse.result().keySet()));
     }
 
     @Test
     public void deleteIndex() throws IOException {
-        DeleteIndexResponse deleteIndexResponse = client.indices().delete(e -> e.index("newapi"));
-        System.out.println(deleteIndexResponse.acknowledged());
+        DeleteIndexResponse deleteIndexResponse = client.indices().delete(e -> e.index(INDEX_NAME));
+        log.info(String.valueOf(deleteIndexResponse.acknowledged()));
     }
 
 }

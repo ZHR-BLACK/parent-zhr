@@ -15,7 +15,6 @@ public class InheritableThreadLocalTest {
     public static void main(String[] args) {
         // 主线程设置本地变量
         threadLocal.set("hello world");
-
         // 子线程
         Thread thread = new Thread(() -> {
             System.out.println("thread = " + threadLocal.get());

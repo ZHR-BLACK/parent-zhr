@@ -2,6 +2,7 @@ package com.zhr.selfstudy.spider;
 
 import cn.hutool.core.util.XmlUtil;
 import com.alibaba.fastjson.JSON;
+import lombok.extern.slf4j.Slf4j;
 import org.htmlcleaner.CleanerProperties;
 import org.htmlcleaner.DomSerializer;
 import org.htmlcleaner.HtmlCleaner;
@@ -20,6 +21,7 @@ import java.io.IOException;
  * @description 爬虫2
  * @date 2022/3/7 6:00 下午
  */
+@Slf4j
 public class SpiderDemo2 {
 
     public static void main(String[] args) throws Exception {
@@ -51,7 +53,7 @@ public class SpiderDemo2 {
                  * Node.getAttributes() 包含此节点的属性的 NamedNodeMap（如果它是 Element）；否则为 null
                  * 如果想获取相应对象的相关属性，可以调用  getAttributes().getNamedItem("属性名") 方法
                  */
-                System.out.println("node = " + JSON.toJSONString(node));
+//                System.out.println("node = " + JSON.toJSONString(node));
 //                System.out.println("node2 = " + JSON.toJSONString(node.getChildNodes()));
 //                NodeList childNodes = node.getChildNodes();
 //                for (int j = 0; j < childNodes.getLength(); j++) {
@@ -66,7 +68,7 @@ public class SpiderDemo2 {
                 String exp2 = ".//div[2]/a/div[1]/text()";
 //                Object result2 = xPath.evaluate(exp2, node, XPathConstants.STRING);
                 Object result2 = XmlUtil.getByXPath(exp2, node, XPathConstants.STRING);
-                System.out.println("result2 = " + String.valueOf(result2).trim());
+                log.info("result2 = " + String.valueOf(result2).trim());
 
 //                System.out.println("node = " + node.getNodeValue().trim());
             }

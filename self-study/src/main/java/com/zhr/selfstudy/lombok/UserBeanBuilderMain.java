@@ -10,7 +10,7 @@ package com.zhr.selfstudy.lombok;
 public class UserBeanBuilderMain {
 
     public static void main(String[] args) {
-        UserBean user = new UserBean().builder()
+        UserBean user = UserBean.builder()
                 .id(11)
                 .userName("张三")
                 .favorite("music")

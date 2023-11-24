@@ -1,0 +1,3 @@
+rem 启动consul
+rem start调用外部程序的命令
+start cmd /k "cd /d D:\download\consul_1.15.3_windows_386&&consul.exe agent -dev"

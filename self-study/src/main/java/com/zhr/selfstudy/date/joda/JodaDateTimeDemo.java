@@ -89,7 +89,7 @@ public class JodaDateTimeDemo {
 
         PrintDiy.printSign("计算间隔和区间");
         DateTime begin = new DateTime("2012-03-01");
-        DateTime end = new DateTime("2023-06-27");
+        DateTime end = new DateTime("2023-09-05");
         //计算区间毫秒数
 //        Duration d = new Duration(begin, end);
 //        long millis2 = d.getMillis();

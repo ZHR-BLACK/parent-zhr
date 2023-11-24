@@ -23,6 +23,7 @@ public class CountExample {
     private static volatile CopyOnWriteArrayList<String> arrayList = new CopyOnWriteArrayList<>();
 
     public static void main(String[] args) throws Exception {
+        // 执行1000次累加5000的操作
         for (int i = 0; i < 100; i++) {
             bingfa();
         }
@@ -42,33 +43,34 @@ public class CountExample {
                     //允许通行，否则线程阻塞等待，直到获取到许可。
                     semaphore.acquire();
                     // todo 这里比较的是这两种添加元素的方法的安全性
-//                    add();
-                    copyList();
+                    add();
+//                    copyList();
 
                     //释放许可
                     semaphore.release();
                 } catch (Exception e) {
                     //log.error("exception", e);
                     e.printStackTrace();
+                } finally {
+                    //闭锁减一
+                    countDownLatch.countDown();
                 }
-                //闭锁减一
-                countDownLatch.countDown();
             });
         }
         countDownLatch.await();//线程阻塞，直到闭锁值为0时，阻塞才释放，继续往下执行
         executorService.shutdown();
         // todo 统计是否安全的计数器
-//        System.out.println("count:" + count);
-//        if (count != 5000) {
-//            notSafeCount++;
-//        }
-//        count = 0;
-
-        if(arrayList.size() != 5000){
+        System.out.println("count:" + count);
+        if (count != 5000) {
             notSafeCount++;
         }
-        System.out.println("size = " + arrayList.size());
-        arrayList.clear();
+        count = 0;
+
+//        if(arrayList.size() != 5000){
+//            notSafeCount++;
+//        }
+//        System.out.println("size = " + arrayList.size());
+//        arrayList.clear();
     }
 
     // 待并发测试的方法,count++不是原子操作,不安全

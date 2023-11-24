@@ -4,8 +4,6 @@ import cn.hutool.core.codec.Base64;
 import cn.hutool.core.util.ZipUtil;
 import com.alibaba.fastjson.JSONObject;
 
-import java.util.Arrays;
-
 /**
  * @创建人 zhangjing710
  * @创建时间 2021/3/18 11:47

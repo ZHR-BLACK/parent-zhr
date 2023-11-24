@@ -1,6 +1,7 @@
 package com.zhr.selfstudy.bigdecimal;
 
 import com.zhr.selfstudy.PrintDiy;
+import lombok.extern.slf4j.Slf4j;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -13,20 +14,21 @@ import java.math.RoundingMode;
  * @description BigDecimal的相关计算
  * 设定保留小数
  **/
+@Slf4j
 public class CalculateDemo {
 
     public static void main(String[] args) {
         PrintDiy.printSign("计算后四舍五入保留两位小数");
         BigDecimal bigDecimal = new BigDecimal("10.50").multiply(new BigDecimal("10.00")).setScale(2, RoundingMode.HALF_UP);
-        System.out.println("bigDecimal = " + bigDecimal);//105.00
+        log.info("bigDecimal:{}" , bigDecimal);//105.00
 
         PrintDiy.printSign("比较两数大小");
         boolean compare = compare("12.50", "36.50");
-        System.out.println("compare = " + compare);// false
+        log.info("compare:{}" , compare);// false
 
         PrintDiy.printSign("取余数,并设定小数位几位");
         BigDecimal remainder = remainder(new BigDecimal("20"), new BigDecimal("6"), 2);
-        System.out.println("remainder = " + remainder);// 2.00
+        log.info("remainder:{}" , remainder);// 2.00
     }
 
     // 比较大小
@@ -35,10 +37,7 @@ public class CalculateDemo {
         BigDecimal b2 = new BigDecimal(v2);
         int bj = b1.compareTo(b2);
         boolean res;
-        if (bj > 0)
-            res = true;
-        else
-            res = false;
+        res = bj > 0;
         return res;
     }
 

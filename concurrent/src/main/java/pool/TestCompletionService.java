@@ -22,14 +22,14 @@ public class TestCompletionService {
         try {
             int taskCount = 10;
             // 结果集
-            List<Integer> list = new ArrayList<Integer>();
-            List<Future<Integer>> futureList = new ArrayList<Future<Integer>>();
+            List<Integer> list = new ArrayList<>();
+//            List<Future<Integer>> futureList = new ArrayList<>();
             // 1.定义CompletionService
-            CompletionService<Integer> completionService = new ExecutorCompletionService<Integer>(exs);
+            CompletionService<Integer> completionService = new ExecutorCompletionService<>(exs);
             // 2.添加任务
             for (int i = 0; i < taskCount; i++) {
-                Future<Integer> future = completionService.submit(new Task(i + 1));
-                futureList.add(future);
+                completionService.submit(new Task(i + 1));
+//                futureList.add(future);
             }
             // 3.获取结果
             for (int i = 0; i < taskCount; i++) {
@@ -44,8 +44,8 @@ public class TestCompletionService {
             //关闭线程池
             exs.shutdown();
         }
-
     }
+
     static class Task implements Callable<Integer> {
         Integer i;
 
@@ -63,7 +63,6 @@ public class TestCompletionService {
             System.out.println("线程：" + Thread.currentThread().getName() + "任务i=" + i + ",执行完成！");
             return i;
         }
-
     }
 
 }

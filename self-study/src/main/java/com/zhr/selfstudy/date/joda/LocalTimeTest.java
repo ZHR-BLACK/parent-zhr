@@ -14,7 +14,6 @@ public class LocalTimeTest {
 
     public static void main(String[] args) {
         LocalTime localTime = LocalTime.of(13, 51, 10);
-        LocalTime localTime1 = LocalTime.now();
 
         //获取小时
         int hour = localTime.getHour();

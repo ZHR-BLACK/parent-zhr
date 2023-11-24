@@ -1,6 +1,8 @@
 package com.zhr.selfstudy.sqlite3;
 
 import com.alibaba.fastjson.JSONObject;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.collections4.CollectionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,12 +13,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
+@Slf4j
 public class SqliteHelper {
 
     private static final String Class_Name = "org.sqlite.JDBC";
-
-    private static Logger log = LoggerFactory.getLogger(SqliteHelper.class);
-
 
     private static boolean isWindowSys() {
         Properties props = System.getProperties(); //获得系统属性集
@@ -33,11 +33,11 @@ public class SqliteHelper {
         String handleBaseDir = databasePath.replaceAll("\\\\", "/");
         log.debug("handleBaseDir is :{}", handleBaseDir);
         if (handleBaseDir.endsWith("/") || handleBaseDir.endsWith("\\")) {
-            return new StringBuffer(handleBaseDir)
-                    .append(databaseName).append(".db").toString();
+            return handleBaseDir +
+                    databaseName + ".db";
         } else {
-            return new StringBuffer(handleBaseDir).append("/")
-                    .append(databaseName).append(".db").toString();
+            return handleBaseDir + "/" +
+                    databaseName + ".db";
         }
 
     }
@@ -53,13 +53,13 @@ public class SqliteHelper {
         Connection conn = null;
         // db所在目录
         String databasePath = "C:/Users/ZHR";
-        String dbFile_path = getDbFile(databasePath, databaseName);
-        File dbFile = new File(dbFile_path);
+        String dbFilePath = getDbFile(databasePath, databaseName);
+        File dbFile = new File(dbFilePath);
         if (dbFile.exists()) {
-            log.info("dbFile_path is: {}", dbFile_path);
-            String url = "jdbc:sqlite:" + dbFile_path;
+            log.info("dbFile_path is: {}", dbFilePath);
+            String url = "jdbc:sqlite:" + dbFilePath;
             if (isWindowSys()) {
-                url = "jdbc:sqlite:/" + dbFile_path.toLowerCase();
+                url = "jdbc:sqlite:/" + dbFilePath.toLowerCase();
             }
             log.debug("sqlite url is:{}", url);
             conn = DriverManager.getConnection(url);
@@ -84,7 +84,7 @@ public class SqliteHelper {
             ClassNotFoundException, FileNotFoundException {
         log.debug("sql={}", sql);
         List<JSONObject> list = executeQueryList(sql, channelCode);
-        if (list != null && list.size() > 0) {
+        if (CollectionUtils.isNotEmpty(list)) {
             return list.get(0);
         }
         return null;

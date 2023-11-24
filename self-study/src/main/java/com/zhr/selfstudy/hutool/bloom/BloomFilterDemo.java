@@ -15,14 +15,19 @@ import cn.hutool.bloomfilter.BitMapBloomFilter;
 public class BloomFilterDemo {
 
     public static void main(String[] args) {
+        int total = 10000000;
         // 初始化
         BitMapBloomFilter filter = new BitMapBloomFilter(10);
-        filter.add("123");
-        filter.add("abc");
-        filter.add("ddd");
-
-        // 查找
-        boolean abc = filter.contains("abc");
-        System.out.println("abc = " + abc);
+        for (int i = 0; i < total; i++) {
+            filter.add(String.valueOf(i));
+        }
+        int count = 0;
+        // 验证匹配度
+        for (int i = 0; i < total + 10000; i++) {
+            if (filter.contains(String.valueOf(i))) {
+                count++;
+            }
+        }
+        System.out.println("匹配数量:" + count);
     }
 }

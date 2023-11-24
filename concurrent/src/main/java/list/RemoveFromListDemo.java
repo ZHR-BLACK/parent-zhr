@@ -2,6 +2,7 @@ package list;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 /**
  * @author ZHR
@@ -14,15 +15,11 @@ import java.util.Iterator;
 public class RemoveFromListDemo {
 
     public static void main(String[] args) {
-        ArrayList<Integer> list = new ArrayList<>();
+        List<Integer> list = new ArrayList<>();
         list.add(2);
-        Iterator<Integer> iterator = list.iterator();
-        while (iterator.hasNext()) {
-            Integer integer = iterator.next();
-            if (integer == 2) {
-                iterator.remove();   //注意这个地方
-            }
-        }
+        //注意这个地方
+        list.removeIf(integer -> integer == 2);
+        System.out.println(list);
     }
 
 }

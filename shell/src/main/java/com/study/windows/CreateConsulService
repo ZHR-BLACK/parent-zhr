@@ -1,0 +1,11 @@
+rem 将consul注册为服务并启动
+@echo.service startup......
+@echo off
+rem @sc create是创建服务
+@sc create Consul binpath= "D:\download\consul_1.15.3\consul.exe agent -server -ui -bind=127.0.0.1 -client=127.0.0.1 -bootstrap-expect  1  -data-dir D:\download\consul_1.15.3\data"
+rem @net start Consul启动服务
+@net start Consul
+rem 设置服务自启
+@sc config Consul start= AUTO
+@echo.Consul starting success!
+@pause

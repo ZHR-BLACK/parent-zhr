@@ -9,16 +9,16 @@ import java.text.DecimalFormat;
  * @version 1.0
  * @ClassName SupplementZeroTest
  * @Date 2020-04-17 17:49
- * @description 字符串右补空格,数字左补0
+ * @description 字符串右补空格, 数字左补0
  **/
 public class SupplementZeroTest {
 
-    //1，正数左补零 
+    //1，正数左补零
     public static void main(String[] args) {
         int youNumber = 1;
-        // 0 代表前面补充0      
-        // 4 代表长度为4      
-        // d 代表参数为正数型      
+        // 0 代表前面补充0
+        // 4 代表长度为4
+        // d 代表参数为正数型
         String str = String.format("%04d", youNumber);
         System.out.println(str); // 0001
 
@@ -37,7 +37,7 @@ public class SupplementZeroTest {
         String repo_Mess1 = String.format("%1$-10s", s);
         System.out.println("repo_Mess1 ********************" + repo_Mess1.length());
 
-        //4,字符串左补零 
+        //4,字符串左补零
         String ss = "sasd";
         // 不够10位左补0
         int list = 10 - ss.length();
@@ -46,6 +46,6 @@ public class SupplementZeroTest {
             sb.append("0");
         }
         sb.append(ss);
-        System.out.println("sb********************" + sb.toString());
+        System.out.println("sb********************" + sb);
     }
 }

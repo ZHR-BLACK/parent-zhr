@@ -15,13 +15,14 @@ import java.util.stream.Stream;
 /**
  * @author zhangjing710
  * @description 多线程并发任务, 取结果归集
- * CompletableFuture满足并发执行，顺序完成先手顺序获取的目标。而且支持每个任务的异常返回，配合流式编程，用起来速度飞起。JDK源生支持，API丰富，推荐使用
+ * CompletableFuture满足并发执行，顺序完成先手顺序获取的目标。
+ * 而且支持每个任务的异常返回，配合流式编程，用起来速度飞起。JDK源生支持，API丰富，推荐使用
  * @date 2022/2/24 3:26 下午
  */
 public class CompletableFutureDemo2 {
 
     public static void main(String[] args) {
-        Long start = System.currentTimeMillis();
+        long start = System.currentTimeMillis();
         //结果集
         List<String> list = new ArrayList<>();
         List<String> list2 = new ArrayList<>();

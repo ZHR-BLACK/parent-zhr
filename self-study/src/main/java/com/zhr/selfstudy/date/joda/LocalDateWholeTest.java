@@ -17,12 +17,8 @@ public class LocalDateWholeTest {
         DateTimeFormatter df = DateTimeFormatter.ofPattern("HHmmss");
 
         LocalDateTime startTime = LocalDateTime.now().plusHours(1).toLocalDate().atTime(LocalDateTime.now().plusHours(1).getHour(), 0, 0);
-//        LocalDateTime endTime = LocalDateTime.now().plusHours(3).toLocalDate().atTime(LocalDateTime.now().plusHours(3).getHour(), 0, 0);
 
         String startTimeStr = df.format(startTime);
-//        String endTimeStr = df.format(endTime);
-//        String localTime = startTimeStr + "-" + endTimeStr;
         System.out.println("startTimeStr = " + startTimeStr);
-//        System.out.println("endTimeStr = " + endTimeStr);
     }
 }

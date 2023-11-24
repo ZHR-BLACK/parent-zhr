@@ -39,18 +39,14 @@ public class CMain {
         A a = new A();
         a.setB(b);
 
-        List<B> list = new ArrayList();
+        List<B> list = new ArrayList<>();
         list.add(b);
         list.add(b2);
         a.setBs(list);
-
 
         CMain cMain = new CMain();
         // 复制A的属性值到CMain中
         BeanUtil.copyProperties(a, cMain);
         System.out.println("c = " + cMain);
-        System.out.println("c = " + cMain.getB().getPhone());
-        List<B> bs = cMain.getBs();
-        System.out.println("bs ********************" + bs);
     }
 }

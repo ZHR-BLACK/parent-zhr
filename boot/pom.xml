@@ -23,17 +23,11 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-<!--            <exclusions>-->
-<!--                <exclusion>-->
-<!--                    <artifactId>spring-beans</artifactId>-->
-<!--                    <groupId>org.springframework</groupId>-->
-<!--                </exclusion>-->
-<!--                <exclusion>-->
-<!--                    <artifactId>spring-core</artifactId>-->
-<!--                    <groupId>org.springframework</groupId>-->
-<!--                </exclusion>-->
-<!--            </exclusions>-->
         </dependency>
 
         <dependency>
@@ -45,16 +39,6 @@
         <dependency>
             <groupId>com.squareup.okhttp3</groupId>
             <artifactId>okhttp</artifactId>
-            <exclusions>
-                <exclusion>
-                    <artifactId>kotlin-stdlib-common</artifactId>
-                    <groupId>org.jetbrains.kotlin</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>kotlin-stdlib</artifactId>
-                    <groupId>org.jetbrains.kotlin</groupId>
-                </exclusion>
-            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
@@ -75,12 +59,6 @@
                 <configuration>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
-<!--                <groupId>org.springframework.boot</groupId>-->
-<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
-<!--                <version>2.3.8.RELEASE</version>-->
-<!--                <configuration>-->
-<!--                    <failOnMissingWebXml>false</failOnMissingWebXml>-->
-<!--                </configuration>-->
             </plugin>
         </plugins>
 

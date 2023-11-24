@@ -5,7 +5,8 @@ package threadlocal;
  * @version 1.0
  * @ClassName ThreadLocalDemo
  * @Date 2020-05-29 18:08
- * @description 当存储的为对象时 就是数据集合 比如前台传过来的参数，每一个人传过来的 都是这个人独有的，才能保证数据准确性，抽取业务数据为一个对象
+ * @description 当存储的为对象时 就是数据集合 比如前台传过来的参数，每一个人传过来的 都是这个人独有的，
+ * 才能保证数据准确性，抽取业务数据为一个对象
  **/
 public class ThreadLocalDemo {
 

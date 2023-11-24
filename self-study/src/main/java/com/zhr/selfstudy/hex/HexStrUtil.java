@@ -10,11 +10,11 @@ package com.zhr.selfstudy.hex;
 public class HexStrUtil {
 
     /**
+     * @return java.lang.String
      * @Author ZHR
      * @Description 将字符串转为16进制字符串(无需Unicode编码)
-     * @Date2019/4/1515:19
-     * @param:str 待转化字符串
-     * @returnjava.lang.String
+     * @Date 2019/4/1515:19
+     * @param: str 待转化字符串
      **/
     public static String str2HexStr(String str) {
         char[] chars = "0123456789ABCDEF".toCharArray();
@@ -31,11 +31,11 @@ public class HexStrUtil {
     }
 
     /**
+     * @return java.lang.String
      * @Author ZHR
      * @Description 将16进制字符串转为字符串(无需Unicode编码)
-     * @Date2019/4/1515:23
+     * @Date 2019/4/1515:23
      * @param: hexStr
-     * @returnjava.lang.String
      **/
     public static String hexStr2Str(String hexStr) {
         String str = "0123456789ABCDEF";

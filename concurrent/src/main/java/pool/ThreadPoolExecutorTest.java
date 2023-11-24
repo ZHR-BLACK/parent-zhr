@@ -13,6 +13,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @description 自定义实现线程池
  * 自定义线程工厂
  * 自定义拒绝策略
+ * 多线程执行完毕后执行主线程代码打印
  **/
 public class ThreadPoolExecutorTest {
 
@@ -29,7 +30,7 @@ public class ThreadPoolExecutorTest {
                 Future<String> submit = pool.submit(thread);
                 list.add(submit);
             } catch (Exception e) {
-//                e.printStackTrace();
+                e.printStackTrace();
             }
         }
         System.out.println("list==================" + list.size());

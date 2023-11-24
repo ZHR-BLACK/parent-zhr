@@ -19,7 +19,7 @@ public class ThreadPoolLocalTest {
 
     final static ThreadPoolExecutor poolExecutor = new ThreadPoolExecutor(5, 5, 1, TimeUnit.MINUTES, new LinkedBlockingQueue<>());
 
-    final static ThreadLocal<LocalVariable> localVirable = new ThreadLocal();
+    final static ThreadLocal<LocalVariable> localVirable = new ThreadLocal<>();
 
     public static void main(String[] args) throws InterruptedException {
 
@@ -31,7 +31,7 @@ public class ThreadPoolLocalTest {
                 // 不加remove会内存泄漏
 //                localVirable.remove();
             });
-            Thread.sleep(5000);
+            Thread.sleep(1000);
         }
 
         System.out.println("pool executor over********************");

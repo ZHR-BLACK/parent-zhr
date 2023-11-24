@@ -60,7 +60,7 @@ public class ElasticSearchConfig {
 
     @Bean("restClient")
     public ElasticsearchClient elasticsearchClient() {
-        RestClient httpClient = RestClient.builder(new HttpHost("127.0.0.1", 9200)).build();
+        RestClient httpClient = RestClient.builder(new HttpHost("8.140.51.4", 9200)).build();
         // 不引用jakarta.json-api时，此行会报错
         ElasticsearchTransport transport = new RestClientTransport(httpClient, new JacksonJsonpMapper());
         return new ElasticsearchClient(transport);
