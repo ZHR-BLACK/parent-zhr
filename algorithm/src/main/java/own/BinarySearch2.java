@@ -2,6 +2,7 @@ package own;
 
 /**
  * 递归 二分查找
+ *
  * @param <T>
  */
 public class BinarySearch2<T extends Comparable<T>> {
@@ -10,6 +11,16 @@ public class BinarySearch2<T extends Comparable<T>> {
         return binarySearch2(data, target, 0, data.length - 1);
     }
 
+    /*
+     * @author ZHR
+     * @param data: 原数组
+     * @param target: 目标值
+     * @param left: 左下标
+     * @param right: 右下标
+     * return int 目标元素的下标值
+     * @date 2023/11/28	17:29
+     * @description 递归二分查找
+     */
     private int binarySearch2(T[] data, T target, int left, int right) {
         if (left > right) {
             return -1;

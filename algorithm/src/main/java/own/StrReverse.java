@@ -1,5 +1,7 @@
 package own;
 
+import java.util.logging.Logger;
+
 /**
  * @author ZHR
  * @version 1.0
@@ -9,10 +11,11 @@ package own;
  **/
 public class StrReverse {
 
+    static Logger log = Logger.getLogger("StrReverse");
+
     public static void main(String[] args) {
         String asdas = reverse("asdas");
-        System.out.println("==================" + asdas);
-
+        log.info(asdas);
     }
 
     public static String reverse(String str) {

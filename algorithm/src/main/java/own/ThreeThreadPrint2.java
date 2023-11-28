@@ -17,60 +17,54 @@ public class ThreeThreadPrint2 {
     private static volatile int state = 0;
 
     public static void main(String[] args) throws InterruptedException {
-        Thread thread = new Thread() {
-            public void run() {
-                for (int i = 0; i < 10; ) {
-                    lock.lock();
-                    try {
-                        while (state % 3 == 0) {
-                            System.out.print("A");
-                            state++;
-                            i++;
-                        }
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    } finally {
-                        lock.unlock();
+        Thread thread = new Thread(() -> {
+            for (int i = 0; i < 10; ) {
+                lock.lock();
+                try {
+                    while (state % 3 == 0) {
+                        System.out.print("A");
+                        state++;
+                        i++;
                     }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                } finally {
+                    lock.unlock();
                 }
             }
-        };
-        Thread thread1 = new Thread() {
-            public void run() {
-                for (int i = 0; i < 10; ) {
-                    lock.lock();
-                    try {
-                        while (state % 3 == 1) {
-                            System.out.print("B");
-                            state++;
-                            i++;
-                        }
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    } finally {
-                        lock.unlock();
+        });
+        Thread thread1 = new Thread(() -> {
+            for (int i = 0; i < 10; ) {
+                lock.lock();
+                try {
+                    while (state % 3 == 1) {
+                        System.out.print("B");
+                        state++;
+                        i++;
                     }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                } finally {
+                    lock.unlock();
                 }
             }
-        };
-        Thread thread2 = new Thread() {
-            public void run() {
-                for (int i = 0; i < 10; ) {
-                    lock.lock();
-                    try {
-                        while (state % 3 == 2) {
-                            System.out.print("C");
-                            state++;
-                            i++;
-                        }
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    } finally {
-                        lock.unlock();
+        });
+        Thread thread2 = new Thread(() -> {
+            for (int i = 0; i < 10; ) {
+                lock.lock();
+                try {
+                    while (state % 3 == 2) {
+                        System.out.print("C");
+                        state++;
+                        i++;
                     }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                } finally {
+                    lock.unlock();
                 }
             }
-        };
+        });
 
         thread.start();
         Thread.sleep(500);

@@ -13,7 +13,7 @@ import java.util.Map;
 public class ArrayCountSum {
 
     public static void main(String[] args) {
-        int[] arr = {5, 5, 5, 5, 5, 1, 2, 2, 3, 3, 3, 4, 4, 4, 4};
+        int[] arr = {5, 5, 5, 5, 5, 1, 2, 2, 3, 3,5, 3, 4, 4, 4, 4};
         int dup = dup(arr);
         System.out.println("dup==================" + dup);
     }
@@ -21,12 +21,7 @@ public class ArrayCountSum {
     public static int dup(int[] arr) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < arr.length; i++) {
-            Integer count = map.get(arr[i]);
-            if (count == null) {
-                map.put(arr[i], 1);
-            } else {
-                map.put(arr[i], count + 1);
-            }
+            map.merge(arr[i], 1, Integer::sum);
         }
         int max = map.get(arr[0]);
         for (Map.Entry<Integer, Integer> entry : map.entrySet()) {

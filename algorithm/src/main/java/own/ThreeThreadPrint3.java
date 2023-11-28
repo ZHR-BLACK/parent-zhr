@@ -18,22 +18,19 @@ public class ThreeThreadPrint3 {
     private static int type;
 
     public static void main(String[] args) {
-        Thread thread = new Thread() {
-            public void run() {
-                while (true) {
-                    synchronized (ThreeThreadPrint3.class) {
-                        if (count.get() < sum) {
-                            type = count.get() % 3;
-                            System.out.print(strs[type]);
-                            count.getAndIncrement();
-                        } else {
-                            break;
-                        }
+        Thread thread = new Thread(() -> {
+            while (true) {
+                synchronized (ThreeThreadPrint3.class) {
+                    if (count.get() < sum) {
+                        type = count.get() % 3;
+                        System.out.print(strs[type]);
+                        count.getAndIncrement();
+                    } else {
+                        break;
                     }
                 }
             }
-        };
-
+        });
         thread.start();
     }
 }

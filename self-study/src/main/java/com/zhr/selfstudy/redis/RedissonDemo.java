@@ -22,7 +22,6 @@ public class RedissonDemo {
     private static final Redisson redisson = RedissonManager.getRedisson();
 
     public static void main(String[] args) {
-
         RLock rLock = redisson.getLock("myLock");
         boolean locked = false;
         try {
