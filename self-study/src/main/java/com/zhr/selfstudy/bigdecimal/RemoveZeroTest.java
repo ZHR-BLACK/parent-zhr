@@ -1,5 +1,7 @@
 package com.zhr.selfstudy.bigdecimal;
 
+import org.junit.Test;
+
 import java.math.BigDecimal;
 
 /**
@@ -10,9 +12,10 @@ import java.math.BigDecimal;
  * 去掉数字型字符串后面无用的0
  * 去掉BigDecimal后无用的0
  **/
-public class RemoveZero {
+public class RemoveZeroTest {
 
-    public static void main(String[] args) {
+    @Test
+    public void stripZeroTest(){
         BigDecimal bd = new BigDecimal("56.100000000");
         System.out.println(bd.stripTrailingZeros().toPlainString());// 56.1
     }

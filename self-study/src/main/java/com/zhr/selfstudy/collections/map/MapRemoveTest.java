@@ -1,5 +1,6 @@
 package com.zhr.selfstudy.collections.map;
 
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -14,6 +15,7 @@ import java.util.Map;
  * @Date 2023-07-04 15:47
  * @description map删除元素
  **/
+@Slf4j
 public class MapRemoveTest {
 
     @Test
@@ -33,9 +35,9 @@ public class MapRemoveTest {
 
         // 根据value值删除元素
         map.keySet().removeIf(key -> map.get(key).equals("2"));
-        System.out.println(map);
+        log.info("map:{}", map);
         // 在list中删除map中删除的元素对应的key
         keyList.removeIf(key -> map.get(key) == null);
-        System.out.println(keyList);
+        log.info("keyList:{}", keyList);
     }
 }

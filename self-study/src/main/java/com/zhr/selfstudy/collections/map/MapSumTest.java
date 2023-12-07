@@ -21,8 +21,8 @@ public class MapSumTest {
 
 
     @Test
-    public void mergeTest(){
-        Map<String,Integer> map = new HashMap<>();
+    public void mergeTest() {
+        Map<String, Integer> map = new HashMap<>();
 
         List<String> list = new ArrayList<>();
         list.add("aaa");
@@ -34,7 +34,7 @@ public class MapSumTest {
         list.add("ccc");
         list.add("ccc");
         list.add("ccc");
-        list.forEach(item -> map.merge(item,1,Integer::sum));
+        list.forEach(item -> map.merge(item, 1, Integer::sum));
         log.info(JSON.toJSONString(map));
     }
 

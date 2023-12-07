@@ -1,19 +1,20 @@
-package com.zhr.selfstudy.redis;
+package com.zhr.selfstudy.redis.redisson;
 
 import com.zhr.selfstudy.redis.config.RedissonManager;
 import lombok.extern.slf4j.Slf4j;
+import org.junit.Test;
 import org.redisson.Redisson;
 import org.redisson.api.RList;
 
 import java.util.List;
 
 @Slf4j
-public class RedissonListDemo {
+public class RedissonListTest {
 
     private static final Redisson redisson = RedissonManager.getRedisson();
 
-
-    public static void main(String[] args) {
+    @Test
+    public void listTest(){
         //====================操作list====================
         RList<String> list = redisson.getList("list");
         list.add("victory1");
@@ -33,4 +34,5 @@ public class RedissonListDemo {
         //====================关闭客户端====================
         redisson.shutdown();
     }
+
 }

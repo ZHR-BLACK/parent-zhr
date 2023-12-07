@@ -14,7 +14,6 @@ import java.time.temporal.ChronoField;
  **/
 public class LocalDateTest {
 
-
     public static void main(String[] args) {
         //获取当前年月日
         LocalDate localDate = LocalDate.now();

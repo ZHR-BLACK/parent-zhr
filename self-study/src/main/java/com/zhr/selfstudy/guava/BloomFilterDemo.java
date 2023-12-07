@@ -3,8 +3,8 @@ package com.zhr.selfstudy.guava;
 import com.google.common.base.Charsets;
 import com.google.common.hash.BloomFilter;
 import com.google.common.hash.Funnels;
-
-import java.nio.charset.Charset;
+import lombok.extern.slf4j.Slf4j;
+import org.junit.Test;
 
 /**
  * @author ZHR
@@ -13,9 +13,11 @@ import java.nio.charset.Charset;
  * @Date 2023-07-28 14:44
  * @description 布隆过滤器
  **/
+@Slf4j
 public class BloomFilterDemo {
 
-    public static void main(String[] args) {
+    @Test
+    public void filterTest(){
         int total = 1000000;
         // 错误率默认是0.03,可以指定错误率，越小错误率越少，占用空间越大
         BloomFilter<String> bf = BloomFilter.create(Funnels.stringFunnel(Charsets.UTF_8), total,0.003);
