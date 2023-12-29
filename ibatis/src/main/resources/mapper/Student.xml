@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+        "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap>
+    <!-- 通过typeAlias使得我们在下面使用Student实体类的时候不需要写包名 -->
+    <typeAlias alias="Student" type="com.zhr.pojo.Student"/>
+
+
+    <!-- id表示select里的sql语句，resultClass表示返回结果的类型,但是无法映射与表中字段的驼峰字段 -->
+    <select id="findAll" resultClass="Student">
+        select *
+        from student
+    </select>
+    <!-- 字段别名能与pojo类驼峰字段进行映射  -->
+    <select id="findAllAs" resultClass="Student">
+        select id, name, address, student_name as studentName, amount, age, create_time as createTime
+        from student
+    </select>
+    <!-- parameterClass表示参数的内容，入参为基本类型 -->
+    <select id="findByID" parameterClass="long" resultClass="Student">
+        select *
+        from student
+        where id = #id#
+    </select>
+    <!-- 时间范围内数据 -->
+    <select id="findByTimeRange" parameterClass="Student" resultClass="Student">
+        select *
+        from student
+        where create_time <![CDATA[<=]]> #createTime#
+          and update_time <![CDATA[>=]]> #createTime#
+    </select>
+
+    <!-- in查询-->
+    <select id="findAllIn" parameterClass="list" resultClass="Student">
+        select *
+        from student
+        where id in
+        <iterate open="(" close=")" conjunction=" , ">#ids[]#</iterate>
+    </select>
+
+    <insert id="insertStudent" parameterClass="Student">
+        insert into Student(id,name,age,address,create_time) values(#id#,#name#,#age#,#address#,#createTime#)
+        <!-- 返回自动增长值,long类型主键 -->
+        <selectKey resultClass="long" keyProperty="id">
+            select @@identity as inserted
+        </selectKey>
+    </insert>
+
+    <delete id="deleteStudentByID" parameterClass="long">
+        delete
+        from student
+        where id = #id#
+    </delete>
+    <delete id="deleteStudent" parameterClass="Student">
+        delete
+        from Student
+        where id = #id#
+    </delete>
+
+    <update id="updateStudent" parameterClass="Student">
+        update student
+        set name=#name#,
+            age=#age#,
+            address=#address#
+        where id = #id#
+    </update>
+
+    <!-- 模糊查询，使用$代替#。此种方法就是去掉了类型检查，使用字符串连接，不过可能会有sql注入风险-->
+    <select id="selectByLike" parameterClass="String" resultClass="Student">
+        select *
+        from student
+        where name like '%$name$%'
+    </select>
+    <!-- 多条件组合查询 -->
+    <!-- 方法一(对象构造查询参数) -->
+    <!-- 项目中在写ibatis中的sql语句时，where user_id in (#user_id_list# )，运行时总是不行，这里不该用#，而应该用$，区别如下：
+      1.#是把传入的数据当作字符串，如#user_id_list#传入的是1,2,则sql语句生成是这样，in ('1,2') ,当然不可以
+      2.$传入的数据直接生成在sql里，如#user_id_list#传入的是1,2,则sql语句生成是这样，in(1,2) 这就对了．
+      3.#方式能够很大程度防止sql注入．
+      4.$方式无法防止sql注入．
+      5.$方式一般用于传入数据库对象．例如传入表名.
+      6.一般能用#的就别用$.
+      直观的说
+      #str# 出来的效果是  'str'
+      $str$ 出来的效果是  str
+      另外  ##只能用在特定的几个地方 $$可以用在任何地方  比如 order by $str$
+      你甚至可以直接写  $str$  把 order by 这个字串放在str里传进来  -->
+    <select id="findByCon1" parameterClass="Student" resultClass="Student">
+        select *
+        from student
+        where name like '%$name$%'
+          and age >= #age#
+    </select>
+    <!-- 方法二(map封装查询参数) -->
+    <parameterMap class="java.util.HashMap" id="paramMap">
+        <parameter property="name"/>
+        <parameter property="age"/>
+    </parameterMap>
+    <select id="findByCon2" parameterMap="paramMap" resultClass="Student">
+        select *
+        from student
+        where name like ?
+          and age >= ?
+    </select>
+
+</sqlMap>

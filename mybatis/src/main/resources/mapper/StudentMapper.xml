@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!--上面2行的是约束依赖，固定照抄就好-->
+<!--下面的才是要自己编写的地方-->
+<!--写mapper的配置文件第一步就是要写<mapper></mapper>标签-->
+<!--<mapper></mapper>标签里包含着各个CURD操作的SQL语句-->
+<mapper namespace="com.zhr.dao.StudentDao">
+
+    <resultMap id="student" type="java.util.Map">
+        <id property="id" column="id"/>
+        <result property="amount" column="amount"/>
+        <result property="age" column="age"/>
+        <result property="studentName" column="student_name"/>
+    </resultMap>
+
+    <select id="selStudent" resultMap="student">
+        select * from student;
+    </select>
+
+    <select id="selStudentMap" resultType="java.util.Map">
+        select * from student;
+    </select>
+
+    <select id="selStudentClassMapList" resultType="java.util.Map">
+        select a.student_name studentName,b.class_name className from student a
+            left join student_class b on a.id = b.student_id;
+    </select>
+    <select id="selStudentIdList" resultType="java.lang.Long">
+        select id from student where id in (1,2) ;
+    </select>
+</mapper>

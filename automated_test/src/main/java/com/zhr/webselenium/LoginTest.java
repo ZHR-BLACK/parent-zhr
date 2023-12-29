@@ -33,8 +33,8 @@ public class LoginTest {
         qqLoginLink.click();
         Thread.sleep(1000);
 
-        driver.findElement(By.name("userName")).sendKeys("15810672669");
-        driver.findElement(By.name("password")).sendKeys("zhang1012.jing");
+        driver.findElement(By.name("userName")).sendKeys("15");
+        driver.findElement(By.name("password")).sendKeys("zha");
         driver.findElement(By.id("TANGRAM__PSP_4__submit")).click();
     }
 }
