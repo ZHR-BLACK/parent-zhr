@@ -21,7 +21,5 @@ public class LastIndexOfTest {
         // 或者根据/分割字符串,截取需要的串
         String[] split = s.split("/");
         System.out.println("split ********************" + split[2]);
-
-
     }
 }

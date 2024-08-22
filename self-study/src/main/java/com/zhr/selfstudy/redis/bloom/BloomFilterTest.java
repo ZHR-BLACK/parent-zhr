@@ -1,7 +1,6 @@
 package com.zhr.selfstudy.redis.bloom;
 
 import com.zhr.selfstudy.redis.config.RedissonManager;
-import io.rebloom.client.Client;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.redisson.Redisson;
