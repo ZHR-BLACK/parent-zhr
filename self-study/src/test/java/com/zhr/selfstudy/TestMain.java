@@ -1,5 +1,10 @@
 package com.zhr.selfstudy;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 /**
  * @author ZHR
  * @version 1.0
@@ -10,23 +15,22 @@ package com.zhr.selfstudy;
 public class TestMain {
 
     public static void main(String[] args) {
-        int[] nums = new int[]{1, 2, 3, 3, 3, 6, 8, 34};
+        List<Map> list = new ArrayList<>();
 
-        int left = 0;
-        int right = nums.length - 1;
-        int target = 3;
+        Map map = new HashMap();
 
-        while(left <= right){
-            int mid = (left + right) / 2;
-            if(nums[mid] < target){
-                left = mid + 1;
-            } else if(nums[mid] > target){
-                right = mid - 1;
-            } else {
-                // 3
-                System.out.println(nums[mid]);
-            }
-        }
+        map.put("a","b");
+        map.put("c","d1");
 
+        list.add(map);
+
+        Map map2 = new HashMap();
+
+        map2.put("a","b");
+        map2.put("c","d2");
+
+        list.add(map2);
+
+        System.out.println("map = " + (String)list.get(list.size() - 1).get("c"));
     }
 }
