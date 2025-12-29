@@ -21,7 +21,7 @@ import java.util.List;
  */
 @SpringBootTest
 @RunWith(SpringJUnit4ClassRunner.class)
-//@PropertySource({"classpath:application.properties"})
+@PropertySource({"classpath:application.properties"})
 @Slf4j
 public class StudentDatabseTest {
 

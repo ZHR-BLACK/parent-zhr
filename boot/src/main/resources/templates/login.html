@@ -1,21 +1,103 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Spring Security Example </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户登录</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .login-container {
+            max-width: 400px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .login-title {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+        .error-message {
+            color: #dc3545;
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            border-radius: 4px;
+        }
+        .success-message {
+            color: #155724;
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 4px;
+        }
+    </style>
 </head>
 <body>
-<div th:if="${param.error}">
-    用户名或密码错
-</div>
-<div th:if="${param.logout}">
-    您已注销成功
-</div>
-<form th:action="@{/login}" method="post">
-    <div><label> 用户名 : <input type="text" name="username"/> </label></div>
-    <div><label> 密  码 : <input type="password" name="password"/> </label></div>
-    <div><input type="submit" value="登录"/></div>
-</form>
+    <div class="login-container">
+        <h2 class="login-title">用户登录</h2>
+        
+        <div th:if="${param.error}" class="error-message">
+            用户名或密码错误！
+        </div>
+        <div th:if="${param.logout}" class="success-message">
+            您已成功退出登录！
+        </div>
+        
+        <form th:action="@{/user/login}" method="post">
+            <div class="form-group">
+                <label for="username">用户名:</label>
+                <input type="text" id="username" name="username" required/>
+            </div>
+            <div class="form-group">
+                <label for="password">密码:</label>
+                <input type="password" id="password" name="password" required/>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="submit-btn">登录</button>
+            </div>
+        </form>
+        
+        <p style="text-align: center; color: #666; margin-top: 20px;">
+            测试账号：admin / 123456
+        </p>
+    </div>
 </body>
 </html>

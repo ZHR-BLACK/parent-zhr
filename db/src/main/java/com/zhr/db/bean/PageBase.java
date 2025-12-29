@@ -2,13 +2,14 @@ package com.zhr.db.bean;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 
 /**
- * @author zhaokunpeng5
  * 分页类
  */
 @Data
-public class PageBase {
+public class PageBase implements Serializable {
     private static final long serialVersionUID = 1L;
 
     /**

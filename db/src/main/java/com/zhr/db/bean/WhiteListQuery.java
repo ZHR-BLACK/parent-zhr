@@ -4,8 +4,6 @@ import lombok.Data;
 
 /**
  * @创建人 zhangjing710
- * @创建时间 2021/3/1 16:47
- * @描述
  */
 @Data
 public class WhiteListQuery extends PageBase{

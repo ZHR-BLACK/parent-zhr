@@ -1,5 +1,7 @@
 package com.zhr.boot.controller;
 
+import lombok.Getter;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,7 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
  * @Date 2020-06-08 17:17
  * @description @PropertySource读取配置文件属性值
  **/
-
+@Getter
+@Slf4j
 @RestController
 @PropertySource(value = {"config/db-config.properties"})
 public class PropertySourceController {
@@ -23,24 +26,11 @@ public class PropertySourceController {
     @Value("${db.password}")
     private String password;
 
-
     // 访问http://127.0.0.1:8080/propertySource
     @RequestMapping("/propertySource")
-    public void propertySource(){
-        System.out.println("username********************" + username);
-        System.out.println("password********************" + password);
-    }
-
-    public String getUsername() {
-        return username;
-    }
-    public void setUsername(String username) {
-        this.username = username;
-    }
-    public String getPassword() {
-        return password;
-    }
-    public void setPassword(String password) {
-        this.password = password;
+    public String propertySource(){
+        log.info("username={}", username);
+        log.info("password={}", password);
+        return "success";
     }
 }

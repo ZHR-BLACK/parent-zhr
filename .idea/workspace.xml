@@ -1,49 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="07216141-6c03-43cd-b448-24c90bd6e2a1" name="Default Changelist" comment="">
+    <list default="true" id="07216141-6c03-43cd-b448-24c90bd6e2a1" name="Default Changelist" comment="补充">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithm/algorithm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/algorithm/algorithm.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boot/src/main/java/com/zhr/boot/controller/PropertySourceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/boot/src/main/java/com/zhr/boot/controller/PropertySourceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boot/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/boot/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/db/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/src/main/java/com/zhr/db/bean/PageBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/db/src/main/java/com/zhr/db/bean/PageBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/src/main/java/com/zhr/db/bean/VendersQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/db/src/main/java/com/zhr/db/bean/VendersQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/src/main/java/com/zhr/db/bean/WhiteListQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/db/src/main/java/com/zhr/db/bean/WhiteListQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/db/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/src/test/java/com/zhr/db/junit/StudentDatabseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/db/src/test/java/com/zhr/db/junit/StudentDatabseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design-mode/design-mode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/design-mode/design-mode.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/self-study/doc/com/zhr/selfstudy/stream/demo2/StreamAPIOperrateDemo.html" beforeDir="false" afterPath="$PROJECT_DIR$/self-study/doc/com/zhr/selfstudy/stream/demo2/StreamAPIOperrateDemo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/self-study/src/main/java/com/zhr/selfstudy/str/ReplaceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/self-study/src/main/java/com/zhr/selfstudy/str/ReplaceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/self-study/src/main/java/com/zhr/selfstudy/str/UnicodeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/self-study/src/main/java/com/zhr/selfstudy/str/UnicodeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/self-study/src/main/java/com/zhr/selfstudy/stream/demo2/StreamAPIOperrateDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/self-study/src/main/java/com/zhr/selfstudy/stream/demo2/StreamAPIOperateDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/self-study/src/main/java/com/zhr/selfstudy/stream/exer/TestTransaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/self-study/src/main/java/com/zhr/selfstudy/stream/exer/TestTransaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/self-study/src/main/java/com/zhr/selfstudy/stream/map/ListToMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/self-study/src/main/java/com/zhr/selfstudy/stream/map/ListToMap.java" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <ignored path="$PROJECT_DIR$/common/target/" />
-    <ignored path="$PROJECT_DIR$/../self/target/" />
-    <ignored path="$PROJECT_DIR$/self-study/target/" />
-    <ignored path="$PROJECT_DIR$/algorithm/target/" />
-    <ignored path="$PROJECT_DIR$/jdk-detail/target/" />
-    <ignored path="$PROJECT_DIR$/rabbitmq/target/" />
-    <ignored path="$PROJECT_DIR$/../bs_mvnbuild/bs_ccb/target/" />
-    <ignored path="$PROJECT_DIR$/../bs_mvnbuild/bs_icbc/target/" />
-    <ignored path="$PROJECT_DIR$/../bs_mvnbuild/bs_tjunionpay/target/" />
-    <ignored path="$PROJECT_DIR$/../bs_mvnbuild/bs_sklf_api/target/" />
-    <ignored path="$PROJECT_DIR$/../bs_mvnbuild/bs_sklf_citibank/target/" />
-    <ignored path="$PROJECT_DIR$/../bs_mvnbuild/bs_certificate_exchange/target/" />
-    <ignored path="$PROJECT_DIR$/../bs_mvnbuild/bs_sklf_api_web/target/" />
-    <ignored path="$PROJECT_DIR$/../bs_mvnbuild/bs_sklf_ccb/target/" />
-    <ignored path="$PROJECT_DIR$/../bs_mvnbuild/bs_abc/target/" />
-    <ignored path="$PROJECT_DIR$/../bs_mvnbuild/bs_chinapay/target/" />
-    <ignored path="$PROJECT_DIR$/../bs_mvnbuild/bs_citibank/target/" />
-    <ignored path="$PROJECT_DIR$/../bs_mvnbuild/bs_sklf_api_invoke/target/" />
-    <ignored path="$PROJECT_DIR$/../bs_mvnbuild/bs_invoke_test/target/" />
-    <ignored path="$PROJECT_DIR$/../bs_mvnbuild/bs_sklf_xiamenintelbank/target/" />
-    <ignored path="$PROJECT_DIR$/../bs_mvnbuild/bs_baseservice/target/" />
-    <ignored path="$PROJECT_DIR$/../bs_mvnbuild/bs_zgcb/target/" />
-    <ignored path="$PROJECT_DIR$/../bs_mvnbuild/bs_cebmerchant/target/" />
-    <ignored path="$PROJECT_DIR$/../bs_mvnbuild/bs_cebunionpay/target/" />
-    <ignored path="$PROJECT_DIR$/../bs_mvnbuild/bs_cmbc/target/" />
-    <ignored path="$PROJECT_DIR$/../bs_mvnbuild/bs_jlwj/target/" />
-    <ignored path="$PROJECT_DIR$/../bs_mvnbuild/target/" />
-    <ignored path="$PROJECT_DIR$/../bs_mvnbuild/bs_jrmf360/target/" />
-    <ignored path="$PROJECT_DIR$/../bs_mvnbuild/bs_sklf_cmbc/target/" />
-    <ignored path="$PROJECT_DIR$/../bs_mvnbuild/bs_boc/target/" />
-    <ignored path="$PROJECT_DIR$/../bs_mvnbuild/bs_pab/target/" />
-    <ignored path="$PROJECT_DIR$/eureka/target/" />
-    <ignored path="$PROJECT_DIR$/../java8-stream-sample/target/" />
-    <ignored path="$PROJECT_DIR$/design-mode/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -135,6 +118,18 @@
       </map>
     </option>
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ZHR-BLACK&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ZHR-BLACK/parent-zhr.git&quot;,
+    &quot;accountId&quot;: &quot;323fa8b7-9aeb-4445-9915-e9d9202943e0&quot;
+  }
+}</component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -195,15 +190,10 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="D:\repository" />
-        <option name="mavenHome" value="D:/apache-maven-3.3.9" />
-        <option name="userSettingsFile" value="D:\apache-maven-3.3.9\conf\settings.xml" />
+        <option name="alwaysUpdateSnapshots" value="true" />
+        <option name="localRepository" value="$USER_HOME$/repo" />
+        <option name="userSettingsFile" value="$USER_HOME$/repo/settings.xml" />
       </MavenGeneralSettings>
-    </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
     </option>
   </component>
   <component name="MavenProjectNavigator">
@@ -212,13 +202,17 @@
       <select />
     </treeState>
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
     <option name="width" value="1860" />
     <option name="height" value="1100" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectId" id="2kxoHZucL0h4WMoSV0CrF0c88nb" />
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
@@ -327,19 +321,55 @@
       <pane id="Scope" />
     </panes>
   </component>
-  <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/design-mode/src/main/java" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15339805" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.CalculateDemo.executor": "Run",
+    "Application.LastIndexOfTest.executor": "Run",
+    "Application.ListToMap.executor": "Run",
+    "Application.ReplaceTest.executor": "Run",
+    "Application.TestMain.executor": "Run",
+    "Application.UnicodeTest.executor": "Run",
+    "JUnit.SimpleReadTest.simpleRead.executor": "Run",
+    "JUnit.StreamAPIOperateDemo.test1.executor": "Run",
+    "JUnit.StudentDatabseTest.testSelectAllId.executor": "Run",
+    "JUnit.TestTransaction.executor": "Run",
+    "JUnit.TestTransaction.test1.executor": "Run",
+    "JUnit.TestTransaction.test5.executor": "Run",
+    "JUnit.TestTransaction.test7.executor": "Run",
+    "JUnit.TestTransaction.test8.executor": "Run",
+    "Maven.parent-zhr [clean,-DskipTests,install].executor": "Run",
+    "Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found": "找到数据库连接形参",
+    "Notification.DoNotAsk-DatabaseConfigFileWatcher.found": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.BootApplication.executor": "Run",
+    "data.sources.detected.do.not.suggest.again": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/zhaoxx/workspace/parent-zhr",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "项目",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="lambda" />
@@ -351,25 +381,39 @@
       <recent name="D:\idea-workspace\parent\self-study\src\main\resources" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean -DskipTests install" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.ResponsibilityChainModel">
-    <configuration name="MyHandler" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="behavior_pattern.responsibilityChainModel.mode2.MyHandler" />
-      <module name="designmode" />
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="KtorApplicationConfigurationType" />
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+    <option name="configurationStatuses">
+      <map>
+        <entry key="SpringBootApplicationConfigurationType">
+          <value>
+            <map>
+              <entry key="BootApplication" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.BootApplication">
+    <configuration name="ReplaceTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zhr.selfstudy.str.ReplaceTest" />
+      <module name="self-study" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="behavior_pattern.responsibilityChainModel.mode2.*" />
+          <option name="PATTERN" value="com.zhr.selfstudy.str.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -377,12 +421,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ResponsibilityChainModel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="behavior_pattern.responsibilityChainModel.ResponsibilityChainModel" />
-      <module name="designmode" />
+    <configuration name="UnicodeTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zhr.selfstudy.str.UnicodeTest" />
+      <module name="self-study" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="behavior_pattern.responsibilityChainModel.*" />
+          <option name="PATTERN" value="com.zhr.selfstudy.str.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -390,41 +434,71 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="behavior_pattern.memento.Test" />
-      <module name="designmode" />
+    <configuration name="StreamAPIOperateDemo.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="self-study" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="behavior_pattern.memento.*" />
+          <option name="PATTERN" value="com.zhr.selfstudy.stream.demo2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.zhr.selfstudy.stream.demo2" />
+      <option name="MAIN_CLASS_NAME" value="com.zhr.selfstudy.stream.demo2.StreamAPIOperateDemo" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="behavior_pattern.state.Test" />
-      <module name="designmode" />
+    <configuration name="TestTransaction.test7" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="self-study" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="behavior_pattern.state.*" />
+          <option name="PATTERN" value="com.zhr.selfstudy.stream.exer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.zhr.selfstudy.stream.exer" />
+      <option name="MAIN_CLASS_NAME" value="com.zhr.selfstudy.stream.exer.TestTransaction" />
+      <option name="METHOD_NAME" value="test7" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="behavior_pattern.interpreter.Test" />
-      <module name="designmode" />
+    <configuration name="TestTransaction.test8" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="self-study" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="behavior_pattern.interpreter.*" />
+          <option name="PATTERN" value="com.zhr.selfstudy.stream.exer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.zhr.selfstudy.stream.exer" />
+      <option name="MAIN_CLASS_NAME" value="com.zhr.selfstudy.stream.exer.TestTransaction" />
+      <option name="METHOD_NAME" value="test8" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="boot" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zhr.boot.BootApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DbApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="db" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zhr.db.DbApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="es" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zhr.es.EsApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -436,9 +510,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="KafkaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="kafka-demo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.study.KafkaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RabbitmqApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="rabbitmq" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.zhr.rabbitmq.RabbitmqApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RocketmqDemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="rocketmq-demo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zhr.rocketmqdemo.RocketmqDemoApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -457,16 +545,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WpsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="wps" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zhr.wps.WpsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ResponsibilityChainModel" />
-        <item itemvalue="Application.MyHandler" />
-        <item itemvalue="Application.Test (2)" />
-        <item itemvalue="Application.Test" />
-        <item itemvalue="Application.Test (1)" />
+        <item itemvalue="Application.ReplaceTest" />
+        <item itemvalue="Application.UnicodeTest" />
+        <item itemvalue="JUnit.StreamAPIOperateDemo.test1" />
+        <item itemvalue="JUnit.TestTransaction.test7" />
+        <item itemvalue="JUnit.TestTransaction.test8" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-26cb7f24e5b0-intellij.indexing.shared.core-IU-253.29346.138" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.29346.138" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -483,6 +587,20 @@
       <workItem from="1558597681748" duration="53000" />
       <workItem from="1558597854795" duration="7759000" />
       <workItem from="1558607878532" duration="337000" />
+      <workItem from="1724234502981" duration="4986000" />
+      <workItem from="1725868462515" duration="1295000" />
+      <workItem from="1727254429357" duration="70000" />
+      <workItem from="1732350815806" duration="182000" />
+      <workItem from="1732352405964" duration="222000" />
+      <workItem from="1734966379650" duration="91000" />
+      <workItem from="1744782230684" duration="25000" />
+      <workItem from="1753695481772" duration="1965000" />
+      <workItem from="1753779105563" duration="579000" />
+      <workItem from="1766630030476" duration="165000" />
+      <workItem from="1766630499139" duration="220000" />
+      <workItem from="1766630988279" duration="130000" />
+      <workItem from="1766631135211" duration="101000" />
+      <workItem from="1766631245777" duration="17633000" />
     </task>
     <task id="LOCAL-00001" summary="完善中行代码">
       <created>1557992949103</created>
@@ -519,7 +637,23 @@
       <option name="project" value="LOCAL" />
       <updated>1558001216293</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="补充">
+      <option name="closed" value="true" />
+      <created>1724297391679</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1724297391679</updated>
+    </task>
+    <task id="LOCAL-00007" summary="补充">
+      <option name="closed" value="true" />
+      <created>1727254486875</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1727254486875</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -565,33 +699,24 @@
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-core" />
+    <option featureType="dependencySupport" implementationName="java:org.seleniumhq.selenium:selenium-java" />
+    <option featureType="dependencySupport" implementationName="java:io.projectreactor:reactor-core" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.data:spring-data-commons" />
+    <option featureType="dependencySupport" implementationName="java:org.hibernate.validator:hibernate-validator" />
+    <option featureType="dependencySupport" implementationName="java:javax.validation:validation-api" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-webmvc" />
+    <option featureType="dependencySupport" implementationName="java:org.projectlombok:lombok" />
+    <option featureType="dependencySupport" implementationName="java:io.reactivex.rxjava3:rxjava" />
+    <option featureType="dependencySupport" implementationName="java:org.thymeleaf:thymeleaf" />
+    <option featureType="dependencySupport" implementationName="maven-packaging:war" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-messaging" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
     <option name="RECENT_FILTERS">
       <map>
         <entry key="Branch">
@@ -606,12 +731,26 @@
         </entry>
       </map>
     </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="完善平安代码" />
     <MESSAGE value="完善中行代码" />
     <MESSAGE value="使b2e0007,b2e0009,b2e0012接口支持送批量报文" />
-    <option name="LAST_COMMIT_MESSAGE" value="使b2e0007,b2e0009,b2e0012接口支持送批量报文" />
+    <MESSAGE value="补充" />
+    <option name="LAST_COMMIT_MESSAGE" value="补充" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../java8-stream-sample/src/main/java/lambda/LambdaDemo.java">

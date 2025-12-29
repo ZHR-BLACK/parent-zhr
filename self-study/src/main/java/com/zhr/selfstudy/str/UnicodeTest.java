@@ -1,5 +1,7 @@
 package com.zhr.selfstudy.str;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * @author ZHR
  * @version 1.0
@@ -7,14 +9,13 @@ package com.zhr.selfstudy.str;
  * @Date 2020-01-06 14:08
  * @description string转为unicode  用于一些不支持中文的地方
  **/
+@Slf4j
 public class UnicodeTest {
 
     public static void main(String[] args) {
-
         String a = "041@8100000000011748@中国光大银行股份有限公司@00000005";
         String s = str2unicode(a);
-        System.out.println("s ********************" + s);
-
+        log.info("s={}", s);
     }
 
     public static String str2unicode(final String gbString) {

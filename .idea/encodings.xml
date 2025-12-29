@@ -1,37 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/../bs_mvnbuild" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bs_mvnbuild/bs_abc" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bs_mvnbuild/bs_baseservice" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bs_mvnbuild/bs_boc" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bs_mvnbuild/bs_ccb" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bs_mvnbuild/bs_cebmerchant" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bs_mvnbuild/bs_cebunionpay" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bs_mvnbuild/bs_certificate_exchange" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bs_mvnbuild/bs_chinapay" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bs_mvnbuild/bs_citibank" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bs_mvnbuild/bs_cmbc" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bs_mvnbuild/bs_icbc" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bs_mvnbuild/bs_invoke_test" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bs_mvnbuild/bs_jlwj" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bs_mvnbuild/bs_jrmf360" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bs_mvnbuild/bs_pab" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bs_mvnbuild/bs_sklf_api" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bs_mvnbuild/bs_sklf_api_invoke" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bs_mvnbuild/bs_sklf_api_web" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bs_mvnbuild/bs_sklf_ccb" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bs_mvnbuild/bs_sklf_citibank" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bs_mvnbuild/bs_sklf_cmbc" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bs_mvnbuild/bs_sklf_xiamenintelbank" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bs_mvnbuild/bs_tjunionpay" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../bs_mvnbuild/bs_zgcb" charset="UTF-8" />
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/algorithm" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/algorithm/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/automated_test/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/boot/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/concurrent/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/db/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/design-mode" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/jdk-detail" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/design-mode/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/es/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ibatis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ibatis/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jfinal-demo/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kafka-demo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kafka-demo/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mybatis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mybatis/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/out/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rabbitmq" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rabbitmq/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rocketmq-demo/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/self-study" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/self-study/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wps/src/main/resources" charset="UTF-8" />
   </component>
 </project>

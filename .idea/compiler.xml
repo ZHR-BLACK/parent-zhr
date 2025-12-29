@@ -2,39 +2,62 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="bs_invoke_test" />
-        <module name="bs_ccb" />
         <module name="bs_icbc" />
-        <module name="bs_baseservice" />
-        <module name="bs_sklf_citibank" />
-        <module name="bs_certificate_exchange" />
         <module name="bs_jrmf360" />
-        <module name="bs_jlwj" />
-        <module name="bs_citibank" />
-        <module name="bs_sklf_cmbc" />
-        <module name="eureka-client" />
         <module name="bs_abc" />
+        <module name="bs_jlwj" />
+        <module name="bs_cmbc" />
+        <module name="common" />
+        <module name="bs_tjunionpay" />
+        <module name="bs_citibank" />
+        <module name="bs_certificate_exchange" />
+        <module name="bs_sklf_ccb" />
+        <module name="bs_sklf_api_invoke" />
+        <module name="bs_ccb" />
+        <module name="designmode" />
+        <module name="bs_sklf_citibank" />
+        <module name="bs_zgcb" />
+        <module name="bs_chinapay" />
+        <module name="bs_cebunionpay" />
+        <module name="bs_sklf_api_web" />
+        <module name="eureka-client" />
         <module name="bs_cebmerchant" />
         <module name="bs_boc" />
-        <module name="common" />
+        <module name="bs_invoke_test" />
+        <module name="bs_sklf_cmbc" />
         <module name="java8-stream-sample" />
-        <module name="rabbitmq" />
-        <module name="bs_chinapay" />
-        <module name="bs_tjunionpay" />
-        <module name="designmode" />
-        <module name="self-study" />
-        <module name="bs_cebunionpay" />
-        <module name="bs_cmbc" />
-        <module name="algorithm" />
         <module name="bs_sklf_api" />
-        <module name="bs_zgcb" />
-        <module name="bs_sklf_api_web" />
-        <module name="bs_sklf_api_invoke" />
-        <module name="bs_sklf_ccb" />
+        <module name="bs_baseservice" />
+      </profile>
+      <profile name="Annotation profile for parent-zhr" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/repo/org/mapstruct/mapstruct-processor/1.5.5.Final/mapstruct-processor-1.5.5.Final.jar" />
+          <entry name="$USER_HOME$/repo/org/projectlombok/lombok/1.18.6/lombok-1.18.6.jar" />
+        </processorPath>
+        <module name="self-study" />
+        <module name="mybatis" />
+        <module name="concurrent" />
+        <module name="kafka-demo" />
+        <module name="ibatis" />
+        <module name="rabbitmq" />
+        <module name="es" />
+        <module name="out" />
+        <module name="rocketmq-demo" />
+        <module name="automated_test" />
+        <module name="wps" />
+        <module name="boot" />
+        <module name="jfinal-demo" />
+        <module name="db" />
+        <module name="algorithm" />
+        <module name="design-mode" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
@@ -48,14 +71,14 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="algorithm" options="-parameters" />
+      <module name="algorithm" options="" />
       <module name="common" options="-parameters" />
       <module name="designmode" options="-parameters" />
       <module name="eureka-client" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
       <module name="jdkdetail" options="-parameters" />
-      <module name="rabbitmq" options="-parameters" />
-      <module name="self-study" options="-parameters" />
+      <module name="rabbitmq" options="" />
+      <module name="self-study" options="" />
     </option>
   </component>
 </project>

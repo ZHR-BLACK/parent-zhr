@@ -1,5 +1,6 @@
 package com.zhr.selfstudy.stream.demo2;
 
+import lombok.extern.slf4j.Slf4j;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -7,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
@@ -14,7 +16,8 @@ import java.util.stream.Stream;
  * @author: morningcat.zhang
  * @Date: 2019/2/5 1:10 AM
  */
-public class StreamAPIOperrateDemo {
+@Slf4j
+public class StreamAPIOperateDemo {
 
     /**
      * 多个中间操作可以连接起来形成一个流水线，除非流水线上触发终止操作，
@@ -39,18 +42,8 @@ public class StreamAPIOperrateDemo {
      */
     @Test
     public void test1() {
-        //中间操作 过滤年龄不等于18
-        //Stream<Student> stream2 = stream1.filter(new MyPredicate());
-
-//        Stream<Student> stream2 = stream1.filter((t) -> {
-//            if (t.getAge() >= 18) {
-//                return true;
-//            }
-//            return false;
-//        });
-//        // 终止操作
-//        stream2.forEach(System.out::println);
-        stream1.filter(item -> item.getAge() >= 18).forEach(System.out::println);
+        List<Student> list = stream1.filter(item -> item.getAge() >= 18).collect(Collectors.toList());
+        log.info("过滤年龄大于等于18的学生={}", list);
     }
 
 
@@ -97,7 +90,7 @@ public class StreamAPIOperrateDemo {
         //Stream<Student> stream2 = stream1.map(new MyFunction());
         Stream<Student> stream2 = stream1.peek((o) -> {
             if (o.getName().contains("敏感词汇")) {
-                o.setName(o.getName().replaceAll("敏感词汇","*"));
+                o.setName(o.getName().replaceAll("敏感词汇", "*"));
             }
         });
         // 终止操作
@@ -124,9 +117,9 @@ public class StreamAPIOperrateDemo {
         List<String> list = Arrays.asList("hello", "world", "gq");
 
         Stream<Stream<Character>> stream
-                = list.stream().map(StreamAPIOperrateDemo::stringToCharacter);
+                = list.stream().map(StreamAPIOperateDemo::stringToCharacter);
         Stream<Character> stream2
-                = list.stream().flatMap(StreamAPIOperrateDemo::stringToCharacter);
+                = list.stream().flatMap(StreamAPIOperateDemo::stringToCharacter);
 
         stream.forEach((sm) -> sm.forEach(System.out::print));
 
@@ -143,25 +136,14 @@ public class StreamAPIOperrateDemo {
         return characterList.stream();
     }
 
-    /**********************************************************/
-
     /**
      * 排序
      * sorted() 自然排序
      */
     @Test
     public void test8() {
-        //中间操作 排序
-        //Stream<Student> stream2 = stream1.sorted();
-        //Stream<Student> stream2 = stream1.sorted(new StudentComparator());
-
-        //Stream<Student> stream2 = stream1.sorted((s1, s2) -> s1.getAge() - s2.getAge());
-
-        Stream<Student> stream2 = stream1.sorted(Comparator.comparingInt(Student::getAge));
-//        Stream<Student> stream3 = stream1.sorted(Comparator.comparingInt(Student::getAge));
-
-        // 终止操作
-        stream2.forEach(System.out::println);
+        List<Student> list = stream1.sorted(Comparator.comparingInt(Student::getAge)).collect(Collectors.toList());
+        log.info("学生按年龄倒序排列={}", list);
     }
 
 }
