@@ -18,15 +18,12 @@
         <module>automated_test</module>
         <module>jfinal-demo</module>
         <module>boot</module>
-        <module>out</module>
         <module>kafka-demo</module>
-        <module>db</module>
         <module>es</module>
 <!--        <module>shell</module>-->
-        <module>wps</module>
-        <module>rocketmq-demo</module>
         <module>ibatis</module>
         <module>mybatis</module>
+        <module>spring-cloud-alibaba-demo</module>
     </modules>
 
     <properties>
@@ -57,10 +54,29 @@
         <amqp-client.version>4.4.1</amqp-client.version>
         <jsch.version>0.1.55</jsch.version>
         <commons-io.version>2.6</commons-io.version>
+        <!-- Spring Cloud Alibaba -->
+        <spring-cloud-alibaba.version>2021.0.5.0</spring-cloud-alibaba.version>
+        <spring-cloud.version>2021.0.5</spring-cloud.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <!-- Spring Cloud -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- Spring Cloud Alibaba -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter</artifactId>
