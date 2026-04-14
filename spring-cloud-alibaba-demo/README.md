@@ -2,16 +2,17 @@
 
 ## 项目简介
 
-本模块演示了如何集成 Spring Cloud Alibaba 生态，包括 Nacos、RocketMQ 和 Seata 等组件。
+本模块演示了如何集成 Spring Cloud Alibaba 生态，包括 Nacos、RocketMQ、Seata 和 Sentinel 等组件。
 
 ## 技术栈
 
 - Spring Boot 2.7.14
 - Spring Cloud 2021.0.5
 - Spring Cloud Alibaba 2021.0.5.0
+- Nacos
 - RocketMQ
 - Seata
-- Nacos
+- Sentinel
 - MyBatis-Plus
 - MySQL
 
@@ -46,6 +47,20 @@ mvn clean install
    - 访问 `http://localhost:8080/test-seata`
    - 查看控制台输出，应该能看到事务测试成功的日志
 
+3. **测试 Sentinel 熔断降级**：
+   - 访问 `http://localhost:8080/sentinel/test?name=TestUser` 测试基本功能
+   - 快速连续访问 `http://localhost:8080/sentinel/test` 测试限流功能（每秒最多2个请求）
+   - 访问 `http://localhost:8080/sentinel/degrade?name=error` 测试降级功能
+   - 访问 `http://localhost:8080/sentinel/hotparam?param=test` 测试热点参数限流
+   - 访问 `http://localhost:8080/sentinel/exception?type=runtime` 测试异常降级功能
+   - 访问 `http://localhost:8080/sentinel/exception?type=illegal` 测试忽略特定异常（不会触发降级）
+   - 访问 `http://localhost:8080/sentinel/concurrent?user=test` 测试并发线程数限流
+   - 访问 `http://localhost:8080/sentinel/service?param=normal` 测试服务层注解保护
+   - 访问 `http://localhost:8080/sentinel/service?param=error` 测试服务层异常降级
+   - 访问 `http://localhost:8080/sentinel/service-hotparam?userId=user1&commonParam=param1` 测试服务层热点参数限流
+   - 访问 `http://localhost:8080/sentinel/service-ignore-exception?param=runtime` 测试服务层异常降级
+   - 访问 `http://localhost:8080/sentinel/service-ignore-exception?param=illegal` 测试服务层忽略特定异常
+
 ## 项目结构
 
 ```
@@ -59,12 +74,17 @@ spring-cloud-alibaba-demo/
         │       └── study/
         │           ├── SpringCloudAlibabaDemoApplication.java  # 主应用类
         │           ├── controller/
-        │           │   └── DemoController.java                # 示例控制器
+        │           │   ├── DemoController.java                # 示例控制器
+        │           │   └── SentinelController.java            # Sentinel 控制器
         │           ├── rocketmq/
         │           │   ├── RocketMQProducerConfig.java        # RocketMQ 生产者配置
         │           │   └── RocketMQConsumerConfig.java        # RocketMQ 消费者配置
-        │           └── seata/
-        │               └── SeataConfig.java                   # Seata 配置
+        │           ├── seata/
+        │           │   └── SeataConfig.java                   # Seata 配置
+        │           ├── sentinel/
+        │           │   └── SentinelConfig.java                # Sentinel 配置
+        │           └── service/
+        │               └── SentinelService.java               # Sentinel 服务层
         └── resources/
             └── bootstrap.yml                                  # 配置文件
 ```
@@ -98,14 +118,6 @@ spring:
 
 ## 注意事项
 
-1. 确保 Nacos、RocketMQ 和 Seata 服务都已正确启动
-2. 如需修改服务地址，可在 `bootstrap.yml` 文件中调整
-3. 实际生产环境中，应根据需要配置更多参数
-
-## 扩展建议
-
-1. 添加更多微服务模块，构建完整的微服务架构
-2. 集成 Spring Cloud Gateway 作为 API 网关
-3. 添加分布式链路追踪（如 Sleuth + Zipkin）
-4. 实现更复杂的业务逻辑，测试 Seata 的分布式事务能力
-5. 配置 RocketMQ 的高级特性，如延迟消息、事务消息等
+1. 确保所有中间件服务（Nacos、RocketMQ、Seata）都已启动
+2. Sentinel Dashboard 可选，用于可视化监控和规则配置
+3. 限流规则在 SentinelConfig 中预设，也可通过 Dashboard 动态调整
