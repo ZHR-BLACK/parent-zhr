@@ -47,7 +47,12 @@ mvn clean install
    - 访问 `http://localhost:8080/test-seata`
    - 查看控制台输出，应该能看到事务测试成功的日志
 
-3. **测试 Sentinel 熔断降级**：
+3. **测试 RocketMQ 消息消费**：
+   - 访问 `http://localhost:8080/send` 发送消息
+   - 观察控制台输出，可以看到消息被消费者接收和处理
+   - 查看offset提交和处理成功状态的相关日志
+
+4. **测试 Sentinel 熔断降级**：
    - 访问 `http://localhost:8080/sentinel/test?name=TestUser` 测试基本功能
    - 快速连续访问 `http://localhost:8080/sentinel/test` 测试限流功能（每秒最多2个请求）
    - 访问 `http://localhost:8080/sentinel/degrade?name=error` 测试降级功能
@@ -78,7 +83,8 @@ spring-cloud-alibaba-demo/
         │           │   └── SentinelController.java            # Sentinel 控制器
         │           ├── rocketmq/
         │           │   ├── RocketMQProducerConfig.java        # RocketMQ 生产者配置
-        │           │   └── RocketMQConsumerConfig.java        # RocketMQ 消费者配置
+        │           │   ├── RocketMQConsumerConfig.java        # RocketMQ 消费者配置（推模式）
+        │           │   └── AdvancedRocketMQConsumer.java      # 高级RocketMQ消费者（手动offset管理）
         │           ├── seata/
         │           │   └── SeataConfig.java                   # Seata 配置
         │           ├── sentinel/
@@ -115,9 +121,13 @@ spring:
 - **Spring Cloud Alibaba Seata**：分布式事务
 - **MyBatis-Plus**：ORM 框架
 - **MySQL**：数据库驱动
+- **Logback**：日志管理
 
 ## 注意事项
 
 1. 确保所有中间件服务（Nacos、RocketMQ、Seata）都已启动
 2. Sentinel Dashboard 可选，用于可视化监控和规则配置
 3. 限流规则在 SentinelConfig 中预设，也可通过 Dashboard 动态调整
+4. 日志配置位于 logback-spring.xml 文件中，支持控制台和文件输出
+5. RocketMQ 消费者日志输出到 logs/rocketmq-consumer.log 文件
+6. Sentinel 相关日志输出到 logs/sentinel.log 文件
